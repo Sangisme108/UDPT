@@ -1,6 +1,6 @@
 # UDPT
 
-# Dcron - Distributed cron
+# Dcron - Distributed, fault tolerant job scheduling system
 
 Website: http://www.dcron.io
 
