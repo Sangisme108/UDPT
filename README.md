@@ -1,6 +1,6 @@
 # UDPT
 
-# Dkron - Distributed, fault tolerant job scheduling system
+# Dkron - Distributed, fault tolerant job scheduling system [![GoDoc](https://godoc.org/github.com/victorcoder/dkron?status.svg)](https://godoc.org/github.com/victorcoder/dkron)
 
 Website: http://dkron.io/
 
