@@ -46,6 +46,7 @@ func (a *AgentCommand) apiRoutes(r *mux.Router) {
 	sub := subver.PathPrefix("/jobs").Subrouter()
 	sub.HandleFunc("/", a.jobCreateOrUpdateHandler).Methods("POST", "PUT")
 	sub.HandleFunc("/", a.jobsHandler).Methods("GET")
+	sub.HandleFunc("/{job}", a.jobGetHandler).Methods("GET")
 	sub.HandleFunc("/{job}", a.jobDeleteHandler).Methods("DELETE")
 	sub.HandleFunc("/{job}", a.jobRunHandler).Methods("POST", "PUT")
 
@@ -74,14 +75,29 @@ func (a *AgentCommand) indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *AgentCommand) jobsHandler(w http.ResponseWriter, r *http.Request) {
-	jobs, err := a.store.GetJobs()
+	jobs, err := a.etcd.GetJobs()
 	if err != nil {
-		log.Fatal(err)
+		log.Error(err)
 	}
 	log.Debug(jobs)
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusOK)
 	if err := json.NewEncoder(w).Encode(jobs); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func (a *AgentCommand) jobGetHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	jobName := vars["job"]
+
+	job, err := a.etcd.GetJob(jobName)
+	if err != nil {
+		log.Error(err)
+	}
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
+	if err := json.NewEncoder(w).Encode(job); err != nil {
 		log.Fatal(err)
 	}
 }
@@ -106,7 +122,7 @@ func (a *AgentCommand) jobCreateOrUpdateHandler(w http.ResponseWriter, r *http.R
 	}
 
 	// Save the new job to etcd
-	if err = a.store.SetJob(&job); err != nil {
+	if err = a.etcd.SetJob(&job); err != nil {
 		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 		w.WriteHeader(422) // unprocessable entity
 		if err := json.NewEncoder(w).Encode(err); err != nil {
@@ -115,20 +131,64 @@ func (a *AgentCommand) jobCreateOrUpdateHandler(w http.ResponseWriter, r *http.R
 		return
 	}
 
-	a.schedulerRestartQuery(a.store.GetLeader())
+	a.schedulerRestartQuery(a.etcd.GetLeader())
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusCreated)
-	if _, err := fmt.Fprintf(w, `{"result": "ok"}`); err != nil {
+	if err := json.NewEncoder(w).Encode(job); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func (a *AgentCommand) jobDeleteHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	jobName := vars["job"]
+
+	job, err := a.etcd.DeleteJob(jobName)
+	if err != nil {
+		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+		w.WriteHeader(http.StatusNotFound)
+		if err := json.NewEncoder(w).Encode(err); err != nil {
+			log.Fatal(err)
+		}
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
+	if err := json.NewEncoder(w).Encode(job); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func (a *AgentCommand) jobRunHandler(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	jobName := vars["job"]
+
+	job, err := a.etcd.GetJob(jobName)
+	if err != nil {
+		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+		w.WriteHeader(http.StatusNotFound)
+		if err := json.NewEncoder(w).Encode(err); err != nil {
+			log.Fatal(err)
+		}
+		return
+	}
+
+	a.RunQuery(job)
+
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
+	if err := json.NewEncoder(w).Encode(job); err != nil {
 		log.Fatal(err)
 	}
 }
 
 func (a *AgentCommand) executionsHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	job := vars["job"]
+	jobName := vars["job"]
 
-	executions, err := a.store.GetExecutions(job)
+	executions, err := a.etcd.GetExecutions(jobName)
 	if err != nil {
 		log.Error(err)
 	}
@@ -148,26 +208,6 @@ func (a *AgentCommand) membersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (a *AgentCommand) jobDeleteHandler(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	job := vars["job"]
-
-	if err := a.store.DeleteJob(job); err != nil {
-		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-		w.WriteHeader(http.StatusNotFound)
-		if err := json.NewEncoder(w).Encode(err); err != nil {
-			log.Fatal(err)
-		}
-		return
-	}
-
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(http.StatusOK)
-	if _, err := fmt.Fprintf(w, `{"result": "ok"}`); err != nil {
-		log.Fatal(err)
-	}
-}
-
 func (a *AgentCommand) leaderHandler(w http.ResponseWriter, r *http.Request) {
 	member, err := a.leaderMember()
 	if err == nil {
@@ -182,29 +222,6 @@ func (a *AgentCommand) leaderHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(http.StatusNotFound)
 	if err := json.NewEncoder(w).Encode(err); err != nil {
-		log.Fatal(err)
-	}
-}
-
-func (a *AgentCommand) jobRunHandler(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	job := vars["job"]
-
-	j, err := a.store.GetJob(job)
-	if err != nil {
-		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-		w.WriteHeader(http.StatusNotFound)
-		if err := json.NewEncoder(w).Encode(err); err != nil {
-			log.Fatal(err)
-		}
-		return
-	}
-
-	a.RunQuery(j)
-
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(http.StatusOK)
-	if _, err := fmt.Fprintf(w, `{"result": "ok"}`); err != nil {
 		log.Fatal(err)
 	}
 }
