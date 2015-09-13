@@ -5,11 +5,11 @@ import (
 	"time"
 )
 
-func TestStore(t *testing.T) {
-	store := NewStore("etcd", []string{}, nil, "dkron-test")
+func TestEtcdClient(t *testing.T) {
+	etcd := NewEtcdClient([]string{}, nil, "dkron-test")
 
 	// Cleanup everything
-	err := store.Client.DeleteTree("dkron-test")
+	_, err := etcd.Client.Delete("dkron-test", true)
 	if err != nil {
 		t.Fatalf("error cleaning up: %s", err)
 	}
@@ -20,11 +20,11 @@ func TestStore(t *testing.T) {
 		Disabled: true,
 	}
 
-	if err := store.SetJob(testJob); err != nil {
+	if err := etcd.SetJob(testJob); err != nil {
 		t.Fatalf("error creating job: %s", err)
 	}
 
-	jobs, err := store.GetJobs()
+	jobs, err := etcd.GetJobs()
 	if err != nil {
 		t.Fatalf("error getting jobs: %s", err)
 	}
@@ -32,11 +32,11 @@ func TestStore(t *testing.T) {
 		t.Fatalf("error in number of expected jobs: %v", jobs)
 	}
 
-	if err := store.DeleteJob("test"); err != nil {
+	if _, err := etcd.DeleteJob("test"); err != nil {
 		t.Fatalf("error deleting job: %s", err)
 	}
 
-	if err := store.DeleteJob("test"); err == nil {
+	if _, err := etcd.DeleteJob("test"); err == nil {
 		t.Fatalf("error job deletion should fail: %s", err)
 	}
 
@@ -49,12 +49,12 @@ func TestStore(t *testing.T) {
 		NodeName:   "testNode",
 	}
 
-	_, err = store.SetExecution(testExecution)
+	_, err = etcd.SetExecution(testExecution)
 	if err != nil {
 		t.Fatalf("error setting the execution: %s", err)
 	}
 
-	execs, err := store.GetExecutions("test")
+	execs, err := etcd.GetExecutions("test")
 	if err != nil {
 		t.Fatalf("error getting executions: %s", err)
 	}
