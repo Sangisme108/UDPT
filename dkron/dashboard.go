@@ -27,8 +27,8 @@ func newCommonDashboardData(a *AgentCommand, nodeName string) *commonDashboardDa
 }
 
 func (a *AgentCommand) dashboardRoutes(r *mux.Router) {
+	r.Path("/dashboard").HandlerFunc(a.dashboardIndexHandler).Methods("GET")
 	subui := r.PathPrefix("/dashboard").Subrouter()
-	subui.HandleFunc("/", a.dashboardIndexHandler).Methods("GET")
 	subui.HandleFunc("/jobs", a.dashboardJobsHandler).Methods("GET")
 	subui.HandleFunc("/jobs/{job}/executions", a.dashboardExecutionsHandler).Methods("GET")
 }
