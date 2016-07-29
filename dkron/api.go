@@ -238,7 +238,9 @@ func (a *AgentCommand) jobRunHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
-	a.RunQuery(job)
+
+	ex := NewExecution(job.Name)
+	a.RunQuery(ex)
 
 	w.Header().Set("Location", r.RequestURI)
 	w.WriteHeader(http.StatusAccepted)
