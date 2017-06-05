@@ -1065,7 +1065,7 @@ func staticFaviconIco() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/favicon.ico", size: 1150, mode: os.FileMode(420), modTime: time.Unix(1493378022, 0)}
+	info := bindataFileInfo{name: "static/favicon.ico", size: 1150, mode: os.FileMode(420), modTime: time.Unix(1496265608, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1305,7 +1305,7 @@ func templatesDashboardHtmlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/dashboard.html.tmpl", size: 4106, mode: os.FileMode(420), modTime: time.Unix(1493378022, 0)}
+	info := bindataFileInfo{name: "templates/dashboard.html.tmpl", size: 4106, mode: os.FileMode(420), modTime: time.Unix(1496265608, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1350,7 +1350,7 @@ func templatesIndexHtmlTmpl() (*asset, error) {
 	return a, nil
 }
 
-var _templatesJobsHtmlTmpl = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xd4\x56\xcf\x8f\x9c\x36\x14\xbe\xef\x5f\xf1\xe2\x54\x49\x7b\x60\x51\xa4\x9c\x1a\xa0\x8a\x36\xbd\x8c\xd2\x1e\x1a\xa9\xd7\xca\xe0\xc7\xe0\xa9\xb1\x47\xf6\x63\x77\x47\x94\xff\xbd\xb2\xf9\xb1\x30\x0c\x93\xee\xb6\x87\xe6\x02\xd8\xfe\xfc\xf9\x7b\xdf\x7b\x36\x6e\x5b\x81\xa5\xd4\x08\xac\x30\x9a\x50\x13\xeb\xba\x9b\x44\xc8\x7b\x28\x14\x77\x2e\x0d\xdd\x5c\x6a\xb4\x30\x02\x40\xef\x23\xff\x6d\x8d\x52\x68\x53\xb6\x33\xf9\x67\xe9\xe8\x8e\xac\x62\xd9\x0d\x40\xdb\x12\xd6\x47\xc5\x09\x81\x39\xe2\xd4\x38\x06\xb7\x5d\x77\x03\x30\xe7\xb5\xe6\x21\xa0\x01\x12\xe2\xb9\xc2\xb1\xbf\x6f\x84\x67\xe4\xc8\xca\x23\x8a\x01\xe7\x91\x76\xfc\xf4\x8d\x2a\xdb\x99\x3c\x89\xa9\x5a\x76\x7e\x69\x8a\x02\x9d\x83\xc2\x34\x9a\xd6\xc3\x3f\x5b\x6b\xec\xd6\xe0\x97\xa0\x77\xdd\xff\xb1\x20\x69\xf4\x62\x20\x89\x9f\xd4\xb4\x2d\x58\xae\xf7\x08\xdf\x1d\x4c\x0e\x3f\xa6\x70\xbb\x33\xb9\x83\x10\xf4\x24\x7c\x46\x28\xb2\x84\x43\x65\xb1\x4c\xd9\xc1\xe4\x2e\x6e\x5b\x3f\xf1\xf6\x57\x5e\x63\xd7\xc5\xf8\x88\x45\x13\xd6\x63\x59\xdb\xc2\x34\x04\x5d\x97\xc4\x3c\x4b\x62\x12\xd9\x82\x6c\x04\x0d\x91\xdf\xf9\xd8\x02\x78\x0b\x18\x3c\xd8\x86\x4d\x0d\x1f\x99\x2c\xfb\x39\x9f\xa4\xf3\x49\x11\x4f\x51\x0d\x13\xe4\x98\xba\x92\x43\xc9\xa3\x42\xda\xc2\x67\x10\x1f\x29\xaa\x1b\xf2\xe9\x4b\x62\xb9\xe4\x04\x54\x0e\x9f\x43\xe4\xa7\x8c\xae\xf4\x39\xea\xad\xee\xba\x0b\xec\xa8\xc5\x8c\xfa\x6a\x78\x53\x1a\x5e\x33\x10\x9c\x78\x44\x66\xbf\x57\x98\xb2\xda\x08\xae\xc6\x3e\x6e\xf7\x48\x29\x7b\x7d\x96\x8c\x68\x00\x91\x24\x3f\xe5\x77\x89\x0f\x2c\x3b\x8f\x02\x4f\xe8\x5f\xef\x1e\x19\x70\x2b\x79\x54\x49\x21\x50\xa7\x8c\x6c\x83\xbd\x76\x9f\xd3\x99\xa4\x37\x3a\x77\xc7\x0f\x1b\x1a\xfd\xd6\x53\xb2\xf8\x33\x65\xb6\xd1\x3b\x93\x7f\xff\xf6\x4c\xd3\xdb\x1f\x02\xc8\x55\xe6\x21\x65\xaf\x6c\xa3\xb5\xd4\xfb\x3f\xce\x40\x93\xe4\xdf\x1a\xbd\x56\x5c\x98\xbd\x7b\x9e\xe4\x99\xc2\x4b\x6c\xfe\xe5\x8e\x52\xf7\xa4\xfe\x59\x3e\xcc\x54\x6e\x89\x7c\xb6\x39\x2f\x4c\x60\x24\x50\x21\xe1\xdc\xb7\xd0\x73\xcd\xb8\x4f\xfd\x94\x55\xb4\x64\xb9\xab\x22\xf3\x42\xfb\xd6\x7c\xde\x36\x7f\xf6\x5e\x77\x70\x53\xee\x7a\xb5\xf9\x6e\xe8\x4f\xb0\xb1\xf1\x2a\x8a\xe0\x17\xef\x07\xf4\xc1\x41\x14\x4d\xc0\xd9\xb9\x1d\x2c\x83\x92\x0b\x64\x20\x45\xca\xae\x5b\x4a\x3c\x97\x5a\xe0\x63\xca\xa2\x77\x0c\xac\xf1\xde\x09\xc9\x95\xd9\x0f\xe6\x28\x9e\xa3\x52\x28\xf2\x53\xca\xea\x53\x58\xff\xb3\xef\x62\x33\xc9\xe7\xab\x47\x23\xc3\xc0\x67\x8a\xa6\xf6\x3f\xa6\x85\xa7\xab\x49\xe3\xef\x2b\x5b\x1e\x3a\x2b\x5c\x6e\xc4\xe9\x0c\x04\xf0\xd1\x22\x9c\x4c\x03\xae\xb1\xf8\xd3\x92\x20\x16\xf2\xfe\x6b\x9c\xa5\x31\x84\x76\xc5\x9a\xe4\x0d\x91\xd1\x23\x36\x27\x0d\x39\xe9\x48\x60\xc9\x1b\x45\xf3\xdd\xde\xfb\xb9\xb5\xe1\xef\xb9\x6a\x9e\x8a\xb2\xaf\x79\x21\x5d\x2d\x27\x05\x2c\xbb\x33\xba\x94\xb6\x4e\xe2\x7e\xcd\x2d\x29\x74\x3a\x62\xca\xfa\x06\xdb\x14\x76\x79\x05\x65\x1c\x5e\xe6\x5f\x99\x74\xd6\xb1\x68\x0e\x8d\x75\x5d\xfe\x8b\x82\xfc\x26\x2b\xb1\x42\x2e\xae\x54\xcd\xc5\x54\x15\x3e\x09\x97\x13\x34\x0b\x33\x65\x21\x59\x2c\x4b\xdc\x91\xeb\x4b\xc7\xd4\x1b\x92\x35\xba\x0f\x49\xec\x01\xd9\x66\xd5\x54\xef\x97\x92\xc3\xf1\xd8\xe7\x61\xe9\xa1\xff\x39\xc2\xea\x32\x53\xbd\xff\x4a\x9d\xfc\xe3\x0d\x9a\x1c\x2d\x66\x49\x61\xc4\x74\x91\xac\xd4\xc1\xc1\xc1\x19\x3d\x5d\xa2\xe0\x2f\x38\x98\x7c\xe7\x8c\x0e\x8b\x7b\x70\x96\xc4\x7e\xe2\x7f\xbe\xa3\xff\x3f\xdb\xa8\x6f\xf8\xfb\x93\x9e\xae\x6e\x49\x1c\xee\xd7\x7e\x70\x40\x0d\xaf\xf1\xee\xf4\x77\x00\x00\x00\xff\xff\x4d\x55\x6b\xed\x16\x0c\x00\x00")
+var _templatesJobsHtmlTmpl = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xd4\x56\xcf\x8f\x9c\x36\x14\xbe\xef\x5f\xf1\xe2\x44\x49\x2b\x95\x45\x91\x72\x6a\x80\x2a\xda\xf4\x32\x4a\x7b\x68\xa4\x5e\x2b\x83\x1f\x83\xa7\xc6\x1e\xd9\x8f\xdd\x1d\x51\xfe\xf7\xca\xe6\xc7\xc2\x30\x6c\x3a\xab\x1e\xda\x0b\x60\xfb\xf3\xe7\xef\x7d\xef\xd9\xb8\x6d\x05\x96\x52\x23\xb0\xc2\x68\x42\x4d\xac\xeb\x6e\x12\x21\xef\xa1\x50\xdc\xb9\x34\x74\x73\xa9\xd1\xc2\x08\x00\xbd\x8f\xfc\xb7\x35\x4a\xa1\x4d\xd9\xce\xe4\x5f\xa4\xa3\x3b\xb2\x8a\x65\x37\x00\x6d\x4b\x58\x1f\x15\x27\x04\xe6\x88\x53\xe3\x18\xdc\x76\xdd\x0d\xc0\x9c\xd7\x9a\x87\x80\x06\x48\x88\xe7\x0a\xc7\xfe\xbe\x11\x9e\x91\x23\x2b\x8f\x28\x06\x9c\x47\xda\xf1\xd3\x37\xaa\x6c\x67\xf2\x24\xa6\x6a\xd9\xf9\xb5\x29\x0a\x74\x0e\x0a\xd3\x68\x5a\x0f\xff\x6c\xad\xb1\x5b\x83\x5f\x83\xde\x75\xff\xa7\x82\xa4\xd1\x8b\x81\x24\x7e\x52\xd3\xb6\x60\xb9\xde\x23\xbc\x91\x3f\xc0\x9b\x83\xc9\xe1\xc7\x14\x6e\x77\x26\x77\x10\x02\x9f\xc4\xcf\x48\x45\x96\x70\xa8\x2c\x96\x29\x3b\x98\xdc\xc5\x6d\xeb\x27\xde\xfe\xca\x6b\xec\xba\x18\x1f\xb1\x68\xc2\x9a\x2c\x6b\x5b\x98\x86\xa0\xeb\x92\x98\x67\x49\x4c\x22\x5b\x90\x8d\xa0\x21\xfa\x3b\x1f\x5f\x00\x6f\x01\x83\x0f\xdb\xb0\xa9\xe1\xa3\x93\x65\x3f\xe7\xb3\x74\x3e\x31\xe2\x29\xaa\x61\x82\x1c\xd3\x57\x72\x28\x79\x54\x48\x5b\xf8\x2c\xe2\x23\x45\x75\x43\x3e\x85\x49\x2c\x97\x9c\x80\xca\xe1\x35\x44\x7e\xca\xe8\x4a\x9f\xa7\xde\xea\xae\xbb\xc0\x8e\x5a\xcc\xa8\x9f\x0d\x6f\x4a\xc3\x6b\x06\x82\x13\x8f\xc8\xec\xf7\x0a\x53\x56\x1b\xc1\xd5\xd8\xc7\xed\x1e\x29\x65\xaf\xbd\x7d\x12\xba\x2e\x1a\x46\x49\x92\xc7\xfe\x2e\xf1\x81\x65\xe7\xf2\xf1\x84\xfe\xf5\xfe\x91\x01\xb7\x92\x47\x95\x14\x02\x75\xca\xc8\x36\xd8\x8b\xf6\xc9\x9c\x69\x79\xab\x73\x77\xfc\xb8\x21\xce\xef\x3b\x25\x8b\x3f\x53\x66\x1b\xbd\x33\xf9\x77\xef\xce\x2a\xe3\xdd\xf7\x01\xe4\x2a\xf3\x90\xb2\x57\xb6\xd1\x5a\xea\xfd\x1f\xa3\xe2\x49\xeb\x6f\x8d\x5e\x4b\x2d\xcc\xde\x5d\xa7\x75\x26\xed\x12\x9b\x7f\xb9\xa3\xd4\x3d\xa9\x7f\x96\x0f\x33\x79\x2b\x75\x57\xdb\x71\x6d\xae\x22\x81\x0a\x09\xe7\x16\x85\x9e\x8b\x1e\x7d\xee\xb1\xab\xc0\xc8\x72\x57\x45\xe6\x85\x4e\xad\xf9\xbc\x43\xfe\x70\x7d\xde\xac\xb5\xce\xf5\x32\xf3\x1a\xef\xcf\xa6\xb1\xf1\x2a\x8a\xe0\x17\xef\x00\xf4\x51\x41\x14\x4d\xc0\xd9\x89\x1c\x4c\x82\x92\x0b\x64\x20\x45\xca\x36\xdc\x23\x9e\x4b\x2d\xf0\x31\x65\xd1\x7b\x06\xd6\x78\xb7\x84\xe4\xca\xec\x07\x3b\x14\xcf\x51\x29\x14\xf9\x29\x65\xf5\x29\x2c\xfc\xc5\x77\xb1\x99\xd6\xf3\x65\xa3\x91\x61\xe0\x33\x45\x53\xfb\x7f\xcd\xc2\xc5\xd5\xa4\xf1\x8f\x94\x2d\xcf\x90\x15\x2e\x37\xe2\x74\x06\x02\xf8\x64\x11\x4e\xa6\x01\xd7\x58\xfc\x69\x49\x10\x0b\x79\xff\x2d\xce\xd2\x18\x42\xbb\x62\x4d\xf2\x86\xc8\xe8\x11\x9b\x93\x86\x9c\x74\x24\xb0\xe4\x8d\xa2\xf9\x1e\xee\xfd\xdc\xda\xc6\xf7\x5c\x35\x4f\x65\xd8\xd7\xb5\x90\xae\x96\x93\x02\x96\xdd\x19\x5d\x4a\x5b\x27\x71\xbf\xe6\x96\x14\x3a\x1d\x31\x65\x7d\x83\x6d\x0a\xbb\xbc\x82\x32\x0e\x2f\xf3\xaf\x4c\x3a\xeb\x58\x34\x87\xc6\xba\x20\x5f\x52\x89\xff\xcb\x12\xac\x90\x8b\x67\xca\xe5\x62\x8e\x0a\xef\xfe\xe5\xcc\xcc\xc2\x4c\x59\xc8\x12\xcb\x12\x77\xe4\xfa\xd2\x89\xf4\x96\x64\x8d\xee\x63\x12\x7b\x40\xb6\x59\x2e\xd5\x87\xa5\xe4\x70\x12\xf6\x09\x58\x7a\xe8\xff\x75\xb0\xba\x94\x54\x1f\xbe\x51\x20\xff\x78\x67\x26\x47\x8b\x59\x52\x18\x31\x5d\x0a\x2b\x75\x70\x70\x70\x46\x4f\x97\x21\xf8\x0b\x0e\x26\xdf\x39\xa3\xc3\xe2\x1e\x9c\x25\xb1\x9f\xf8\xaf\x6f\xe5\xff\xce\xfe\xe9\x1b\xfe\x1e\xa4\xa7\x2b\x58\x12\x87\xbb\xb2\x1f\x1c\x50\xc3\x6b\xbc\x03\xfd\x1d\x00\x00\xff\xff\xde\x92\x65\xda\xe2\x0b\x00\x00")
 
 func templatesJobsHtmlTmplBytes() ([]byte, error) {
 	return bindataRead(
@@ -1365,7 +1365,7 @@ func templatesJobsHtmlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/jobs.html.tmpl", size: 3094, mode: os.FileMode(420), modTime: time.Unix(1482966461, 0)}
+	info := bindataFileInfo{name: "templates/jobs.html.tmpl", size: 3042, mode: os.FileMode(420), modTime: time.Unix(1496695751, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1548,100 +1548,100 @@ type bintree struct {
 }
 
 var _bintree = &bintree{nil, map[string]*bintree{
-	"static": {nil, map[string]*bintree{
-		"bower_components": {nil, map[string]*bintree{
-			"angular": {nil, map[string]*bintree{
-				"angular-csp.css":     {staticBower_componentsAngularAngularCspCss, map[string]*bintree{}},
-				"angular.js":          {staticBower_componentsAngularAngularJs, map[string]*bintree{}},
-				"angular.min.js":      {staticBower_componentsAngularAngularMinJs, map[string]*bintree{}},
-				"angular.min.js.gzip": {staticBower_componentsAngularAngularMinJsGzip, map[string]*bintree{}},
-				"angular.min.js.map":  {staticBower_componentsAngularAngularMinJsMap, map[string]*bintree{}},
-				"index.js":            {staticBower_componentsAngularIndexJs, map[string]*bintree{}},
-				"package.json":        {staticBower_componentsAngularPackageJson, map[string]*bintree{}},
+	"static": &bintree{nil, map[string]*bintree{
+		"bower_components": &bintree{nil, map[string]*bintree{
+			"angular": &bintree{nil, map[string]*bintree{
+				"angular-csp.css":     &bintree{staticBower_componentsAngularAngularCspCss, map[string]*bintree{}},
+				"angular.js":          &bintree{staticBower_componentsAngularAngularJs, map[string]*bintree{}},
+				"angular.min.js":      &bintree{staticBower_componentsAngularAngularMinJs, map[string]*bintree{}},
+				"angular.min.js.gzip": &bintree{staticBower_componentsAngularAngularMinJsGzip, map[string]*bintree{}},
+				"angular.min.js.map":  &bintree{staticBower_componentsAngularAngularMinJsMap, map[string]*bintree{}},
+				"index.js":            &bintree{staticBower_componentsAngularIndexJs, map[string]*bintree{}},
+				"package.json":        &bintree{staticBower_componentsAngularPackageJson, map[string]*bintree{}},
 			}},
-			"angular-mocks": {nil, map[string]*bintree{
-				"angular-mocks.js": {staticBower_componentsAngularMocksAngularMocksJs, map[string]*bintree{}},
-				"ngAnimateMock.js": {staticBower_componentsAngularMocksNganimatemockJs, map[string]*bintree{}},
-				"ngMock.js":        {staticBower_componentsAngularMocksNgmockJs, map[string]*bintree{}},
-				"ngMockE2E.js":     {staticBower_componentsAngularMocksNgmocke2eJs, map[string]*bintree{}},
-				"package.json":     {staticBower_componentsAngularMocksPackageJson, map[string]*bintree{}},
+			"angular-mocks": &bintree{nil, map[string]*bintree{
+				"angular-mocks.js": &bintree{staticBower_componentsAngularMocksAngularMocksJs, map[string]*bintree{}},
+				"ngAnimateMock.js": &bintree{staticBower_componentsAngularMocksNganimatemockJs, map[string]*bintree{}},
+				"ngMock.js":        &bintree{staticBower_componentsAngularMocksNgmockJs, map[string]*bintree{}},
+				"ngMockE2E.js":     &bintree{staticBower_componentsAngularMocksNgmocke2eJs, map[string]*bintree{}},
+				"package.json":     &bintree{staticBower_componentsAngularMocksPackageJson, map[string]*bintree{}},
 			}},
-			"angular-resource": {nil, map[string]*bintree{
-				"angular-resource.js":         {staticBower_componentsAngularResourceAngularResourceJs, map[string]*bintree{}},
-				"angular-resource.min.js":     {staticBower_componentsAngularResourceAngularResourceMinJs, map[string]*bintree{}},
-				"angular-resource.min.js.map": {staticBower_componentsAngularResourceAngularResourceMinJsMap, map[string]*bintree{}},
-				"index.js":                    {staticBower_componentsAngularResourceIndexJs, map[string]*bintree{}},
-				"package.json":                {staticBower_componentsAngularResourcePackageJson, map[string]*bintree{}},
+			"angular-resource": &bintree{nil, map[string]*bintree{
+				"angular-resource.js":         &bintree{staticBower_componentsAngularResourceAngularResourceJs, map[string]*bintree{}},
+				"angular-resource.min.js":     &bintree{staticBower_componentsAngularResourceAngularResourceMinJs, map[string]*bintree{}},
+				"angular-resource.min.js.map": &bintree{staticBower_componentsAngularResourceAngularResourceMinJsMap, map[string]*bintree{}},
+				"index.js":                    &bintree{staticBower_componentsAngularResourceIndexJs, map[string]*bintree{}},
+				"package.json":                &bintree{staticBower_componentsAngularResourcePackageJson, map[string]*bintree{}},
 			}},
-			"angular-rickshaw": {nil, map[string]*bintree{
-				"LICENSE":     {staticBower_componentsAngularRickshawLicense, map[string]*bintree{}},
-				"rickshaw.js": {staticBower_componentsAngularRickshawRickshawJs, map[string]*bintree{}},
+			"angular-rickshaw": &bintree{nil, map[string]*bintree{
+				"LICENSE":     &bintree{staticBower_componentsAngularRickshawLicense, map[string]*bintree{}},
+				"rickshaw.js": &bintree{staticBower_componentsAngularRickshawRickshawJs, map[string]*bintree{}},
 			}},
-			"angular-route": {nil, map[string]*bintree{
-				"angular-route.js":         {staticBower_componentsAngularRouteAngularRouteJs, map[string]*bintree{}},
-				"angular-route.min.js":     {staticBower_componentsAngularRouteAngularRouteMinJs, map[string]*bintree{}},
-				"angular-route.min.js.map": {staticBower_componentsAngularRouteAngularRouteMinJsMap, map[string]*bintree{}},
-				"index.js":                 {staticBower_componentsAngularRouteIndexJs, map[string]*bintree{}},
-				"package.json":             {staticBower_componentsAngularRoutePackageJson, map[string]*bintree{}},
+			"angular-route": &bintree{nil, map[string]*bintree{
+				"angular-route.js":         &bintree{staticBower_componentsAngularRouteAngularRouteJs, map[string]*bintree{}},
+				"angular-route.min.js":     &bintree{staticBower_componentsAngularRouteAngularRouteMinJs, map[string]*bintree{}},
+				"angular-route.min.js.map": &bintree{staticBower_componentsAngularRouteAngularRouteMinJsMap, map[string]*bintree{}},
+				"index.js":                 &bintree{staticBower_componentsAngularRouteIndexJs, map[string]*bintree{}},
+				"package.json":             &bintree{staticBower_componentsAngularRoutePackageJson, map[string]*bintree{}},
 			}},
-			"d3": {nil, map[string]*bintree{
-				".gitattributes": {staticBower_componentsD3Gitattributes, map[string]*bintree{}},
-				"LICENSE":        {staticBower_componentsD3License, map[string]*bintree{}},
-				"d3.js":          {staticBower_componentsD3D3Js, map[string]*bintree{}},
-				"d3.min.js":      {staticBower_componentsD3D3MinJs, map[string]*bintree{}},
-				"package.js":     {staticBower_componentsD3PackageJs, map[string]*bintree{}},
+			"d3": &bintree{nil, map[string]*bintree{
+				".gitattributes": &bintree{staticBower_componentsD3Gitattributes, map[string]*bintree{}},
+				"LICENSE":        &bintree{staticBower_componentsD3License, map[string]*bintree{}},
+				"d3.js":          &bintree{staticBower_componentsD3D3Js, map[string]*bintree{}},
+				"d3.min.js":      &bintree{staticBower_componentsD3D3MinJs, map[string]*bintree{}},
+				"package.js":     &bintree{staticBower_componentsD3PackageJs, map[string]*bintree{}},
 			}},
-			"rickshaw": {nil, map[string]*bintree{
-				".jshintignore":    {staticBower_componentsRickshawJshintignore, map[string]*bintree{}},
-				".jshintrc":        {staticBower_componentsRickshawJshintrc, map[string]*bintree{}},
-				".rock.yml":        {staticBower_componentsRickshawRockYml, map[string]*bintree{}},
-				"LICENSE":          {staticBower_componentsRickshawLicense, map[string]*bintree{}},
-				"package.json":     {staticBower_componentsRickshawPackageJson, map[string]*bintree{}},
-				"rickshaw.css":     {staticBower_componentsRickshawRickshawCss, map[string]*bintree{}},
-				"rickshaw.js":      {staticBower_componentsRickshawRickshawJs, map[string]*bintree{}},
-				"rickshaw.min.css": {staticBower_componentsRickshawRickshawMinCss, map[string]*bintree{}},
-				"rickshaw.min.js":  {staticBower_componentsRickshawRickshawMinJs, map[string]*bintree{}},
-				"vendor": {nil, map[string]*bintree{
-					"d3.layout.min.js": {staticBower_componentsRickshawVendorD3LayoutMinJs, map[string]*bintree{}},
-					"d3.min.js":        {staticBower_componentsRickshawVendorD3MinJs, map[string]*bintree{}},
-					"d3.v2.js":         {staticBower_componentsRickshawVendorD3V2Js, map[string]*bintree{}},
-					"d3.v3.js":         {staticBower_componentsRickshawVendorD3V3Js, map[string]*bintree{}},
+			"rickshaw": &bintree{nil, map[string]*bintree{
+				".jshintignore":    &bintree{staticBower_componentsRickshawJshintignore, map[string]*bintree{}},
+				".jshintrc":        &bintree{staticBower_componentsRickshawJshintrc, map[string]*bintree{}},
+				".rock.yml":        &bintree{staticBower_componentsRickshawRockYml, map[string]*bintree{}},
+				"LICENSE":          &bintree{staticBower_componentsRickshawLicense, map[string]*bintree{}},
+				"package.json":     &bintree{staticBower_componentsRickshawPackageJson, map[string]*bintree{}},
+				"rickshaw.css":     &bintree{staticBower_componentsRickshawRickshawCss, map[string]*bintree{}},
+				"rickshaw.js":      &bintree{staticBower_componentsRickshawRickshawJs, map[string]*bintree{}},
+				"rickshaw.min.css": &bintree{staticBower_componentsRickshawRickshawMinCss, map[string]*bintree{}},
+				"rickshaw.min.js":  &bintree{staticBower_componentsRickshawRickshawMinJs, map[string]*bintree{}},
+				"vendor": &bintree{nil, map[string]*bintree{
+					"d3.layout.min.js": &bintree{staticBower_componentsRickshawVendorD3LayoutMinJs, map[string]*bintree{}},
+					"d3.min.js":        &bintree{staticBower_componentsRickshawVendorD3MinJs, map[string]*bintree{}},
+					"d3.v2.js":         &bintree{staticBower_componentsRickshawVendorD3V2Js, map[string]*bintree{}},
+					"d3.v3.js":         &bintree{staticBower_componentsRickshawVendorD3V3Js, map[string]*bintree{}},
 				}},
 			}},
 		}},
-		"css": {nil, map[string]*bintree{
-			"app.css":                  {staticCssAppCss, map[string]*bintree{}},
-			"bootstrap-custom.min.css": {staticCssBootstrapCustomMinCss, map[string]*bintree{}},
-			"font-awesome.css":         {staticCssFontAwesomeCss, map[string]*bintree{}},
-			"highlight.css":            {staticCssHighlightCss, map[string]*bintree{}},
+		"css": &bintree{nil, map[string]*bintree{
+			"app.css":                  &bintree{staticCssAppCss, map[string]*bintree{}},
+			"bootstrap-custom.min.css": &bintree{staticCssBootstrapCustomMinCss, map[string]*bintree{}},
+			"font-awesome.css":         &bintree{staticCssFontAwesomeCss, map[string]*bintree{}},
+			"highlight.css":            &bintree{staticCssHighlightCss, map[string]*bintree{}},
 		}},
-		"favicon.ico": {staticFaviconIco, map[string]*bintree{}},
-		"fonts": {nil, map[string]*bintree{
-			"fontawesome-webfont.eot":  {staticFontsFontawesomeWebfontEot, map[string]*bintree{}},
-			"fontawesome-webfont.svg":  {staticFontsFontawesomeWebfontSvg, map[string]*bintree{}},
-			"fontawesome-webfont.ttf":  {staticFontsFontawesomeWebfontTtf, map[string]*bintree{}},
-			"fontawesome-webfont.woff": {staticFontsFontawesomeWebfontWoff, map[string]*bintree{}},
+		"favicon.ico": &bintree{staticFaviconIco, map[string]*bintree{}},
+		"fonts": &bintree{nil, map[string]*bintree{
+			"fontawesome-webfont.eot":  &bintree{staticFontsFontawesomeWebfontEot, map[string]*bintree{}},
+			"fontawesome-webfont.svg":  &bintree{staticFontsFontawesomeWebfontSvg, map[string]*bintree{}},
+			"fontawesome-webfont.ttf":  &bintree{staticFontsFontawesomeWebfontTtf, map[string]*bintree{}},
+			"fontawesome-webfont.woff": &bintree{staticFontsFontawesomeWebfontWoff, map[string]*bintree{}},
 		}},
-		"img": {nil, map[string]*bintree{
-			"dkron-badge-bw-background.png": {staticImgDkronBadgeBwBackgroundPng, map[string]*bintree{}},
-			"dkron-badge-bw.png":            {staticImgDkronBadgeBwPng, map[string]*bintree{}},
-			"dkron-logo-white.png":          {staticImgDkronLogoWhitePng, map[string]*bintree{}},
+		"img": &bintree{nil, map[string]*bintree{
+			"dkron-badge-bw-background.png": &bintree{staticImgDkronBadgeBwBackgroundPng, map[string]*bintree{}},
+			"dkron-badge-bw.png":            &bintree{staticImgDkronBadgeBwPng, map[string]*bintree{}},
+			"dkron-logo-white.png":          &bintree{staticImgDkronLogoWhitePng, map[string]*bintree{}},
 		}},
-		"jquery": {nil, map[string]*bintree{
-			"jquery-2.1.3.min.js": {staticJqueryJquery213MinJs, map[string]*bintree{}},
+		"jquery": &bintree{nil, map[string]*bintree{
+			"jquery-2.1.3.min.js": &bintree{staticJqueryJquery213MinJs, map[string]*bintree{}},
 		}},
-		"js": {nil, map[string]*bintree{
-			"bootstrap.min.js":  {staticJsBootstrapMinJs, map[string]*bintree{}},
-			"dashboard.js":      {staticJsDashboardJs, map[string]*bintree{}},
-			"highlight.pack.js": {staticJsHighlightPackJs, map[string]*bintree{}},
+		"js": &bintree{nil, map[string]*bintree{
+			"bootstrap.min.js":  &bintree{staticJsBootstrapMinJs, map[string]*bintree{}},
+			"dashboard.js":      &bintree{staticJsDashboardJs, map[string]*bintree{}},
+			"highlight.pack.js": &bintree{staticJsHighlightPackJs, map[string]*bintree{}},
 		}},
 	}},
-	"templates": {nil, map[string]*bintree{
-		"dashboard.html.tmpl":  {templatesDashboardHtmlTmpl, map[string]*bintree{}},
-		"executions.html.tmpl": {templatesExecutionsHtmlTmpl, map[string]*bintree{}},
-		"index.html.tmpl":      {templatesIndexHtmlTmpl, map[string]*bintree{}},
-		"jobs.html.tmpl":       {templatesJobsHtmlTmpl, map[string]*bintree{}},
-		"status.html.tmpl":     {templatesStatusHtmlTmpl, map[string]*bintree{}},
+	"templates": &bintree{nil, map[string]*bintree{
+		"dashboard.html.tmpl":  &bintree{templatesDashboardHtmlTmpl, map[string]*bintree{}},
+		"executions.html.tmpl": &bintree{templatesExecutionsHtmlTmpl, map[string]*bintree{}},
+		"index.html.tmpl":      &bintree{templatesIndexHtmlTmpl, map[string]*bintree{}},
+		"jobs.html.tmpl":       &bintree{templatesJobsHtmlTmpl, map[string]*bintree{}},
+		"status.html.tmpl":     &bintree{templatesStatusHtmlTmpl, map[string]*bintree{}},
 	}},
 }}
 
