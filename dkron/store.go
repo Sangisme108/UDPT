@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libkv"
-	"github.com/docker/libkv/store"
-	"github.com/docker/libkv/store/consul"
-	"github.com/docker/libkv/store/etcd"
-	"github.com/docker/libkv/store/zookeeper"
+	"github.com/abronan/valkeyrie"
+	"github.com/abronan/valkeyrie/store"
+	"github.com/abronan/valkeyrie/store/consul"
+	etcd "github.com/abronan/valkeyrie/store/etcd/v2"
+	"github.com/abronan/valkeyrie/store/zookeeper"
 	"github.com/victorcoder/dkron/cron"
 )
 
@@ -31,7 +31,7 @@ func init() {
 }
 
 func NewStore(backend string, machines []string, a *AgentCommand, keyspace string) *Store {
-	s, err := libkv.NewStore(store.Backend(backend), machines, nil)
+	s, err := valkeyrie.NewStore(store.Backend(backend), machines, nil)
 	if err != nil {
 		log.Error(err)
 	}
@@ -42,7 +42,7 @@ func NewStore(backend string, machines []string, a *AgentCommand, keyspace strin
 		"keyspace": keyspace,
 	}).Debug("store: Backend config")
 
-	_, err = s.List(keyspace)
+	_, err = s.List(keyspace, nil)
 	if err != store.ErrKeyNotFound && err != nil {
 		log.WithError(err).Fatal("store: Store backend not reachable")
 	}
@@ -193,7 +193,7 @@ func (s *Store) validateJob(job *Job) error {
 
 // GetJobs returns all jobs
 func (s *Store) GetJobs() ([]*Job, error) {
-	res, err := s.Client.List(s.keyspace + "/jobs/")
+	res, err := s.Client.List(s.keyspace+"/jobs/", nil)
 	if err != nil {
 		if err == store.ErrKeyNotFound {
 			log.Debug("store: No jobs found")
@@ -217,7 +217,7 @@ func (s *Store) GetJobs() ([]*Job, error) {
 
 // Get a job
 func (s *Store) GetJob(name string) (*Job, error) {
-	res, err := s.Client.Get(s.keyspace + "/jobs/" + name)
+	res, err := s.Client.Get(s.keyspace+"/jobs/"+name, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -256,7 +256,7 @@ func (s *Store) DeleteJob(name string) (*Job, error) {
 
 func (s *Store) GetExecutions(jobName string) ([]*Execution, error) {
 	prefix := fmt.Sprintf("%s/executions/%s", s.keyspace, jobName)
-	res, err := s.Client.List(prefix)
+	res, err := s.Client.List(prefix, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -282,11 +282,11 @@ func (s *Store) GetExecutions(jobName string) ([]*Execution, error) {
 }
 
 func (s *Store) GetLastExecutionGroup(jobName string) ([]*Execution, error) {
-	res, err := s.Client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, jobName))
+	res, err := s.Client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, jobName), nil)
 	if err != nil {
 		return nil, err
 	}
-	if len(res) == 0{
+	if len(res) == 0 {
 		return []*Execution{}, nil
 	}
 
@@ -299,7 +299,7 @@ func (s *Store) GetLastExecutionGroup(jobName string) ([]*Execution, error) {
 }
 
 func (s *Store) GetExecutionGroup(execution *Execution) ([]*Execution, error) {
-	res, err := s.Client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, execution.JobName))
+	res, err := s.Client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, execution.JobName), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -388,7 +388,7 @@ func (s *Store) DeleteExecutions(jobName string) error {
 
 // Retrieve the leader from the store
 func (s *Store) GetLeader() []byte {
-	res, err := s.Client.Get(s.LeaderKey())
+	res, err := s.Client.Get(s.LeaderKey(), nil)
 	if err != nil {
 		if err == store.ErrNotReachable {
 			log.Fatal("store: Store not reachable, be sure you have an existing key-value store running is running and is reachable.")
