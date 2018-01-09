@@ -51,7 +51,11 @@ func NewStore(backend string, machines []string, a *AgentCommand, keyspace strin
 }
 
 // Store a job
-func (s *Store) SetJob(job *Job) error {
+func (s *Store) SetJob(job *Job, previousJob *Job) error {
+	//Existing job that has children, let's keep it's children
+	if previousJob != nil && len(previousJob.DependentJobs) != 0 {
+		job.DependentJobs = previousJob.DependentJobs
+	}
 	// Sanitize the job name
 	job.Name = generateSlug(job.Name)
 	jobKey := fmt.Sprintf("%s/jobs/%s", s.keyspace, job.Name)
@@ -102,6 +106,7 @@ func (s *Store) SetJob(job *Job) error {
 // Set the depencency tree for a job given the job and the previous version
 // of the Job or nil if it's new.
 func (s *Store) SetJobDependencyTree(job *Job, previousJob *Job) error {
+
 	// Existing job that doesn't have parent job set and it's being set
 	if previousJob != nil && previousJob.ParentJob == "" && job.ParentJob != "" {
 		pj, err := job.GetParent()
@@ -112,7 +117,7 @@ func (s *Store) SetJobDependencyTree(job *Job, previousJob *Job) error {
 		defer pj.Unlock()
 
 		pj.DependentJobs = append(pj.DependentJobs, job.Name)
-		if err := s.SetJob(pj); err != nil {
+		if err := s.SetJob(pj,nil); err != nil {
 			return err
 		}
 	}
@@ -134,7 +139,7 @@ func (s *Store) SetJobDependencyTree(job *Job, previousJob *Job) error {
 			}
 		}
 		pj.DependentJobs = append(pj.DependentJobs[:ndx], pj.DependentJobs[ndx+1:]...)
-		if err := s.SetJob(pj); err != nil {
+		if err := s.SetJob(pj,nil); err != nil {
 			return err
 		}
 	}
@@ -149,7 +154,7 @@ func (s *Store) SetJobDependencyTree(job *Job, previousJob *Job) error {
 		defer pj.Unlock()
 
 		pj.DependentJobs = append(pj.DependentJobs, job.Name)
-		if err := s.SetJob(pj); err != nil {
+		if err := s.SetJob(pj,nil); err != nil {
 			return err
 		}
 	}
