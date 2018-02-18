@@ -12,19 +12,16 @@ import (
 
 const pretty = "pretty"
 
-// Transport is the interface that wraps the ServeHTTP method.
 type Transport interface {
 	ServeHTTP()
 }
 
-// HTTPTransport stores pointers to an agent and a gin Engine.
 type HTTPTransport struct {
 	Engine *gin.Engine
 
 	agent *AgentCommand
 }
 
-// NewTransport creates an HTTPTransport with a bound agent.
 func NewTransport(a *AgentCommand) *HTTPTransport {
 	return &HTTPTransport{
 		agent: a,
@@ -39,11 +36,11 @@ func (h *HTTPTransport) ServeHTTP() {
 	}
 
 	h.Engine = gin.Default()
-	h.Engine.HTMLRender = createMyRender()
+	h.Engine.HTMLRender = CreateMyRender()
 	rootPath := h.Engine.Group("/")
 
-	h.apiRoutes(rootPath)
-	h.agent.dashboardRoutes(rootPath)
+	h.ApiRoutes(rootPath)
+	h.agent.DashboardRoutes(rootPath)
 
 	h.Engine.Use(h.MetaMiddleware())
 	//r.GET("/debug/vars", expvar.Handler())
@@ -55,8 +52,7 @@ func (h *HTTPTransport) ServeHTTP() {
 	go h.Engine.Run(h.agent.config.HTTPAddr)
 }
 
-// apiRoutes registers the api routes on the gin RouterGroup.
-func (h *HTTPTransport) apiRoutes(r *gin.RouterGroup) {
+func (h *HTTPTransport) ApiRoutes(r *gin.RouterGroup) {
 	v1 := r.Group("/v1")
 	v1.GET("/", h.indexHandler)
 	v1.GET("/members", h.membersHandler)
@@ -76,7 +72,6 @@ func (h *HTTPTransport) apiRoutes(r *gin.RouterGroup) {
 	jobs.GET("/:job/executions", h.executionsHandler)
 }
 
-// MetaMiddleware adds middleware to the gin Context.
 func (h *HTTPTransport) MetaMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Header("X-Whom", h.agent.config.NodeName)
@@ -107,7 +102,7 @@ func (h *HTTPTransport) indexHandler(c *gin.Context) {
 }
 
 func (h *HTTPTransport) jobsHandler(c *gin.Context) {
-	jobs, err := h.agent.store.GetJobs()
+	jobs, err := h.agent.Store.GetJobs()
 	if err != nil {
 		log.WithError(err).Error("api: Unable to get jobs, store not reachable.")
 		return
@@ -118,7 +113,7 @@ func (h *HTTPTransport) jobsHandler(c *gin.Context) {
 func (h *HTTPTransport) jobGetHandler(c *gin.Context) {
 	jobName := c.Param("job")
 
-	job, err := h.agent.store.GetJob(jobName)
+	job, err := h.agent.Store.GetJob(jobName)
 	if err != nil {
 		log.Error(err)
 	}
@@ -137,7 +132,7 @@ func (h *HTTPTransport) jobCreateOrUpdateHandler(c *gin.Context) {
 	c.BindJSON(&job)
 
 	// Get if the requested job already exist
-	ej, err := h.agent.store.GetJob(job.Name)
+	ej, err := h.agent.Store.GetJob(job.Name)
 	if err != nil && err != store.ErrKeyNotFound {
 		c.AbortWithError(422, err)
 		return
@@ -150,18 +145,18 @@ func (h *HTTPTransport) jobCreateOrUpdateHandler(c *gin.Context) {
 	}
 
 	// Save the job to the store
-	if err = h.agent.store.SetJob(&job, ej); err != nil {
+	if err = h.agent.Store.SetJob(&job); err != nil {
 		c.AbortWithError(422, err)
 		return
 	}
 
 	// Save the job parent
-	if err = h.agent.store.SetJobDependencyTree(&job, ej); err != nil {
+	if err = h.agent.Store.SetJobDependencyTree(&job, ej); err != nil {
 		c.AbortWithError(422, err)
 		return
 	}
 
-	h.agent.schedulerRestartQuery(string(h.agent.store.GetLeader()))
+	h.agent.schedulerRestartQuery(string(h.agent.Store.GetLeader()))
 
 	c.Header("Location", fmt.Sprintf("%s/%s", c.Request.RequestURI, job.Name))
 	renderJSON(c, http.StatusCreated, job)
@@ -170,20 +165,20 @@ func (h *HTTPTransport) jobCreateOrUpdateHandler(c *gin.Context) {
 func (h *HTTPTransport) jobDeleteHandler(c *gin.Context) {
 	jobName := c.Param("job")
 
-	job, err := h.agent.store.DeleteJob(jobName)
+	job, err := h.agent.Store.DeleteJob(jobName)
 	if err != nil {
 		c.AbortWithError(http.StatusNotFound, err)
 		return
 	}
 
-	h.agent.schedulerRestartQuery(string(h.agent.store.GetLeader()))
+	h.agent.schedulerRestartQuery(string(h.agent.Store.GetLeader()))
 	renderJSON(c, http.StatusOK, job)
 }
 
 func (h *HTTPTransport) jobRunHandler(c *gin.Context) {
 	jobName := c.Param("job")
 
-	job, err := h.agent.store.GetJob(jobName)
+	job, err := h.agent.Store.GetJob(jobName)
 	if err != nil {
 		c.AbortWithError(http.StatusNotFound, err)
 		return
@@ -200,21 +195,21 @@ func (h *HTTPTransport) jobRunHandler(c *gin.Context) {
 func (h *HTTPTransport) executionsHandler(c *gin.Context) {
 	jobName := c.Param("job")
 
-	job, err := h.agent.store.GetJob(jobName)
+	job, err := h.agent.Store.GetJob(jobName)
 	if err != nil {
 		c.AbortWithError(http.StatusNotFound, err)
 		return
 	}
 
-	executions, err := h.agent.store.GetExecutions(job.Name)
+	executions, err := h.agent.Store.GetExecutions(job.Name)
 	if err != nil {
 		if err == store.ErrKeyNotFound {
 			renderJSON(c, http.StatusOK, &[]Execution{})
 			return
+		} else {
+			log.Error(err)
+			return
 		}
-		log.Error(err)
-		return
-
 	}
 	renderJSON(c, http.StatusOK, executions)
 }
