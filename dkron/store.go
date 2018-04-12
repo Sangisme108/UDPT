@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"sort"
-	"time"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/abronan/valkeyrie"
@@ -19,17 +18,14 @@ const MaxExecutions = 100
 
 type Storage interface {
 	SetJob(job *Job) error
-	AtomicJobPut(job *Job, prevJobKVPair *store.KVPair) (bool, error)
 	SetJobDependencyTree(job *Job, previousJob *Job) error
 	GetJobs() ([]*Job, error)
 	GetJob(name string) (*Job, error)
-	GetJobWithKVPair(name string) (*Job, *store.KVPair, error)
 	DeleteJob(name string) (*Job, error)
 	GetExecutions(jobName string) ([]*Execution, error)
 	GetLastExecutionGroup(jobName string) ([]*Execution, error)
 	GetExecutionGroup(execution *Execution) ([]*Execution, error)
 	GetGroupedExecutions(jobName string) (map[int64][]*Execution, []int64, error)
-	GetCurrentExecutions(nodeName string) ([]*Execution, error)
 	SetExecution(execution *Execution) (string, error)
 	DeleteExecutions(jobName string) error
 	GetLeader() []byte
@@ -70,11 +66,9 @@ func NewStore(backend string, machines []string, a *Agent, keyspace string, conf
 }
 
 // Store a job
-func (s *Store) SetJob(job *Job, previousJob *Job) error {
+func (s *Store) SetJob(job *Job, copyDependentJobs bool) error {
 	//Existing job that has children, let's keep it's children
-	if previousJob != nil && len(previousJob.DependentJobs) != 0 {
-		job.DependentJobs = previousJob.DependentJobs
-	}
+
 	// Sanitize the job name
 	job.Name = generateSlug(job.Name)
 	jobKey := fmt.Sprintf("%s/jobs/%s", s.keyspace, job.Name)
@@ -92,6 +86,8 @@ func (s *Store) SetJob(job *Job, previousJob *Job) error {
 		return err
 	}
 	if ej != nil {
+		ej.Lock()
+		ej.Unlock()
 		// When the job runs, these status vars are updated
 		// otherwise use the ones that are stored
 		if ej.LastError.After(job.LastError) {
@@ -106,6 +102,9 @@ func (s *Store) SetJob(job *Job, previousJob *Job) error {
 		if ej.ErrorCount > job.ErrorCount {
 			job.ErrorCount = ej.ErrorCount
 		}
+		if len(ej.DependentJobs) != 0 && copyDependentJobs {
+			job.DependentJobs = ej.DependentJobs
+		}
 	}
 
 	jobJSON, _ := json.Marshal(job)
@@ -119,6 +118,54 @@ func (s *Store) SetJob(job *Job, previousJob *Job) error {
 		return err
 	}
 
+	if ej != nil {
+		// Existing job that doesn't have parent job set and it's being set
+		if ej.ParentJob == "" && job.ParentJob != "" {
+			pj, err := job.GetParent()
+			if err != nil {
+				return err
+			}
+
+			pj.DependentJobs = append(pj.DependentJobs, job.Name)
+			if err := s.SetJob(pj, false); err != nil {
+				return err
+			}
+		}
+
+		// Existing job that has parent job set and it's being removed
+		if ej.ParentJob != "" && job.ParentJob == "" {
+			pj, err := ej.GetParent()
+			if err != nil {
+				return err
+			}
+
+			ndx := 0
+			for i, djn := range pj.DependentJobs {
+				if djn == job.Name {
+					ndx = i
+					break
+				}
+			}
+			pj.DependentJobs = append(pj.DependentJobs[:ndx], pj.DependentJobs[ndx+1:]...)
+			if err := s.SetJob(pj, false); err != nil {
+				return err
+			}
+		}
+	}
+
+	// New job that has parent job set
+	if ej == nil && job.ParentJob != "" {
+		pj, err := job.GetParent()
+		if err != nil {
+			return err
+		}
+
+		pj.DependentJobs = append(pj.DependentJobs, job.Name)
+		if err := s.SetJob(pj, false); err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -129,72 +176,6 @@ func (s *Store) AtomicJobPut(job *Job, prevJobKVPair *store.KVPair) (bool, error
 	ok, _, err := s.Client.AtomicPut(jobKey, jobJSON, prevJobKVPair, nil)
 
 	return ok, err
-}
-
-// Set the depencency tree for a job given the job and the previous version
-// of the Job or nil if it's new.
-func (s *Store) SetJobDependencyTree(job *Job, previousJob *Job) error {
-	// Existing job that doesn't have parent job set and it's being set
-	if previousJob != nil && previousJob.ParentJob == "" && job.ParentJob != "" {
-		pj, err := job.GetParent()
-		if err != nil {
-			return err
-		}
-		pj.Lock()
-		defer pj.Unlock()
-
-		pj.DependentJobs = append(pj.DependentJobs, job.Name)
-		if err := s.SetJob(pj, nil); err != nil {
-			return err
-		}
-	}
-
-	// Existing job that has parent job set and it's being removed
-	if previousJob != nil && previousJob.ParentJob != "" && job.ParentJob == "" {
-		pj, err := previousJob.GetParent()
-		if err != nil {
-			return err
-		}
-		pj.Lock()
-		defer pj.Unlock()
-
-		ndx := 0
-		for i, djn := range pj.DependentJobs {
-			if djn == job.Name {
-				ndx = i
-				break
-			}
-		}
-		pj.DependentJobs = append(pj.DependentJobs[:ndx], pj.DependentJobs[ndx+1:]...)
-		if err := s.SetJob(pj, nil); err != nil {
-			return err
-		}
-	}
-
-	// New job that has parent job set
-	if previousJob == nil && job.ParentJob != "" {
-		pj, err := job.GetParent()
-		if err != nil {
-			return err
-		}
-		pj.Lock()
-		defer pj.Unlock()
-
-		pj.DependentJobs = append(pj.DependentJobs, job.Name)
-		if err := s.SetJob(pj, nil); err != nil {
-			return err
-		}
-	}
-
-	return nil
-}
-
-func (s *Store) validateTimeZone(timezone string) error {
-	if timezone == "" {
-		return nil
-	}
-	_, err := time.LoadLocation(timezone)
-	return err
 }
 
 func (s *Store) validateJob(job *Job) error {
@@ -211,9 +192,6 @@ func (s *Store) validateJob(job *Job) error {
 
 	if job.Concurrency != ConcurrencyAllow && job.Concurrency != ConcurrencyForbid && job.Concurrency != "" {
 		return ErrWrongConcurrency
-	}
-	if err := s.validateTimeZone(job.Timezone); err != nil {
-		return err
 	}
 
 	return nil
@@ -294,7 +272,24 @@ func (s *Store) GetExecutions(jobName string) ([]*Execution, error) {
 		return nil, err
 	}
 
-	return s.unmarshalExecutions(res, jobName)
+	var executions []*Execution
+
+	for _, node := range res {
+		if store.Backend(s.backend) != store.ZK {
+			path := store.SplitKey(node.Key)
+			dir := path[len(path)-2]
+			if dir != jobName {
+				continue
+			}
+		}
+		var execution Execution
+		err := json.Unmarshal([]byte(node.Value), &execution)
+		if err != nil {
+			return nil, err
+		}
+		executions = append(executions, &execution)
+	}
+	return executions, nil
 }
 
 func (s *Store) GetLastExecutionGroup(jobName string) ([]*Execution, error) {
@@ -411,35 +406,6 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 	}
 
 	return key, nil
-}
-
-func (s *Store) GetCurrentExecutions(nodeName string) ([]*Execution, error) {
-	res, err := s.Client.List(fmt.Sprintf("%s/current_executions/%s", s.keyspace, nodeName), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return s.unmarshalExecutions(res, nodeName)
-}
-
-func (s *Store) unmarshalExecutions(res []*store.KVPair, stopWord string) ([]*Execution, error) {
-	var executions []*Execution
-	for _, node := range res {
-		if store.Backend(s.backend) != store.ZK {
-			path := store.SplitKey(node.Key)
-			dir := path[len(path)-2]
-			if dir != stopWord {
-				continue
-			}
-		}
-		var execution Execution
-		err := json.Unmarshal([]byte(node.Value), &execution)
-		if err != nil {
-			return nil, err
-		}
-		executions = append(executions, &execution)
-	}
-	return executions, nil
 }
 
 // Removes all executions of a job
