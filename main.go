@@ -5,32 +5,44 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/hashicorp/go-plugin"
 	"github.com/mitchellh/cli"
-	"github.com/victorcoder/dkron/cmd"
 	"github.com/victorcoder/dkron/dkron"
 )
 
+const (
+	VERSION = "0.9.8"
+)
+
 func main() {
-	c := cli.NewCLI("dkron", dkron.Version)
+	c := cli.NewCLI("dkron", VERSION)
 	c.Args = os.Args[1:]
 	c.HelpFunc = cli.BasicHelpFunc("dkron")
 
 	ui := &cli.BasicUi{Writer: os.Stdout}
 
+	plugins := &Plugins{}
+	plugins.DiscoverPlugins()
+
+	// Make sure we clean up any managed plugins at the end of this
+
 	c.Commands = map[string]cli.CommandFactory{
 		"agent": func() (cli.Command, error) {
-			return &cmd.AgentCommand{
-				Ui: ui,
+			return &dkron.AgentCommand{
+				Ui:               ui,
+				Version:          VERSION,
+				ProcessorPlugins: plugins.Processors,
 			}, nil
 		},
 		"keygen": func() (cli.Command, error) {
-			return &cmd.KeygenCommand{
+			return &dkron.KeygenCommand{
 				Ui: ui,
 			}, nil
 		},
 		"version": func() (cli.Command, error) {
-			return &cmd.VersionCommand{
-				Ui: ui,
+			return &dkron.VersionCommand{
+				Version: VERSION,
+				Ui:      ui,
 			}, nil
 		},
 	}
@@ -39,5 +51,7 @@ func main() {
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error executing CLI: %s\n", err.Error())
 	}
+
+	plugin.CleanupClients()
 	os.Exit(exitStatus)
 }
