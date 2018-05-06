@@ -797,7 +797,7 @@ func staticJsBootstrapMinJs() (*asset, error) {
 	return a, nil
 }
 
-var _staticJsDashboardJs = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xec\x59\xdf\x6f\xdb\x36\x10\x7e\xcf\x5f\x71\x53\x03\x48\x42\x6c\xc5\xe9\xf6\x64\xc7\x01\xba\xb5\x5b\x7f\xad\x2d\xd6\x76\x2f\x81\x11\xd0\xd2\x59\x62\x4d\x91\x2e\x49\x39\x36\x0a\xff\xef\x03\xa9\xdf\x8a\x92\xb8\x59\x36\x64\x6b\xfb\x60\x5b\xe4\xf1\xe3\xf1\xee\xfb\xa8\xbb\x66\x4d\x24\x44\x4b\x29\x38\x4c\x81\xf0\x38\x63\x44\x06\xa9\x88\x32\x86\x9e\x6b\xc7\xdd\x01\x9c\xbb\xc5\xcc\x50\xd2\x70\xa9\x12\x72\xe9\xce\xfc\xc9\x81\x9d\x0e\x42\xc1\x95\x26\x5c\x7b\x6e\x42\x23\x7c\x8a\x8c\x6c\xdd\x01\x3c\x1e\x8d\x46\xfe\xe4\xa0\xb6\xd1\x52\x30\x86\xd2\x73\x5f\x8a\xf9\x6b\xaa\xf4\x2f\x5a\x32\x77\x00\x8b\x8c\x87\x9a\x0a\x0e\xde\xa1\x0a\xc5\x0a\x07\x70\x98\x68\xbd\x1a\xc0\x21\xe5\x1a\xe5\x9a\xb0\x01\x54\xb8\x3e\x7c\x39\x00\xc8\x0d\x03\x99\xf1\x97\x62\x0e\xd3\x0a\xc2\xfb\x24\xe6\x6f\x48\x8a\xb9\x55\x69\x77\xee\xc8\x8c\x73\xca\xe3\x0b\x07\x8e\xa0\x30\x99\xc1\x14\xb4\xcc\x70\x62\x0d\x4d\x08\x24\xaa\x95\xe0\x0a\x61\x9a\x3b\x10\xac\x84\xd2\xde\xd3\x57\x7f\xbc\x7d\x73\xf1\xe4\xdd\x8b\x8b\x77\x4f\x3e\x3c\x87\x23\x70\x8f\x3f\x89\xb9\x3a\x76\x6b\x28\x3f\xc7\x28\xd7\x07\x2a\x0b\x43\x54\xca\xab\xbc\x8a\x88\x26\x03\x50\x9a\xe8\x4c\x0d\x20\x41\x12\xa1\x54\x03\x08\x05\x5f\xd0\xb8\xf4\x15\xe0\xd0\x73\x1f\xa5\xa8\x14\x89\xd1\xf5\x83\x44\xa7\xcc\x73\x4f\x23\xba\x86\x90\x11\xa5\xa6\x0e\x61\x28\x35\xd8\xcf\x61\xb1\x07\x2c\x48\x84\x40\xb9\x73\xf6\xbe\x18\x28\x8e\x6a\x7c\x83\x86\x8f\xc6\xf1\xd3\xe3\x88\xae\xcf\x5c\x93\x93\x72\x43\x27\x68\xc1\x39\x7e\x10\x99\x28\x7b\x75\xbc\x03\xc5\x68\x84\x1f\x57\xde\xe3\xd1\xa8\xce\x95\xe7\x97\x4e\x37\x50\x1c\x3f\xff\xf6\xdc\x90\x09\x85\x6e\x11\x17\xf3\xef\x92\xf2\x48\x5c\x06\x4c\x84\xc4\x2c\x0f\x24\x32\x41\x22\xaf\xb2\xd8\x15\xbf\x76\xa5\x73\x55\x30\x51\x4a\x21\xff\xd1\x50\x46\x84\xc7\x28\xeb\x48\x9e\xce\x33\xad\x05\x07\xbd\x5d\xe1\xd4\xc9\x1f\x9c\x72\xa1\x3d\x19\xd8\xcf\x61\x7e\x68\x30\x2e\x0d\x23\xaa\x52\x5a\x21\x3b\x40\x24\x25\xc3\x84\x46\x11\xf2\xa9\x63\x78\xe6\x9c\x6d\x4e\x8f\x73\xb0\xb3\x67\xe6\x4c\xfb\x65\xaa\x0e\xce\xce\x46\xa6\x60\x7e\x84\x0c\x35\xee\x47\x7e\x6b\xfb\xf5\xec\xcf\xb7\xf8\xaf\xf1\x7f\x91\x31\xb6\x05\x89\xa9\x58\x63\xf4\x5d\x04\x0f\x5f\x04\x26\x53\x77\x55\x81\x16\x71\xcc\x6e\x51\xc1\xdf\xba\xd9\xed\x60\xbe\x8b\xfb\xf0\x58\x9e\x3b\xf6\x9d\xe5\x0f\x9f\xe5\x79\xa6\xf6\xe6\xb8\x89\x8b\xe1\x6d\xb6\x8a\x88\xc6\x3f\x29\x5e\x36\x09\x7e\x23\xb3\x63\xbc\x96\xd8\xf7\xc7\xe0\x5c\x7d\xb9\x77\xef\xad\xb5\x5d\xda\x62\xdb\xa3\x50\x70\x3e\xb4\x29\xbd\x2b\xd5\xda\x10\xfd\x7c\xfb\xd7\xd8\x44\xa3\xa9\xd3\xf0\xe7\x21\xb1\x2b\x46\x6d\xde\xef\x76\xfd\xb5\x7c\x2a\x92\x56\xe4\xfc\x22\x14\x19\xd7\x30\x85\xd1\xa4\x9e\xb3\x27\xeb\x9d\x59\x10\xca\x30\xba\x30\x2c\xea\xcc\xa8\xea\x42\xea\x9b\x2d\x86\xce\x67\xcd\x5b\xbb\xc9\x9b\x26\xaf\x2d\x85\x1a\xdc\xee\x75\x35\x9f\xea\xf1\xb4\xbb\xa7\x41\x6b\x8d\xf7\x9c\xe1\xe6\x53\x58\x83\x85\x90\x1e\x9d\x8e\x26\x40\xe1\xd4\x62\x06\x0c\x79\xac\x93\x09\xd0\xa3\xa3\x9a\x36\x5d\x5f\xdb\xcf\x47\x76\xe5\x39\x9d\xb5\xc3\x5f\x72\xb8\x7d\x9a\xe6\x53\xbd\xb0\x31\x5a\xa9\x8c\x2e\xc0\xe3\x78\x09\x4f\x89\xa9\xd3\x88\xc6\x60\x45\xa4\x42\xaf\x5c\xc3\x88\xd2\x17\xc5\x8e\xbe\x0f\x67\x70\xab\xb1\xdd\xc5\xf7\xeb\x73\xdd\x10\xa1\x6b\x26\x8e\xe0\xa4\xd2\x26\x20\x53\x78\x15\xab\x9d\x89\x9e\xc1\x26\x46\xce\xe3\x83\x9e\x6c\xf5\x07\xbb\x95\xd7\x6b\x23\x5b\xcb\xa2\xec\x31\xbd\x2b\xf7\x6b\x7d\xfb\xe6\x2f\xaf\x5d\xdd\xd2\x5e\x9d\x4c\xd8\x27\x15\x50\x4e\xf5\x73\x1a\x27\x8c\xc6\x89\x51\xe4\x5b\xfe\xba\x78\xf5\x1d\xec\xfa\x3b\xe1\x17\x3c\xc2\xcd\x57\xf4\xc1\x87\xc8\x30\x45\xae\x5b\x6d\xb0\x58\x99\x65\x26\x96\x5f\x8a\x2b\x90\x47\x28\x51\x8e\xc1\x65\x94\xa3\x3b\xb0\xa3\x16\x64\x25\x98\x7d\x2b\x17\x53\x44\xba\xdd\x9a\x4a\xa1\xa4\x68\x45\x5b\xe6\x8d\x93\x14\xc7\xe0\x96\x0d\xa6\x8d\x5f\x81\x09\x10\x0a\x26\xcc\x46\x11\x91\xcb\x58\x22\xf2\x6a\xc6\x10\x6b\x0c\xe7\x5f\x36\x63\x18\x0d\x60\x3b\x86\xd1\x6e\x66\xa3\xd8\xc1\xcd\xef\xb0\x7e\x54\x89\xd1\xad\x78\xb3\xe6\x3d\x85\x44\x67\x12\xeb\x50\x00\x24\x62\x6d\x22\x51\x93\x10\x60\xf3\xab\x90\x29\xd1\xda\x8c\x57\x59\xdf\xf8\x2d\x9b\x3c\x8e\x3a\x93\x1c\x36\x93\xc6\xf8\x6e\xd0\x78\xd8\xf6\x01\x6d\xaf\x05\xda\xb6\x80\x0e\x3a\x80\x0c\x63\xe4\x51\xd3\xd3\xbc\x6a\x18\xc3\x82\x30\x85\xf5\xbe\x49\xc9\xb0\xb1\x6d\xe1\xba\x38\xdb\x27\x1b\xaa\x5a\x30\x34\x5c\xe6\x8e\x8e\xc1\x5d\xd8\x1f\xaf\x7e\xff\xf9\x83\xdb\x5d\xb8\xd9\x77\xe1\xa0\x61\x91\xe2\x47\x4e\xcd\x7c\x22\x32\xe9\x36\x44\xbb\xeb\xc8\xe4\xe1\x56\x30\xbf\x49\xb2\x4a\xca\x02\x06\xbe\xb1\xca\xf4\xe6\xda\xa1\xca\x52\xfa\xf9\xb6\xfc\xa4\x98\xce\x51\x56\x29\x4a\x3f\xdf\x39\x39\xe5\x7f\x41\x2e\x84\x7c\x46\xc2\xa4\x58\x56\xa1\xd8\x7b\x70\x89\x5b\xbf\xa9\x32\x75\x49\x75\x98\x98\xb9\x20\x2f\x2c\xba\x22\x0c\x89\x42\x18\x8d\x3b\xc2\xb4\x2f\xbf\x25\x6e\x67\x41\x55\x8e\x38\x5c\x70\x74\x26\x1d\xc3\xb9\x44\xb2\x9c\x5c\x45\x3c\xd9\x07\x91\x30\xba\xde\x1f\xf2\xf1\x3e\x90\x0c\x89\xe9\x9a\xf7\x06\xfd\x71\x3f\xd0\x85\xde\x1b\xf1\xa7\x7d\x10\xf3\x97\xfa\xed\x98\xbb\x4e\x35\x5f\x29\xb4\x60\x55\xab\x9e\xab\x88\x99\x7e\xfe\x66\x85\xf9\x40\x8b\x7a\x7b\x95\xde\x54\xd3\xc7\x66\xa0\x51\x3c\xda\x62\xe3\x7c\x34\x0b\xea\xf4\x1a\x33\x53\x1a\xf4\x59\x99\xf1\xda\xca\x56\x09\x7d\x66\x76\x62\x72\xe7\x46\xc2\xfe\x3d\x84\x2e\x16\x8d\x36\xe0\x7b\x6f\xf1\x3f\xee\x2d\xf2\xf3\x7a\xbd\x62\xfa\x61\x0a\xa3\xda\xe5\x82\x15\x6d\x93\x61\xaf\x0c\x27\x0d\xf0\xfd\xfa\x96\x3c\xf4\x56\x21\xc1\x2a\x53\x89\x67\x4a\x5d\xfb\x78\x1e\x37\xd8\x01\x43\x38\x99\x05\x1b\x73\x10\x5b\x06\x1b\x9f\x76\x7e\xbb\x41\x2a\x95\xd0\xa8\x83\xf3\x6a\xdb\x7c\x76\x8a\x6c\xfb\xd5\x2e\xb2\xed\x76\xb9\xff\x93\x86\x57\x57\xa4\x76\xd2\xd4\x6d\xaf\x66\x4f\x9a\x9a\xed\xd7\xeb\x49\xa5\xd7\x4e\x22\x9a\x64\xed\x4d\x43\xd3\x60\xd8\x73\xdf\xf5\xa4\xe0\x86\x86\xf0\xbe\xa3\x7f\x72\x2f\xd1\xbf\xd7\x36\xd5\xbc\x39\xfe\x0a\x00\x00\xff\xff\x5c\x12\xb9\xed\xed\x1d\x00\x00")
+var _staticJsDashboardJs = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xec\x59\x5b\x6f\xdb\xb8\x12\x7e\xcf\xaf\x98\xa3\x06\x90\x84\xd8\x8a\xd3\x73\x9e\xec\x38\x40\xcf\x69\x7b\x7a\xdb\xb6\xe8\x65\x5f\x0c\x23\xa0\xa5\xb1\xc4\x86\x22\x5d\x92\x72\x6c\x14\xfe\xef\x0b\x52\x77\x45\x49\xdc\x34\xbb\xc8\x6e\xdb\x07\xbb\x22\x87\x1f\x87\x33\xdf\x47\xcd\x38\x6b\x22\x21\xba\x90\x82\xc3\x14\x08\x8f\x33\x46\x64\x90\x8a\x28\x63\xe8\xb9\x76\xdc\x1d\xc0\xcc\x2d\x66\x86\x92\x86\x17\x2a\x21\x97\xee\xdc\x9f\x1c\xd8\xe9\x20\x14\x5c\x69\xc2\xb5\xe7\x26\x34\xc2\xa7\xc8\xc8\xd6\x1d\xc0\xe3\xd1\x68\xe4\x4f\x0e\x6a\x1b\x2d\x05\x63\x28\x3d\xf7\x95\x58\xbc\xa1\x4a\xff\x4f\x4b\xe6\x0e\x60\x99\xf1\x50\x53\xc1\xc1\x3b\x54\xa1\x58\xe1\x00\x0e\x13\xad\x57\x03\x38\xa4\x5c\xa3\x5c\x13\x36\x80\x0a\xd7\x87\x6f\x07\x00\xb9\x61\x20\x33\xfe\x4a\x2c\x60\x5a\x41\x78\x5f\xc4\xe2\x2d\x49\x31\xb7\x2a\xed\x66\x8e\xcc\x38\xa7\x3c\x3e\x77\xe0\x08\x0a\x93\x39\x4c\x41\xcb\x0c\x27\xd6\xd0\x84\x40\xa2\x5a\x09\xae\x10\xa6\xb9\x03\xc1\x4a\x28\xed\x3d\x7d\xfd\xe1\xdd\xdb\xf3\x27\xef\x5f\x9e\xbf\x7f\xf2\xe9\x05\x1c\x81\x7b\xfc\x45\x2c\xd4\xb1\x5b\x43\xf9\x39\x46\xb9\x3e\x50\x59\x18\xa2\x52\x5e\xe5\x55\x44\x34\x19\x80\xd2\x44\x67\x6a\x00\x09\x92\x08\xa5\x1a\x40\x28\xf8\x92\xc6\xa5\xaf\x00\x87\x9e\xfb\x28\x45\xa5\x48\x8c\xae\x1f\x24\x3a\x65\x9e\x7b\x1a\xd1\x35\x84\x8c\x28\x35\x75\x08\x43\xa9\xc1\x7e\x0e\x8b\x3d\x60\x49\x22\x04\xca\x9d\xb3\x8f\xc5\x40\x71\x54\xe3\x1b\x34\x7c\x34\x8e\x9f\x1e\x47\x74\x7d\xe6\x9a\x9c\x94\x1b\x3a\x41\x0b\xce\xf1\x83\xc8\x44\xd9\xab\xe3\x1d\x28\x46\x23\xfc\xbc\xf2\x1e\x8f\x46\x75\xae\x3c\xbf\x74\xba\x81\xe2\xf8\xf9\xb7\xe7\x86\x4c\x28\x74\x8b\xb8\x98\x7f\x97\x94\x47\xe2\x32\x60\x22\x24\x66\x79\x20\x91\x09\x12\x79\x95\xc5\xae\xf8\xdf\xae\x74\xae\x0a\x26\x4a\x29\xe4\x9f\x1a\xca\x88\xf0\x18\x65\x1d\xc9\xd3\x45\xa6\xb5\xe0\xa0\xb7\x2b\x9c\x3a\xf9\x83\x53\x2e\xb4\x27\x03\xfb\x39\xcc\x0f\x0d\xc6\xa5\x61\x44\x55\x4a\x2b\x64\x07\x88\xa4\x64\x98\xd0\x28\x42\x3e\x75\x0c\xcf\x9c\xb3\xcd\xe9\x71\x0e\x76\xf6\xcc\x9c\x69\xbf\x4c\xd5\xc1\xd9\xd9\xc8\x14\xcc\x8f\x90\xa1\xc6\xfd\xc8\x6f\x6d\xbf\x9f\xfd\xf9\x16\x7f\x37\xfe\x2f\x33\xc6\xb6\x20\x31\x15\x6b\x8c\x7e\x89\xe0\xe1\x8b\xc0\x64\xea\xae\x2a\xd0\x22\x8e\xd9\x2d\x2a\xf8\xa1\x9b\xdd\x0e\xe6\xbb\xb8\x0f\x8f\xe5\xb9\x63\xbf\x58\xfe\xf0\x59\x9e\x67\x6a\x6f\x8e\x9b\xb8\x18\xde\x66\xab\x88\x68\xfc\x9d\xe2\x65\x93\xe0\x37\x32\x3b\xc6\x6b\x89\x7d\x7f\x0c\xce\xd5\x97\x7b\xf7\xd1\x5a\xdb\xa5\x2d\xb6\x3d\x0a\x05\xe7\x43\x9b\xd2\xbb\x52\xad\x0d\xd1\xcf\xb7\xbf\x8c\x4d\x34\x9a\x3a\x0d\x7f\x1e\x12\xbb\x62\xd4\xe6\xfd\x6e\xd7\x5f\xcb\xa7\x22\x69\x45\xce\xcf\x43\x91\x71\x0d\x53\x18\x4d\xea\x39\x7b\xb2\xde\x99\x25\xa1\x0c\xa3\x73\xc3\xa2\xce\x8c\xaa\x2e\xa4\xbe\xd9\x62\x68\x36\x6f\xde\xda\x4d\xde\x34\x79\x6d\x29\xd4\xe0\x76\xaf\xab\xf9\x54\x8f\xa7\xdd\x3d\x0d\x5a\x6b\xbc\xe7\x0c\x37\x9f\xc2\x1a\x2c\x85\xf4\xe8\x74\x34\x01\x0a\xa7\x16\x33\x60\xc8\x63\x9d\x4c\x80\x1e\x1d\xd5\xb4\xe9\xfa\xda\x7e\x3e\xb2\x2b\x67\x74\xde\x0e\x7f\xc9\xe1\xf6\x69\x9a\x4f\xf5\xc2\xc6\x68\xa5\x32\xba\x04\x8f\xe3\x25\x3c\x25\xa6\x4e\x23\x1a\x83\x15\x91\x0a\xbd\x72\x0d\x23\x4a\x9f\x17\x3b\xfa\x3e\x9c\xc1\xad\xc6\x76\x17\xdf\xaf\xcf\x75\x43\x84\xae\x99\x38\x82\x93\x4a\x9b\x80\x4c\xe1\x55\xac\x76\x26\x7a\x06\x9b\x18\x39\x8f\x0f\x7a\xb2\xd5\x1f\xec\x56\x5e\xaf\x8d\x6c\x2d\x8b\xb2\xc7\xf4\xae\xdc\xaf\xf5\xed\x9b\xbf\xbc\x76\x75\x4b\x7b\x75\x32\x61\x5f\x54\x40\x39\xd5\x2f\x68\x9c\x30\x1a\x27\x46\x91\xef\xf8\x9b\xe2\xd5\x77\xb0\xeb\xef\x84\x5f\xf2\x08\x37\xdf\xd1\x07\x1f\x22\xc3\x14\xb9\x6e\xb5\xc1\x62\x65\x96\x99\x58\x7e\x2b\xae\x40\x1e\xa1\x44\x39\x06\x97\x51\x8e\xee\xc0\x8e\x5a\x90\x95\x60\xf6\xad\x5c\x4c\x11\xe9\x76\x6b\x2a\x85\x92\xa2\x15\x6d\x99\x37\x4e\x52\x1c\x83\x5b\x36\x98\x36\x7e\x05\x26\x40\x28\x98\x30\x1b\xc5\x12\x91\x57\xa3\x86\x54\x63\x98\x7d\xdb\x8c\x61\x34\x80\xed\x18\x46\xbb\xb9\x8d\x60\x07\x33\xbf\xbf\xfa\x11\x25\x46\xb7\xe2\xcd\x9b\x77\x14\x12\x9d\x49\xac\xc3\x00\x90\x88\xb5\x89\x42\x4d\x40\x80\xcd\x73\x21\x53\xa2\xb5\x19\xaf\x32\xbe\xf1\x5b\x36\x79\x0c\x75\x26\x39\x6c\x26\x8d\xf1\xdd\xa0\xf1\xb0\xed\x03\xda\x5e\x0b\xb4\x6d\x01\x1d\x74\x00\x19\xc6\xc8\xa3\xa6\xa7\x79\xc5\x30\x86\x25\x61\x0a\xeb\x7d\x93\x92\x5d\x63\xdb\xbe\x75\x71\xb6\x4f\x36\x54\xb5\x60\x68\x78\x91\x3b\x3a\x86\x0f\xc5\x0f\x37\xc1\x73\xba\xb1\x91\x0a\xde\x66\xe9\x02\x65\xb0\xb4\x06\xaf\x7f\xfb\xef\xa7\x2e\xde\xe6\x07\xf1\x06\x8d\x85\x29\x7e\xe6\x54\x8f\xc1\x4d\x44\x66\x69\x57\x46\x62\xd7\x11\xd4\xc3\xad\x75\xfe\x2f\xc9\x2a\x29\x4b\x1d\xf8\xc9\x6a\xd8\x9b\xab\x8c\x2a\x4b\xe9\xd7\xdb\xf2\x93\xa2\x61\x49\x95\xa2\xf4\xeb\x9d\x93\x53\xfe\x58\xb9\x14\xf2\x19\x09\x93\x62\x59\x85\x62\x6f\xcc\x0b\xdc\xfa\x4d\x4d\xaa\x4b\xaa\xc3\xc4\xcc\x05\x79\x09\xd2\x95\x6c\x48\x14\xc2\x68\xdc\x91\xb1\x7d\x4d\x5e\xe0\x76\x1e\x54\x85\x8b\xc3\x05\x47\x67\xd2\x31\x5c\x48\x24\x17\x93\xab\x88\x27\xfb\x20\x12\x46\xd7\xfb\x43\x3e\xde\x07\x92\x21\x31\xfd\xf5\xde\xa0\xff\xde\x0f\x74\xa9\xf7\x46\xfc\xcf\x3e\x88\xf9\xeb\xff\x76\xcc\x5d\xa7\xee\xaf\x14\x5a\xb0\xaa\x55\xf9\x55\xc4\x4c\xbf\xfe\xb4\xc2\x7c\xa0\xe5\xbf\xbd\x4a\x6f\xaa\xfe\x63\x33\xd0\x28\x33\x6d\x59\x32\x1b\xcd\x83\x3a\xbd\xc6\xcc\x14\x12\x7d\x56\x66\xbc\xb6\xb2\x35\x45\x9f\x99\x9d\x98\xdc\xb9\xe5\xb0\x7f\x39\xa1\xcb\x65\xa3\x61\xf8\xd5\x85\xfc\x83\xbb\x90\xfc\xbc\x5e\xaf\x98\xfe\x35\x85\x51\xed\x72\xc1\x8a\xb6\xc9\xb0\x57\x86\x93\x06\xf8\x7e\x1d\x4e\x1e\x7a\xab\x90\x60\x95\xa9\xc4\x33\x85\xb1\x7d\x9c\xc5\x0d\x76\xc0\x10\x4e\xe6\xc1\xc6\x1c\xc4\x16\xcd\xc6\xa7\x9d\xdf\x6e\xa5\x4a\x25\x34\xaa\xe6\xbc\x36\x37\x9f\x9d\x92\xdc\x7e\xb5\x4b\x72\xbb\x5d\xee\xff\xa4\xe1\xd5\x15\xa9\x9d\x34\x75\xdb\xab\xd9\x93\xa6\x66\xfb\xf5\x7a\x52\xe9\xb5\x93\x88\x26\x59\x7b\xd3\xd0\x34\x18\xf6\xdc\x77\x3d\x29\xb8\xa1\x75\xbc\xef\xe8\x9f\xdc\x4b\xf4\xef\xb5\xa1\x35\x6f\x8e\x3f\x02\x00\x00\xff\xff\x32\xcd\x6c\xf2\x17\x1e\x00\x00")
 
 func staticJsDashboardJsBytes() ([]byte, error) {
 	return bindataRead(
@@ -812,7 +812,7 @@ func staticJsDashboardJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/js/dashboard.js", size: 7661, mode: os.FileMode(420), modTime: time.Unix(1525442760, 0)}
+	info := bindataFileInfo{name: "static/js/dashboard.js", size: 7703, mode: os.FileMode(420), modTime: time.Unix(1525640805, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -852,7 +852,7 @@ func staticNode_modulesAngularAngularCspCss() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/angular-csp.css", size: 343, mode: os.FileMode(420), modTime: time.Unix(1432691267, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/angular-csp.css", size: 343, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -872,7 +872,7 @@ func staticNode_modulesAngularAngularJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/angular.js", size: 1032467, mode: os.FileMode(420), modTime: time.Unix(1432691267, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/angular.js", size: 1032467, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -892,7 +892,7 @@ func staticNode_modulesAngularAngularMinJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/angular.min.js", size: 144729, mode: os.FileMode(420), modTime: time.Unix(1432691267, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/angular.min.js", size: 144729, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -912,7 +912,7 @@ func staticNode_modulesAngularAngularMinJsGzip() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/angular.min.js.gzip", size: 51446, mode: os.FileMode(420), modTime: time.Unix(1432691203, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/angular.min.js.gzip", size: 51446, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -932,7 +932,7 @@ func staticNode_modulesAngularAngularMinJsMap() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/angular.min.js.map", size: 390782, mode: os.FileMode(420), modTime: time.Unix(1432691267, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/angular.min.js.map", size: 390782, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -952,7 +952,7 @@ func staticNode_modulesAngularBowerJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/bower.json", size: 113, mode: os.FileMode(420), modTime: time.Unix(1432691267, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/bower.json", size: 113, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -972,7 +972,7 @@ func staticNode_modulesAngularIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular/index.js", size: 48, mode: os.FileMode(420), modTime: time.Unix(1432691203, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular/index.js", size: 48, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -992,7 +992,7 @@ func staticNode_modulesAngularMocksAngularMocksJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-mocks/angular-mocks.js", size: 85726, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-mocks/angular-mocks.js", size: 85726, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1012,7 +1012,7 @@ func staticNode_modulesAngularMocksBowerJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-mocks/bower.json", size: 170, mode: os.FileMode(420), modTime: time.Unix(1476207881, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-mocks/bower.json", size: 170, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1032,7 +1032,7 @@ func staticNode_modulesAngularMocksNganimatemockJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-mocks/ngAnimateMock.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1476207830, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-mocks/ngAnimateMock.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1052,7 +1052,7 @@ func staticNode_modulesAngularMocksNgmockJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-mocks/ngMock.js", size: 55, mode: os.FileMode(420), modTime: time.Unix(1476207830, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-mocks/ngMock.js", size: 55, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1072,7 +1072,7 @@ func staticNode_modulesAngularMocksNgmocke2eJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-mocks/ngMockE2E.js", size: 58, mode: os.FileMode(420), modTime: time.Unix(1476207830, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-mocks/ngMockE2E.js", size: 58, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1092,7 +1092,7 @@ func staticNode_modulesAngularResourceAngularResourceJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-resource/angular-resource.js", size: 28127, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-resource/angular-resource.js", size: 28127, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1112,7 +1112,7 @@ func staticNode_modulesAngularResourceAngularResourceMinJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-resource/angular-resource.min.js", size: 4034, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-resource/angular-resource.min.js", size: 4034, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1132,7 +1132,7 @@ func staticNode_modulesAngularResourceAngularResourceMinJsMap() (*asset, error) 
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-resource/angular-resource.min.js.map", size: 9769, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-resource/angular-resource.min.js.map", size: 9769, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1152,7 +1152,7 @@ func staticNode_modulesAngularResourceBowerJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-resource/bower.json", size: 176, mode: os.FileMode(420), modTime: time.Unix(1476207881, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-resource/bower.json", size: 176, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1172,7 +1172,7 @@ func staticNode_modulesAngularResourceIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-resource/index.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1476207834, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-resource/index.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1192,7 +1192,7 @@ func staticNode_modulesAngularRickshawLicense() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-rickshaw/LICENSE", size: 11323, mode: os.FileMode(420), modTime: time.Unix(1470056524, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-rickshaw/LICENSE", size: 11323, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1212,7 +1212,7 @@ func staticNode_modulesAngularRickshawRickshawJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-rickshaw/rickshaw.js", size: 12366, mode: os.FileMode(420), modTime: time.Unix(1470056524, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-rickshaw/rickshaw.js", size: 12366, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1232,7 +1232,7 @@ func staticNode_modulesAngularRouteAngularRouteJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-route/angular-route.js", size: 36165, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-route/angular-route.js", size: 36165, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1252,7 +1252,7 @@ func staticNode_modulesAngularRouteAngularRouteMinJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-route/angular-route.min.js", size: 4526, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-route/angular-route.min.js", size: 4526, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1272,7 +1272,7 @@ func staticNode_modulesAngularRouteAngularRouteMinJsMap() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-route/angular-route.min.js.map", size: 11386, mode: os.FileMode(420), modTime: time.Unix(1476207880, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-route/angular-route.min.js.map", size: 11386, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1292,7 +1292,7 @@ func staticNode_modulesAngularRouteBowerJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-route/bower.json", size: 170, mode: os.FileMode(420), modTime: time.Unix(1476207881, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-route/bower.json", size: 170, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1312,7 +1312,7 @@ func staticNode_modulesAngularRouteIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/angular-route/index.js", size: 56, mode: os.FileMode(420), modTime: time.Unix(1476207839, 0)}
+	info := bindataFileInfo{name: "static/node_modules/angular-route/index.js", size: 56, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1332,7 +1332,7 @@ func staticNode_modulesD3Gitattributes() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/.gitattributes", size: 50, mode: os.FileMode(420), modTime: time.Unix(1456954465, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/.gitattributes", size: 50, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1352,7 +1352,7 @@ func staticNode_modulesD3Npmignore() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/.npmignore", size: 44, mode: os.FileMode(420), modTime: time.Unix(1456954465, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/.npmignore", size: 44, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1372,7 +1372,7 @@ func staticNode_modulesD3Spmignore() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/.spmignore", size: 17, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/.spmignore", size: 17, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1392,7 +1392,7 @@ func staticNode_modulesD3License() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/LICENSE", size: 1429, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/LICENSE", size: 1429, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1412,7 +1412,7 @@ func staticNode_modulesD3BinMeteor() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/bin/meteor", size: 576, mode: os.FileMode(493), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/bin/meteor", size: 576, mode: os.FileMode(493), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1432,7 +1432,7 @@ func staticNode_modulesD3BinStart() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/bin/start", size: 143, mode: os.FileMode(493), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/bin/start", size: 143, mode: os.FileMode(493), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1452,7 +1452,7 @@ func staticNode_modulesD3BinUglify() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/bin/uglify", size: 890, mode: os.FileMode(493), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/bin/uglify", size: 890, mode: os.FileMode(493), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1472,7 +1472,7 @@ func staticNode_modulesD3ComposerJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/composer.json", size: 614, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/composer.json", size: 614, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1492,7 +1492,7 @@ func staticNode_modulesD3D3Js() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/d3.js", size: 337945, mode: os.FileMode(420), modTime: time.Unix(1462408189, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/d3.js", size: 337945, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1512,7 +1512,7 @@ func staticNode_modulesD3D3MinJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/d3.min.js", size: 151725, mode: os.FileMode(420), modTime: time.Unix(1462408191, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/d3.min.js", size: 151725, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1532,7 +1532,7 @@ func staticNode_modulesD3PackageJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/package.js", size: 366, mode: os.FileMode(420), modTime: time.Unix(1462408188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/package.js", size: 366, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1552,7 +1552,7 @@ func staticNode_modulesD3SrcArraysAscendingJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/ascending.js", size: 114, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/ascending.js", size: 114, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1572,7 +1572,7 @@ func staticNode_modulesD3SrcArraysBisectJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/bisect.js", size: 898, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/bisect.js", size: 898, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1592,7 +1592,7 @@ func staticNode_modulesD3SrcArraysDescendingJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/descending.js", size: 88, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/descending.js", size: 88, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1612,7 +1612,7 @@ func staticNode_modulesD3SrcArraysDeviationJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/deviation.js", size: 128, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/deviation.js", size: 128, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1632,7 +1632,7 @@ func staticNode_modulesD3SrcArraysEntriesJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/entries.js", size: 136, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/entries.js", size: 136, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1652,7 +1652,7 @@ func staticNode_modulesD3SrcArraysExtentJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/extent.js", size: 569, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/extent.js", size: 569, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1672,7 +1672,7 @@ func staticNode_modulesD3SrcArraysIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/index.js", size: 418, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/index.js", size: 418, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1692,7 +1692,7 @@ func staticNode_modulesD3SrcArraysKeysJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/keys.js", size: 100, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/keys.js", size: 100, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1712,7 +1712,7 @@ func staticNode_modulesD3SrcArraysMapJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/map.js", size: 1974, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/map.js", size: 1974, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1732,7 +1732,7 @@ func staticNode_modulesD3SrcArraysMaxJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/max.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/max.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1752,7 +1752,7 @@ func staticNode_modulesD3SrcArraysMeanJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/mean.js", size: 379, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/mean.js", size: 379, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1772,7 +1772,7 @@ func staticNode_modulesD3SrcArraysMedianJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/median.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/median.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1792,7 +1792,7 @@ func staticNode_modulesD3SrcArraysMergeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/merge.js", size: 336, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/merge.js", size: 336, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1812,7 +1812,7 @@ func staticNode_modulesD3SrcArraysMinJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/min.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/min.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1832,7 +1832,7 @@ func staticNode_modulesD3SrcArraysNestJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/nest.js", size: 2116, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/nest.js", size: 2116, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1852,7 +1852,7 @@ func staticNode_modulesD3SrcArraysPairsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/pairs.js", size: 191, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/pairs.js", size: 191, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1872,7 +1872,7 @@ func staticNode_modulesD3SrcArraysPermuteJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/permute.js", size: 160, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/permute.js", size: 160, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1892,7 +1892,7 @@ func staticNode_modulesD3SrcArraysQuantileJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/quantile.js", size: 239, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/quantile.js", size: 239, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1912,7 +1912,7 @@ func staticNode_modulesD3SrcArraysRangeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/range.js", size: 641, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/range.js", size: 641, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1932,7 +1932,7 @@ func staticNode_modulesD3SrcArraysSetJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/set.js", size: 557, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/set.js", size: 557, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1952,7 +1952,7 @@ func staticNode_modulesD3SrcArraysShuffleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/shuffle.js", size: 283, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/shuffle.js", size: 283, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1972,7 +1972,7 @@ func staticNode_modulesD3SrcArraysSumJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/sum.js", size: 346, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/sum.js", size: 346, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1992,7 +1992,7 @@ func staticNode_modulesD3SrcArraysTransposeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/transpose.js", size: 373, mode: os.FileMode(420), modTime: time.Unix(1454363754, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/transpose.js", size: 373, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2012,7 +2012,7 @@ func staticNode_modulesD3SrcArraysValuesJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/values.js", size: 113, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/values.js", size: 113, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2032,7 +2032,7 @@ func staticNode_modulesD3SrcArraysVarianceJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/variance.js", size: 561, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/variance.js", size: 561, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2052,7 +2052,7 @@ func staticNode_modulesD3SrcArraysZipJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/zip.js", size: 80, mode: os.FileMode(420), modTime: time.Unix(1454363754, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/arrays/zip.js", size: 80, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2072,7 +2072,7 @@ func staticNode_modulesD3SrcBehaviorBehaviorJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/behavior.js", size: 18, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/behavior.js", size: 18, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2092,7 +2092,7 @@ func staticNode_modulesD3SrcBehaviorDragJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/drag.js", size: 2897, mode: os.FileMode(420), modTime: time.Unix(1456954465, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/drag.js", size: 2897, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2112,7 +2112,7 @@ func staticNode_modulesD3SrcBehaviorIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/index.js", size: 49, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/index.js", size: 49, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2132,7 +2132,7 @@ func staticNode_modulesD3SrcBehaviorZoomJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/zoom.js", size: 11028, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/behavior/zoom.js", size: 11028, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2152,7 +2152,7 @@ func staticNode_modulesD3SrcColorColorJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/color.js", size: 118, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/color.js", size: 118, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2172,7 +2172,7 @@ func staticNode_modulesD3SrcColorHclJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/hcl.js", size: 1032, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/hcl.js", size: 1032, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2192,7 +2192,7 @@ func staticNode_modulesD3SrcColorHslJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/hsl.js", size: 1429, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/hsl.js", size: 1429, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2212,7 +2212,7 @@ func staticNode_modulesD3SrcColorIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/index.js", size: 86, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/index.js", size: 86, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2232,7 +2232,7 @@ func staticNode_modulesD3SrcColorLabJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/lab.js", size: 1676, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/lab.js", size: 1676, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2252,7 +2252,7 @@ func staticNode_modulesD3SrcColorRgbJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/rgb.js", size: 7536, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/rgb.js", size: 7536, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2272,7 +2272,7 @@ func staticNode_modulesD3SrcColorXyzJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/color/xyz.js", size: 217, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/color/xyz.js", size: 217, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2292,7 +2292,7 @@ func staticNode_modulesD3SrcCompatArrayJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/array.js", size: 391, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/array.js", size: 391, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2312,7 +2312,7 @@ func staticNode_modulesD3SrcCompatDateJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/date.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/date.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2332,7 +2332,7 @@ func staticNode_modulesD3SrcCompatIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/index.js", size: 47, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/index.js", size: 47, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2352,7 +2352,7 @@ func staticNode_modulesD3SrcCompatStyleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/style.js", size: 987, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/compat/style.js", size: 987, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2372,7 +2372,7 @@ func staticNode_modulesD3SrcCoreArrayJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/array.js", size: 126, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/array.js", size: 126, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2392,7 +2392,7 @@ func staticNode_modulesD3SrcCoreClassJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/class.js", size: 187, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/class.js", size: 187, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2412,7 +2412,7 @@ func staticNode_modulesD3SrcCoreDocumentJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/document.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/document.js", size: 464, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2432,7 +2432,7 @@ func staticNode_modulesD3SrcCoreFunctorJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/functor.js", size: 118, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/functor.js", size: 118, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2452,7 +2452,7 @@ func staticNode_modulesD3SrcCoreIdentityJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/identity.js", size: 40, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/identity.js", size: 40, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2472,7 +2472,7 @@ func staticNode_modulesD3SrcCoreIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/index.js", size: 48, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/index.js", size: 48, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2492,7 +2492,7 @@ func staticNode_modulesD3SrcCoreNoopJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/noop.js", size: 22, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/noop.js", size: 22, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2512,7 +2512,7 @@ func staticNode_modulesD3SrcCoreNsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/ns.js", size: 558, mode: os.FileMode(420), modTime: time.Unix(1456954465, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/ns.js", size: 558, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2532,7 +2532,7 @@ func staticNode_modulesD3SrcCoreRebindJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/rebind.js", size: 599, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/rebind.js", size: 599, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2552,7 +2552,7 @@ func staticNode_modulesD3SrcCoreSourceJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/source.js", size: 45, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/source.js", size: 45, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2572,7 +2572,7 @@ func staticNode_modulesD3SrcCoreSubclassJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/subclass.js", size: 364, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/subclass.js", size: 364, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2592,7 +2592,7 @@ func staticNode_modulesD3SrcCoreTargetJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/target.js", size: 45, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/target.js", size: 45, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2612,7 +2612,7 @@ func staticNode_modulesD3SrcCoreTrueJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/true.js", size: 38, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/true.js", size: 38, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2632,7 +2632,7 @@ func staticNode_modulesD3SrcCoreVendorJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/vendor.js", size: 365, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/vendor.js", size: 365, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2652,7 +2652,7 @@ func staticNode_modulesD3SrcCoreZeroJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/core/zero.js", size: 35, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/core/zero.js", size: 35, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2672,7 +2672,7 @@ func staticNode_modulesD3SrcD3Js() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/d3.js", size: 365, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/d3.js", size: 365, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2692,7 +2692,7 @@ func staticNode_modulesD3SrcDsvCsvJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/csv.js", size: 49, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/csv.js", size: 49, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2712,7 +2712,7 @@ func staticNode_modulesD3SrcDsvDsvJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/dsv.js", size: 3779, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/dsv.js", size: 3779, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2732,7 +2732,7 @@ func staticNode_modulesD3SrcDsvIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/index.js", size: 42, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/index.js", size: 42, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2752,7 +2752,7 @@ func staticNode_modulesD3SrcDsvTsvJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/tsv.js", size: 67, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/dsv/tsv.js", size: 67, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2772,7 +2772,7 @@ func staticNode_modulesD3SrcEndJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/end.js", size: 180, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/end.js", size: 180, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2792,7 +2792,7 @@ func staticNode_modulesD3SrcEventDispatchJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/dispatch.js", size: 1635, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/dispatch.js", size: 1635, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2812,7 +2812,7 @@ func staticNode_modulesD3SrcEventDragJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/drag.js", size: 1155, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/drag.js", size: 1155, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2832,7 +2832,7 @@ func staticNode_modulesD3SrcEventEventJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/event.js", size: 1703, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/event.js", size: 1703, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2852,7 +2852,7 @@ func staticNode_modulesD3SrcEventIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/index.js", size: 101, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/index.js", size: 101, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2872,7 +2872,7 @@ func staticNode_modulesD3SrcEventMouseJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/mouse.js", size: 1319, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/mouse.js", size: 1319, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2892,7 +2892,7 @@ func staticNode_modulesD3SrcEventTimerJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/timer.js", size: 2088, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/timer.js", size: 2088, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2912,7 +2912,7 @@ func staticNode_modulesD3SrcEventTouchJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/touch.js", size: 369, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/touch.js", size: 369, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2932,7 +2932,7 @@ func staticNode_modulesD3SrcEventTouchesJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/event/touches.js", size: 346, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/event/touches.js", size: 346, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2952,7 +2952,7 @@ func staticNode_modulesD3SrcFormatCollapseJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/collapse.js", size: 68, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/collapse.js", size: 68, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2972,7 +2972,7 @@ func staticNode_modulesD3SrcFormatFormatJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/format.js", size: 68, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/format.js", size: 68, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -2992,7 +2992,7 @@ func staticNode_modulesD3SrcFormatFormatprefixJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/formatPrefix.js", size: 736, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/formatPrefix.js", size: 736, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3012,7 +3012,7 @@ func staticNode_modulesD3SrcFormatIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/index.js", size: 74, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/index.js", size: 74, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3032,7 +3032,7 @@ func staticNode_modulesD3SrcFormatPrecisionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/precision.js", size: 98, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/precision.js", size: 98, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3052,7 +3052,7 @@ func staticNode_modulesD3SrcFormatRequoteJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/requote.js", size: 129, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/requote.js", size: 129, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3072,7 +3072,7 @@ func staticNode_modulesD3SrcFormatRoundJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/format/round.js", size: 115, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/format/round.js", size: 115, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3092,7 +3092,7 @@ func staticNode_modulesD3SrcGeoAlbersUsaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/albers-usa.js", size: 3903, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/albers-usa.js", size: 3903, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3112,7 +3112,7 @@ func staticNode_modulesD3SrcGeoAlbersJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/albers.js", size: 224, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/albers.js", size: 224, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3132,7 +3132,7 @@ func staticNode_modulesD3SrcGeoAreaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/area.js", size: 2045, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/area.js", size: 2045, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3152,7 +3152,7 @@ func staticNode_modulesD3SrcGeoAzimuthalEqualAreaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/azimuthal-equal-area.js", size: 360, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/azimuthal-equal-area.js", size: 360, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3172,7 +3172,7 @@ func staticNode_modulesD3SrcGeoAzimuthalEquidistantJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/azimuthal-equidistant.js", size: 380, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/azimuthal-equidistant.js", size: 380, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3192,7 +3192,7 @@ func staticNode_modulesD3SrcGeoAzimuthalJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/azimuthal.js", size: 561, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/azimuthal.js", size: 561, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3212,7 +3212,7 @@ func staticNode_modulesD3SrcGeoBoundsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/bounds.js", size: 4841, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/bounds.js", size: 4841, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3232,7 +3232,7 @@ func staticNode_modulesD3SrcGeoCartesianJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/cartesian.js", size: 889, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/cartesian.js", size: 889, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3252,7 +3252,7 @@ func staticNode_modulesD3SrcGeoCentroidJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/centroid.js", size: 4691, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/centroid.js", size: 4691, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3272,7 +3272,7 @@ func staticNode_modulesD3SrcGeoCircleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/circle.js", size: 2276, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/circle.js", size: 2276, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3292,7 +3292,7 @@ func staticNode_modulesD3SrcGeoClipAntimeridianJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-antimeridian.js", size: 2882, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-antimeridian.js", size: 2882, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3312,7 +3312,7 @@ func staticNode_modulesD3SrcGeoClipCircleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-circle.js", size: 5883, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-circle.js", size: 5883, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3332,7 +3332,7 @@ func staticNode_modulesD3SrcGeoClipExtentJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-extent.js", size: 5483, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-extent.js", size: 5483, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3352,7 +3352,7 @@ func staticNode_modulesD3SrcGeoClipPolygonJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-polygon.js", size: 3056, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip-polygon.js", size: 3056, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3372,7 +3372,7 @@ func staticNode_modulesD3SrcGeoClipJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip.js", size: 4267, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/clip.js", size: 4267, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3392,7 +3392,7 @@ func staticNode_modulesD3SrcGeoComposeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/compose.js", size: 250, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/compose.js", size: 250, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3412,7 +3412,7 @@ func staticNode_modulesD3SrcGeoConicConformalJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic-conformal.js", size: 1055, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic-conformal.js", size: 1055, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3432,7 +3432,7 @@ func staticNode_modulesD3SrcGeoConicEqualAreaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic-equal-area.js", size: 755, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic-equal-area.js", size: 755, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3452,7 +3452,7 @@ func staticNode_modulesD3SrcGeoConicEquidistantJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic-equidistant.js", size: 817, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic-equidistant.js", size: 817, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3472,7 +3472,7 @@ func staticNode_modulesD3SrcGeoConicJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic.js", size: 372, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/conic.js", size: 372, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3492,7 +3492,7 @@ func staticNode_modulesD3SrcGeoDistanceJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/distance.js", size: 581, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/distance.js", size: 581, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3512,7 +3512,7 @@ func staticNode_modulesD3SrcGeoEquirectangularJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/equirectangular.js", size: 256, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/equirectangular.js", size: 256, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3532,7 +3532,7 @@ func staticNode_modulesD3SrcGeoGeoJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/geo.js", size: 13, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/geo.js", size: 13, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3552,7 +3552,7 @@ func staticNode_modulesD3SrcGeoGnomonicJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/gnomonic.js", size: 266, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/gnomonic.js", size: 266, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3572,7 +3572,7 @@ func staticNode_modulesD3SrcGeoGraticuleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/graticule.js", size: 3028, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/graticule.js", size: 3028, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3592,7 +3592,7 @@ func staticNode_modulesD3SrcGeoGreatarcJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/greatArc.js", size: 1042, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/greatArc.js", size: 1042, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3612,7 +3612,7 @@ func staticNode_modulesD3SrcGeoIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/index.js", size: 703, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/index.js", size: 703, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3632,7 +3632,7 @@ func staticNode_modulesD3SrcGeoInterpolateJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/interpolate.js", size: 1068, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/interpolate.js", size: 1068, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3652,7 +3652,7 @@ func staticNode_modulesD3SrcGeoLengthJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/length.js", size: 1175, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/length.js", size: 1175, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3672,7 +3672,7 @@ func staticNode_modulesD3SrcGeoMercatorJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/mercator.js", size: 1175, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/mercator.js", size: 1175, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3692,7 +3692,7 @@ func staticNode_modulesD3SrcGeoOrthographicJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/orthographic.js", size: 259, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/orthographic.js", size: 259, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3712,7 +3712,7 @@ func staticNode_modulesD3SrcGeoPathAreaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-area.js", size: 1041, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-area.js", size: 1041, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3732,7 +3732,7 @@ func staticNode_modulesD3SrcGeoPathBoundsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-bounds.js", size: 543, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-bounds.js", size: 543, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3752,7 +3752,7 @@ func staticNode_modulesD3SrcGeoPathBufferJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-buffer.js", size: 1345, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-buffer.js", size: 1345, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3772,7 +3772,7 @@ func staticNode_modulesD3SrcGeoPathCentroidJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-centroid.js", size: 2171, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-centroid.js", size: 2171, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3792,7 +3792,7 @@ func staticNode_modulesD3SrcGeoPathContextJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-context.js", size: 1027, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path-context.js", size: 1027, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3812,7 +3812,7 @@ func staticNode_modulesD3SrcGeoPathJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path.js", size: 2939, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/path.js", size: 2939, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3832,7 +3832,7 @@ func staticNode_modulesD3SrcGeoPointInPolygonJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/point-in-polygon.js", size: 2480, mode: os.FileMode(420), modTime: time.Unix(1462408050, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/point-in-polygon.js", size: 2480, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3852,7 +3852,7 @@ func staticNode_modulesD3SrcGeoProjectionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/projection.js", size: 3463, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/projection.js", size: 3463, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3872,7 +3872,7 @@ func staticNode_modulesD3SrcGeoResampleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/resample.js", size: 3232, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/resample.js", size: 3232, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3892,7 +3892,7 @@ func staticNode_modulesD3SrcGeoRotationJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/rotation.js", size: 2351, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/rotation.js", size: 2351, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3912,7 +3912,7 @@ func staticNode_modulesD3SrcGeoSphericalJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/spherical.js", size: 280, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/spherical.js", size: 280, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3932,7 +3932,7 @@ func staticNode_modulesD3SrcGeoStereographicJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/stereographic.js", size: 325, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/stereographic.js", size: 325, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3952,7 +3952,7 @@ func staticNode_modulesD3SrcGeoStreamJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/stream.js", size: 2514, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/stream.js", size: 2514, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3972,7 +3972,7 @@ func staticNode_modulesD3SrcGeoTransformJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/transform.js", size: 1023, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/transform.js", size: 1023, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -3992,7 +3992,7 @@ func staticNode_modulesD3SrcGeoTransverseMercatorJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/transverse-mercator.js", size: 823, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geo/transverse-mercator.js", size: 823, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4012,7 +4012,7 @@ func staticNode_modulesD3SrcGeomClipLineJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/clip-line.js", size: 1337, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/clip-line.js", size: 1337, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4032,7 +4032,7 @@ func staticNode_modulesD3SrcGeomDelaunayJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/delaunay.js", size: 162, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/delaunay.js", size: 162, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4052,7 +4052,7 @@ func staticNode_modulesD3SrcGeomGeomJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/geom.js", size: 14, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/geom.js", size: 14, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4072,7 +4072,7 @@ func staticNode_modulesD3SrcGeomHullJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/hull.js", size: 2812, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/hull.js", size: 2812, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4092,7 +4092,7 @@ func staticNode_modulesD3SrcGeomIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/index.js", size: 104, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/index.js", size: 104, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4112,7 +4112,7 @@ func staticNode_modulesD3SrcGeomPointJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/point.js", size: 93, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/point.js", size: 93, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4132,7 +4132,7 @@ func staticNode_modulesD3SrcGeomPolygonJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/polygon.js", size: 2474, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/polygon.js", size: 2474, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4152,7 +4152,7 @@ func staticNode_modulesD3SrcGeomQuadtreeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/quadtree.js", size: 6955, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/quadtree.js", size: 6955, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4172,7 +4172,7 @@ func staticNode_modulesD3SrcGeomVoronoiBeachJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/beach.js", size: 4710, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/beach.js", size: 4710, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4192,7 +4192,7 @@ func staticNode_modulesD3SrcGeomVoronoiCellJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/cell.js", size: 1825, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/cell.js", size: 1825, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4212,7 +4212,7 @@ func staticNode_modulesD3SrcGeomVoronoiCircleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/circle.js", size: 1683, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/circle.js", size: 1683, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4232,7 +4232,7 @@ func staticNode_modulesD3SrcGeomVoronoiClipJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/clip.js", size: 1936, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/clip.js", size: 1936, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4252,7 +4252,7 @@ func staticNode_modulesD3SrcGeomVoronoiEdgeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/edge.js", size: 1573, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/edge.js", size: 1573, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4272,7 +4272,7 @@ func staticNode_modulesD3SrcGeomVoronoiIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/index.js", size: 1530, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/index.js", size: 1530, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4292,7 +4292,7 @@ func staticNode_modulesD3SrcGeomVoronoiRedBlackJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/red-black.js", size: 5507, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi/red-black.js", size: 5507, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4312,7 +4312,7 @@ func staticNode_modulesD3SrcGeomVoronoiJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi.js", size: 3009, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/geom/voronoi.js", size: 3009, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4332,7 +4332,7 @@ func staticNode_modulesD3SrcInterpolateArrayJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/array.js", size: 446, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/array.js", size: 446, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4352,7 +4352,7 @@ func staticNode_modulesD3SrcInterpolateEaseJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/ease.js", size: 2583, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/ease.js", size: 2583, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4372,7 +4372,7 @@ func staticNode_modulesD3SrcInterpolateHclJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/hcl.js", size: 525, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/hcl.js", size: 525, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4392,7 +4392,7 @@ func staticNode_modulesD3SrcInterpolateHslJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/hsl.js", size: 525, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/hsl.js", size: 525, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4412,7 +4412,7 @@ func staticNode_modulesD3SrcInterpolateIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/index.js", size: 235, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/index.js", size: 235, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4432,7 +4432,7 @@ func staticNode_modulesD3SrcInterpolateInterpolateJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/interpolate.js", size: 713, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/interpolate.js", size: 713, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4452,7 +4452,7 @@ func staticNode_modulesD3SrcInterpolateLabJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/lab.js", size: 341, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/lab.js", size: 341, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4472,7 +4472,7 @@ func staticNode_modulesD3SrcInterpolateNumberJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/number.js", size: 158, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/number.js", size: 158, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4492,7 +4492,7 @@ func staticNode_modulesD3SrcInterpolateObjectJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/object.js", size: 406, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/object.js", size: 406, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4512,7 +4512,7 @@ func staticNode_modulesD3SrcInterpolateRgbJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/rgb.js", size: 428, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/rgb.js", size: 428, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4532,7 +4532,7 @@ func staticNode_modulesD3SrcInterpolateRoundJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/round.js", size: 149, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/round.js", size: 149, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4552,7 +4552,7 @@ func staticNode_modulesD3SrcInterpolateStringJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/string.js", size: 1881, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/string.js", size: 1881, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4572,7 +4572,7 @@ func staticNode_modulesD3SrcInterpolateTransformJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/transform.js", size: 2078, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/transform.js", size: 2078, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4592,7 +4592,7 @@ func staticNode_modulesD3SrcInterpolateUninterpolateJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/uninterpolate.js", size: 262, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/uninterpolate.js", size: 262, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4612,7 +4612,7 @@ func staticNode_modulesD3SrcInterpolateZoomJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/zoom.js", size: 1200, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/interpolate/zoom.js", size: 1200, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4632,7 +4632,7 @@ func staticNode_modulesD3SrcLayoutBundleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/bundle.js", size: 1518, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/bundle.js", size: 1518, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4652,7 +4652,7 @@ func staticNode_modulesD3SrcLayoutChordJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/chord.js", size: 3574, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/chord.js", size: 3574, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4672,7 +4672,7 @@ func staticNode_modulesD3SrcLayoutClusterJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/cluster.js", size: 2670, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/cluster.js", size: 2670, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4692,7 +4692,7 @@ func staticNode_modulesD3SrcLayoutForceJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/force.js", size: 9636, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/force.js", size: 9636, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4712,7 +4712,7 @@ func staticNode_modulesD3SrcLayoutHierarchyJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/hierarchy.js", size: 3525, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/hierarchy.js", size: 3525, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4732,7 +4732,7 @@ func staticNode_modulesD3SrcLayoutHistogramJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/histogram.js", size: 3510, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/histogram.js", size: 3510, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4752,7 +4752,7 @@ func staticNode_modulesD3SrcLayoutIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/index.js", size: 222, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/index.js", size: 222, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4772,7 +4772,7 @@ func staticNode_modulesD3SrcLayoutLayoutJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/layout.js", size: 16, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/layout.js", size: 16, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4792,7 +4792,7 @@ func staticNode_modulesD3SrcLayoutPackJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/pack.js", size: 5280, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/pack.js", size: 5280, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4812,7 +4812,7 @@ func staticNode_modulesD3SrcLayoutPartitionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/partition.js", size: 1147, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/partition.js", size: 1147, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4832,7 +4832,7 @@ func staticNode_modulesD3SrcLayoutPieJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/pie.js", size: 1989, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/pie.js", size: 1989, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4852,7 +4852,7 @@ func staticNode_modulesD3SrcLayoutStackJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/stack.js", size: 5478, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/stack.js", size: 5478, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4872,7 +4872,7 @@ func staticNode_modulesD3SrcLayoutTreeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/tree.js", size: 7592, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/tree.js", size: 7592, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4892,7 +4892,7 @@ func staticNode_modulesD3SrcLayoutTreemapJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/treemap.js", size: 6586, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/layout/treemap.js", size: 6586, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4912,7 +4912,7 @@ func staticNode_modulesD3SrcLocaleCaEsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ca-ES.js", size: 634, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ca-ES.js", size: 634, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4932,7 +4932,7 @@ func staticNode_modulesD3SrcLocaleDeChJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/de-CH.js", size: 624, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/de-CH.js", size: 624, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4952,7 +4952,7 @@ func staticNode_modulesD3SrcLocaleDeDeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/de-DE.js", size: 624, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/de-DE.js", size: 624, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4972,7 +4972,7 @@ func staticNode_modulesD3SrcLocaleEnCaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/en-CA.js", size: 610, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/en-CA.js", size: 610, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4992,7 +4992,7 @@ func staticNode_modulesD3SrcLocaleEnGbJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/en-GB.js", size: 611, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/en-GB.js", size: 611, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5012,7 +5012,7 @@ func staticNode_modulesD3SrcLocaleEnUsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/en-US.js", size: 610, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/en-US.js", size: 610, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5032,7 +5032,7 @@ func staticNode_modulesD3SrcLocaleEsEsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/es-ES.js", size: 624, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/es-ES.js", size: 624, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5052,7 +5052,7 @@ func staticNode_modulesD3SrcLocaleFiFiJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/fi-FI.js", size: 681, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/fi-FI.js", size: 681, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5072,7 +5072,7 @@ func staticNode_modulesD3SrcLocaleFrCaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/fr-CA.js", size: 609, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/fr-CA.js", size: 609, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5092,7 +5092,7 @@ func staticNode_modulesD3SrcLocaleFrFrJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/fr-FR.js", size: 650, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/fr-FR.js", size: 650, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5112,7 +5112,7 @@ func staticNode_modulesD3SrcLocaleHeIlJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/he-IL.js", size: 734, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/he-IL.js", size: 734, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5132,7 +5132,7 @@ func staticNode_modulesD3SrcLocaleHuHuJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/hu-HU.js", size: 669, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/hu-HU.js", size: 669, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5152,7 +5152,7 @@ func staticNode_modulesD3SrcLocaleItItJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/it-IT.js", size: 636, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/it-IT.js", size: 636, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5172,7 +5172,7 @@ func staticNode_modulesD3SrcLocaleJaJpJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ja-JP.js", size: 643, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ja-JP.js", size: 643, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5192,7 +5192,7 @@ func staticNode_modulesD3SrcLocaleKoKrJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ko-KR.js", size: 625, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ko-KR.js", size: 625, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5212,7 +5212,7 @@ func staticNode_modulesD3SrcLocaleLocaleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/locale.js", size: 192, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/locale.js", size: 192, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5232,7 +5232,7 @@ func staticNode_modulesD3SrcLocaleMkMkJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/mk-MK.js", size: 795, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/mk-MK.js", size: 795, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5252,7 +5252,7 @@ func staticNode_modulesD3SrcLocaleNlNlJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/nl-NL.js", size: 620, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/nl-NL.js", size: 620, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5272,7 +5272,7 @@ func staticNode_modulesD3SrcLocaleNumberFormatJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/number-format.js", size: 5642, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/number-format.js", size: 5642, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5292,7 +5292,7 @@ func staticNode_modulesD3SrcLocalePlPlJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/pl-PL.js", size: 800, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/pl-PL.js", size: 800, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5312,7 +5312,7 @@ func staticNode_modulesD3SrcLocalePtBrJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/pt-BR.js", size: 618, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/pt-BR.js", size: 618, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5332,7 +5332,7 @@ func staticNode_modulesD3SrcLocaleRuRuJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ru-RU.js", size: 794, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/ru-RU.js", size: 794, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5352,7 +5352,7 @@ func staticNode_modulesD3SrcLocaleSvSeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/sv-SE.js", size: 618, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/sv-SE.js", size: 618, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5372,7 +5372,7 @@ func staticNode_modulesD3SrcLocaleTimeFormatJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/time-format.js", size: 12285, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/time-format.js", size: 12285, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5392,7 +5392,7 @@ func staticNode_modulesD3SrcLocaleTimeScaleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/time-scale.js", size: 0, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/time-scale.js", size: 0, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5412,7 +5412,7 @@ func staticNode_modulesD3SrcLocaleZhCnJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/zh-CN.js", size: 702, mode: os.FileMode(420), modTime: time.Unix(1462408012, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/locale/zh-CN.js", size: 702, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5432,7 +5432,7 @@ func staticNode_modulesD3SrcMathAbsJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/abs.js", size: 20, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/abs.js", size: 20, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5452,7 +5452,7 @@ func staticNode_modulesD3SrcMathAdderJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/adder.js", size: 990, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/adder.js", size: 990, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5472,7 +5472,7 @@ func staticNode_modulesD3SrcMathIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/index.js", size: 37, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/index.js", size: 37, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5492,7 +5492,7 @@ func staticNode_modulesD3SrcMathNumberJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/number.js", size: 106, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/number.js", size: 106, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5512,7 +5512,7 @@ func staticNode_modulesD3SrcMathRandomJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/random.js", size: 791, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/random.js", size: 791, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5532,7 +5532,7 @@ func staticNode_modulesD3SrcMathTransformJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/transform.js", size: 1686, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/transform.js", size: 1686, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5552,7 +5552,7 @@ func staticNode_modulesD3SrcMathTrigonometryJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/math/trigonometry.js", size: 1054, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/math/trigonometry.js", size: 1054, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5572,7 +5572,7 @@ func staticNode_modulesD3SrcScaleBilinearJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/bilinear.js", size: 212, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/bilinear.js", size: 212, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5592,7 +5592,7 @@ func staticNode_modulesD3SrcScaleCategoryJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/category.js", size: 1501, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/category.js", size: 1501, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5612,7 +5612,7 @@ func staticNode_modulesD3SrcScaleIdentityJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/identity.js", size: 653, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/identity.js", size: 653, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5632,7 +5632,7 @@ func staticNode_modulesD3SrcScaleIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/index.js", size: 190, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/index.js", size: 190, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5652,7 +5652,7 @@ func staticNode_modulesD3SrcScaleLinearJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/linear.js", size: 4797, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/linear.js", size: 4797, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5672,7 +5672,7 @@ func staticNode_modulesD3SrcScaleLogJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/log.js", size: 2634, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/log.js", size: 2634, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5692,7 +5692,7 @@ func staticNode_modulesD3SrcScaleNiceJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/nice.js", size: 618, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/nice.js", size: 618, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5712,7 +5712,7 @@ func staticNode_modulesD3SrcScaleOrdinalJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/ordinal.js", size: 3260, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/ordinal.js", size: 3260, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5732,7 +5732,7 @@ func staticNode_modulesD3SrcScalePolylinearJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/polylinear.js", size: 569, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/polylinear.js", size: 569, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5752,7 +5752,7 @@ func staticNode_modulesD3SrcScalePowJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/pow.js", size: 1289, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/pow.js", size: 1289, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5772,7 +5772,7 @@ func staticNode_modulesD3SrcScaleQuantileJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/quantile.js", size: 1223, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/quantile.js", size: 1223, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5792,7 +5792,7 @@ func staticNode_modulesD3SrcScaleQuantizeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/quantize.js", size: 869, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/quantize.js", size: 869, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5812,7 +5812,7 @@ func staticNode_modulesD3SrcScaleScaleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/scale.js", size: 283, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/scale.js", size: 283, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5832,7 +5832,7 @@ func staticNode_modulesD3SrcScaleSqrtJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/sqrt.js", size: 102, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/sqrt.js", size: 102, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5852,7 +5852,7 @@ func staticNode_modulesD3SrcScaleThresholdJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/threshold.js", size: 681, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/scale/threshold.js", size: 681, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5872,7 +5872,7 @@ func staticNode_modulesD3SrcSelectionAppendJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/append.js", size: 772, mode: os.FileMode(420), modTime: time.Unix(1456954465, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/append.js", size: 772, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5892,7 +5892,7 @@ func staticNode_modulesD3SrcSelectionAttrJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/attr.js", size: 1974, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/attr.js", size: 1974, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5912,7 +5912,7 @@ func staticNode_modulesD3SrcSelectionCallJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/call.js", size: 187, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/call.js", size: 187, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5932,7 +5932,7 @@ func staticNode_modulesD3SrcSelectionClassedJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/classed.js", size: 2512, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/classed.js", size: 2512, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5952,7 +5952,7 @@ func staticNode_modulesD3SrcSelectionDataJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/data.js", size: 2922, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/data.js", size: 2922, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5972,7 +5972,7 @@ func staticNode_modulesD3SrcSelectionDatumJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/datum.js", size: 174, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/datum.js", size: 174, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -5992,7 +5992,7 @@ func staticNode_modulesD3SrcSelectionEachJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/each.js", size: 436, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/each.js", size: 436, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6012,7 +6012,7 @@ func staticNode_modulesD3SrcSelectionEmptyJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/empty.js", size: 90, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/empty.js", size: 90, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6032,7 +6032,7 @@ func staticNode_modulesD3SrcSelectionEnterInsertJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/enter-insert.js", size: 538, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/enter-insert.js", size: 538, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6052,7 +6052,7 @@ func staticNode_modulesD3SrcSelectionEnterSelectJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/enter-select.js", size: 678, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/enter-select.js", size: 678, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6072,7 +6072,7 @@ func staticNode_modulesD3SrcSelectionEnterJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/enter.js", size: 676, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/enter.js", size: 676, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6092,7 +6092,7 @@ func staticNode_modulesD3SrcSelectionFilterJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/filter.js", size: 676, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/filter.js", size: 676, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6112,7 +6112,7 @@ func staticNode_modulesD3SrcSelectionHtmlJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/html.js", size: 380, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/html.js", size: 380, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6132,7 +6132,7 @@ func staticNode_modulesD3SrcSelectionIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/index.js", size: 20, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/index.js", size: 20, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6152,7 +6152,7 @@ func staticNode_modulesD3SrcSelectionInsertJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/insert.js", size: 297, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/insert.js", size: 297, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6172,7 +6172,7 @@ func staticNode_modulesD3SrcSelectionInterruptJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/interrupt.js", size: 813, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/interrupt.js", size: 813, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6192,7 +6192,7 @@ func staticNode_modulesD3SrcSelectionNodeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/node.js", size: 265, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/node.js", size: 265, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6212,7 +6212,7 @@ func staticNode_modulesD3SrcSelectionOnJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/on.js", size: 2878, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/on.js", size: 2878, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6232,7 +6232,7 @@ func staticNode_modulesD3SrcSelectionOrderJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/order.js", size: 375, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/order.js", size: 375, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6252,7 +6252,7 @@ func staticNode_modulesD3SrcSelectionPropertyJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/property.js", size: 1379, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/property.js", size: 1379, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6272,7 +6272,7 @@ func staticNode_modulesD3SrcSelectionRemoveJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/remove.js", size: 289, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/remove.js", size: 289, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6292,7 +6292,7 @@ func staticNode_modulesD3SrcSelectionSelectJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/select.js", size: 825, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/select.js", size: 825, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6312,7 +6312,7 @@ func staticNode_modulesD3SrcSelectionSelectallJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/selectAll.js", size: 686, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/selectAll.js", size: 686, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6332,7 +6332,7 @@ func staticNode_modulesD3SrcSelectionSelectionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/selection.js", size: 1943, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/selection.js", size: 1943, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6352,7 +6352,7 @@ func staticNode_modulesD3SrcSelectionSizeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/size.js", size: 134, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/size.js", size: 134, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6372,7 +6372,7 @@ func staticNode_modulesD3SrcSelectionSortJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/sort.js", size: 471, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/sort.js", size: 471, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6392,7 +6392,7 @@ func staticNode_modulesD3SrcSelectionStyleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/style.js", size: 2125, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/style.js", size: 2125, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6412,7 +6412,7 @@ func staticNode_modulesD3SrcSelectionTextJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/text.js", size: 388, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/text.js", size: 388, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6432,7 +6432,7 @@ func staticNode_modulesD3SrcSelectionTransitionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/transition.js", size: 683, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/selection/transition.js", size: 683, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6452,7 +6452,7 @@ func staticNode_modulesD3SrcStartJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/start.js", size: 55, mode: os.FileMode(420), modTime: time.Unix(1462408188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/start.js", size: 55, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6472,7 +6472,7 @@ func staticNode_modulesD3SrcSvgArcJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/arc.js", size: 8887, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/arc.js", size: 8887, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6492,7 +6492,7 @@ func staticNode_modulesD3SrcSvgAreaRadialJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/area-radial.js", size: 406, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/area-radial.js", size: 406, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6512,7 +6512,7 @@ func staticNode_modulesD3SrcSvgAreaJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/area.js", size: 2820, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/area.js", size: 2820, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6532,7 +6532,7 @@ func staticNode_modulesD3SrcSvgAxisJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/axis.js", size: 5400, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/axis.js", size: 5400, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6552,7 +6552,7 @@ func staticNode_modulesD3SrcSvgBrushJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/brush.js", size: 13119, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/brush.js", size: 13119, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6572,7 +6572,7 @@ func staticNode_modulesD3SrcSvgChordJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/chord.js", size: 2067, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/chord.js", size: 2067, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6592,7 +6592,7 @@ func staticNode_modulesD3SrcSvgDiagonalRadialJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/diagonal-radial.js", size: 652, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/diagonal-radial.js", size: 652, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6612,7 +6612,7 @@ func staticNode_modulesD3SrcSvgDiagonalJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/diagonal.js", size: 985, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/diagonal.js", size: 985, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6632,7 +6632,7 @@ func staticNode_modulesD3SrcSvgIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/index.js", size: 211, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/index.js", size: 211, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6652,7 +6652,7 @@ func staticNode_modulesD3SrcSvgLineRadialJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/line-radial.js", size: 532, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/line-radial.js", size: 532, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6672,7 +6672,7 @@ func staticNode_modulesD3SrcSvgLineJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/line.js", size: 12044, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/line.js", size: 12044, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6692,7 +6692,7 @@ func staticNode_modulesD3SrcSvgSvgJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/svg.js", size: 13, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/svg.js", size: 13, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6712,7 +6712,7 @@ func staticNode_modulesD3SrcSvgSymbolJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/symbol.js", size: 2405, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/svg/symbol.js", size: 2405, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6732,7 +6732,7 @@ func staticNode_modulesD3SrcTimeDayJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/day.js", size: 597, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/day.js", size: 597, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6752,7 +6752,7 @@ func staticNode_modulesD3SrcTimeFormatIsoJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/format-iso.js", size: 511, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/format-iso.js", size: 511, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6772,7 +6772,7 @@ func staticNode_modulesD3SrcTimeFormatUtcJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/format-utc.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/format-utc.js", size: 62, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6792,7 +6792,7 @@ func staticNode_modulesD3SrcTimeFormatJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/format.js", size: 107, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/format.js", size: 107, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6812,7 +6812,7 @@ func staticNode_modulesD3SrcTimeHourJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/hour.js", size: 452, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/hour.js", size: 452, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6832,7 +6832,7 @@ func staticNode_modulesD3SrcTimeIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/index.js", size: 238, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/index.js", size: 238, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6852,7 +6852,7 @@ func staticNode_modulesD3SrcTimeIntervalJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/interval.js", size: 1505, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/interval.js", size: 1505, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6872,7 +6872,7 @@ func staticNode_modulesD3SrcTimeMinuteJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/minute.js", size: 391, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/minute.js", size: 391, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6892,7 +6892,7 @@ func staticNode_modulesD3SrcTimeMonthJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/month.js", size: 367, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/month.js", size: 367, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6912,7 +6912,7 @@ func staticNode_modulesD3SrcTimeScaleUtcJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/scale-utc.js", size: 856, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/scale-utc.js", size: 856, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6932,7 +6932,7 @@ func staticNode_modulesD3SrcTimeScaleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/scale.js", size: 4394, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/scale.js", size: 4394, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6952,7 +6952,7 @@ func staticNode_modulesD3SrcTimeSecondJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/second.js", size: 391, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/second.js", size: 391, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6972,7 +6972,7 @@ func staticNode_modulesD3SrcTimeTimeJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/time.js", size: 1652, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/time.js", size: 1652, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -6992,7 +6992,7 @@ func staticNode_modulesD3SrcTimeWeekJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/week.js", size: 1007, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/week.js", size: 1007, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7012,7 +7012,7 @@ func staticNode_modulesD3SrcTimeYearJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/time/year.js", size: 375, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/time/year.js", size: 375, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7032,7 +7032,7 @@ func staticNode_modulesD3SrcTransitionAttrJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/attr.js", size: 2046, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/attr.js", size: 2046, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7052,7 +7052,7 @@ func staticNode_modulesD3SrcTransitionDelayJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/delay.js", size: 435, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/delay.js", size: 435, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7072,7 +7072,7 @@ func staticNode_modulesD3SrcTransitionDurationJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/duration.js", size: 471, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/duration.js", size: 471, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7092,7 +7092,7 @@ func staticNode_modulesD3SrcTransitionEachJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/each.js", size: 796, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/each.js", size: 796, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7112,7 +7112,7 @@ func staticNode_modulesD3SrcTransitionEaseJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/ease.js", size: 387, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/ease.js", size: 387, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7132,7 +7132,7 @@ func staticNode_modulesD3SrcTransitionFilterJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/filter.js", size: 579, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/filter.js", size: 579, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7152,7 +7152,7 @@ func staticNode_modulesD3SrcTransitionIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/index.js", size: 21, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/index.js", size: 21, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7172,7 +7172,7 @@ func staticNode_modulesD3SrcTransitionRemoveJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/remove.js", size: 238, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/remove.js", size: 238, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7192,7 +7192,7 @@ func staticNode_modulesD3SrcTransitionSelectJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/select.js", size: 771, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/select.js", size: 771, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7212,7 +7212,7 @@ func staticNode_modulesD3SrcTransitionSelectallJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/selectAll.js", size: 843, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/selectAll.js", size: 843, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7232,7 +7232,7 @@ func staticNode_modulesD3SrcTransitionStyleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/style.js", size: 1998, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/style.js", size: 1998, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7252,7 +7252,7 @@ func staticNode_modulesD3SrcTransitionSubtransitionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/subtransition.js", size: 714, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/subtransition.js", size: 714, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7272,7 +7272,7 @@ func staticNode_modulesD3SrcTransitionTextJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/text.js", size: 268, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/text.js", size: 268, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7292,7 +7292,7 @@ func staticNode_modulesD3SrcTransitionTransitionJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/transition.js", size: 4036, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/transition.js", size: 4036, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7312,7 +7312,7 @@ func staticNode_modulesD3SrcTransitionTweenJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/tween.js", size: 767, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/transition/tween.js", size: 767, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7332,7 +7332,7 @@ func staticNode_modulesD3SrcXhrHtmlJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/html.js", size: 308, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/html.js", size: 308, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7352,7 +7352,7 @@ func staticNode_modulesD3SrcXhrIndexJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/index.js", size: 73, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/index.js", size: 73, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7372,7 +7372,7 @@ func staticNode_modulesD3SrcXhrJsonJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/json.js", size: 189, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/json.js", size: 189, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7392,7 +7392,7 @@ func staticNode_modulesD3SrcXhrTextJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/text.js", size: 91, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/text.js", size: 91, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7412,7 +7412,7 @@ func staticNode_modulesD3SrcXhrXhrJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/xhr.js", size: 4043, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/xhr.js", size: 4043, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7432,7 +7432,7 @@ func staticNode_modulesD3SrcXhrXmlJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/xml.js", size: 89, mode: os.FileMode(420), modTime: time.Unix(1454026188, 0)}
+	info := bindataFileInfo{name: "static/node_modules/d3/src/xhr/xml.js", size: 89, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7452,7 +7452,7 @@ func staticNode_modulesRickshawJshintignore() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/.jshintignore", size: 147, mode: os.FileMode(420), modTime: time.Unix(1499619715, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/.jshintignore", size: 147, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7472,7 +7472,7 @@ func staticNode_modulesRickshawJshintrc() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/.jshintrc", size: 210, mode: os.FileMode(420), modTime: time.Unix(1499619715, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/.jshintrc", size: 210, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7492,7 +7492,7 @@ func staticNode_modulesRickshawNpmignore() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/.npmignore", size: 134, mode: os.FileMode(420), modTime: time.Unix(1515590571, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/.npmignore", size: 134, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7512,7 +7512,7 @@ func staticNode_modulesRickshawRockYml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/.rock.yml", size: 131, mode: os.FileMode(420), modTime: time.Unix(1499619715, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/.rock.yml", size: 131, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7532,7 +7532,7 @@ func staticNode_modulesRickshawTravisYml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/.travis.yml", size: 511, mode: os.FileMode(420), modTime: time.Unix(1515590571, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/.travis.yml", size: 511, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7552,7 +7552,7 @@ func staticNode_modulesRickshawLicense() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/LICENSE", size: 1076, mode: os.FileMode(420), modTime: time.Unix(1515590571, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/LICENSE", size: 1076, mode: os.FileMode(420), modTime: time.Unix(1525468108, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7572,7 +7572,7 @@ func staticNode_modulesRickshawBowerJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/bower.json", size: 550, mode: os.FileMode(420), modTime: time.Unix(1520784424, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/bower.json", size: 550, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7592,7 +7592,7 @@ func staticNode_modulesRickshawRickshawCss() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.css", size: 7309, mode: os.FileMode(420), modTime: time.Unix(1520784433, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.css", size: 7309, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7612,7 +7612,7 @@ func staticNode_modulesRickshawRickshawJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.js", size: 107054, mode: os.FileMode(420), modTime: time.Unix(1520784435, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.js", size: 107054, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7632,7 +7632,7 @@ func staticNode_modulesRickshawRickshawMinCss() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.min.css", size: 6009, mode: os.FileMode(420), modTime: time.Unix(1520784434, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.min.css", size: 6009, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7652,7 +7652,7 @@ func staticNode_modulesRickshawRickshawMinJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.min.js", size: 80891, mode: os.FileMode(420), modTime: time.Unix(1520784436, 0)}
+	info := bindataFileInfo{name: "static/node_modules/rickshaw/rickshaw.min.js", size: 80891, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7752,7 +7752,7 @@ func templatesDashboardHtmlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/dashboard.html.tmpl", size: 4082, mode: os.FileMode(420), modTime: time.Unix(1525441907, 0)}
+	info := bindataFileInfo{name: "templates/dashboard.html.tmpl", size: 4082, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -7812,7 +7812,7 @@ func templatesJobsHtmlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/jobs.html.tmpl", size: 3225, mode: os.FileMode(420), modTime: time.Unix(1525440070, 0)}
+	info := bindataFileInfo{name: "templates/jobs.html.tmpl", size: 3225, mode: os.FileMode(420), modTime: time.Unix(1525468107, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
