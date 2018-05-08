@@ -11,14 +11,15 @@ import (
 )
 
 const (
+	StatusNotSet = ""
 	// Success is status of a job whose last run was a success.
-	Success = iota
+	StatusSuccess = "success"
 	// Running is status of a job whose last run has not finished.
-	Running
+	StatusRunning = "running"
 	// Failed is status of a job whose last run was not successful on any nodes.
-	Failed
+	StatusFailed = "failed"
 	// PartialyFailed is status of a job whose last run was successful on only some nodes.
-	PartialyFailed
+	StatusPartialyFailed = "partially_failed"
 
 	// ConcurrencyAllow allows a job to execute concurrency.
 	ConcurrencyAllow = "allow"
@@ -113,6 +114,9 @@ type Job struct {
 
 	// Executor args
 	ExecutorConfig ExecutorPluginConfig `json:"executor_config"`
+
+	// Computed job status
+	Status string `json:"status"`
 }
 
 // Run the job
@@ -144,10 +148,10 @@ func (j *Job) String() string {
 }
 
 // Status returns the status of a job whether it's running, succeded or failed
-func (j *Job) Status() int {
+func (j *Job) GetStatus() string {
 	// Maybe we are testing
 	if j.Agent == nil {
-		return -1
+		return StatusNotSet
 	}
 
 	execs, _ := j.Agent.Store.GetLastExecutionGroup(j.Name)
@@ -155,11 +159,11 @@ func (j *Job) Status() int {
 	failed := 0
 	for _, ex := range execs {
 		if ex.FinishedAt.IsZero() {
-			return Running
+			return StatusRunning
 		}
 	}
 
-	var status int
+	var status string
 	for _, ex := range execs {
 		if ex.Success {
 			success = success + 1
@@ -169,11 +173,11 @@ func (j *Job) Status() int {
 	}
 
 	if failed == 0 {
-		status = Success
+		status = StatusSuccess
 	} else if failed > 0 && success == 0 {
-		status = Failed
+		status = StatusFailed
 	} else if failed > 0 && success > 0 {
-		status = PartialyFailed
+		status = StatusPartialyFailed
 	}
 
 	return status
@@ -194,7 +198,7 @@ func (j *Job) GetParent() (*Job, error) {
 		return nil, ErrNoParent
 	}
 
-	parentJob, err := j.Agent.Store.GetJob(j.ParentJob)
+	parentJob, err := j.Agent.Store.GetJob(j.ParentJob, nil)
 	if err != nil {
 		if err == store.ErrKeyNotFound {
 			return nil, ErrParentJobNotFound
@@ -247,16 +251,18 @@ func (j *Job) isRunnable() bool {
 	if j.Concurrency == ConcurrencyForbid {
 		j.Agent.RefreshJobStatus(j.Name)
 	}
-	status := j.Status()
+	if j.Status == StatusNotSet {
+		j.Status = j.GetStatus()
+	}
 
-	if status == Running {
+	if j.Status == StatusRunning {
 		if j.Concurrency == ConcurrencyAllow {
 			return true
 		} else if j.Concurrency == ConcurrencyForbid {
 			log.WithFields(logrus.Fields{
 				"job":         j.Name,
 				"concurrency": j.Concurrency,
-				"job_status":  status,
+				"job_status":  j.Status,
 			}).Debug("scheduler: Skipping execution")
 			return false
 		}
