@@ -29,7 +29,6 @@ type Storage interface {
 	GetLastExecutionGroup(jobName string) ([]*Execution, error)
 	GetExecutionGroup(execution *Execution) ([]*Execution, error)
 	GetGroupedExecutions(jobName string) (map[int64][]*Execution, []int64, error)
-	GetCurrentExecutions(nodeName string) ([]*Execution, error)
 	SetExecution(execution *Execution) (string, error)
 	DeleteExecutions(jobName string) error
 	GetLeader() []byte
@@ -408,15 +407,6 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 	}
 
 	return key, nil
-}
-
-func (s *Store) GetCurrentExecutions(nodeName string) ([]*Execution, error) {
-	res, err := s.Client.List(fmt.Sprintf("%s/current_executions/%s", s.keyspace, nodeName), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return s.unmarshalExecutions(res, nodeName)
 }
 
 func (s *Store) unmarshalExecutions(res []*store.KVPair, stopWord string) ([]*Execution, error) {
