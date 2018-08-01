@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/abronan/valkeyrie"
 	"github.com/abronan/valkeyrie/store"
 	"github.com/abronan/valkeyrie/store/consul"
