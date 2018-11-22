@@ -7,6 +7,7 @@ import (
 
 	"github.com/abronan/valkeyrie"
 	"github.com/abronan/valkeyrie/store"
+	"github.com/abronan/valkeyrie/store/boltdb"
 	"github.com/abronan/valkeyrie/store/consul"
 	"github.com/abronan/valkeyrie/store/etcd/v2"
 	"github.com/abronan/valkeyrie/store/etcd/v3"
@@ -54,6 +55,7 @@ func init() {
 	consul.Register()
 	zookeeper.Register()
 	redis.Register()
+	boltdb.Register()
 }
 
 func NewStore(backend string, machines []string, a *Agent, keyspace string, config *store.Config) *Store {
