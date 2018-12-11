@@ -41,7 +41,7 @@ type Store struct {
 	Client   store.Store
 	agent    *Agent
 	keyspace string
-	backend  string
+	backend  store.Backend
 }
 
 type JobOptions struct {
@@ -58,7 +58,7 @@ func init() {
 	boltdb.Register()
 }
 
-func NewStore(backend string, machines []string, a *Agent, keyspace string, config *store.Config) *Store {
+func NewStore(backend store.Backend, machines []string, a *Agent, keyspace string, config *store.Config) *Store {
 	s, err := valkeyrie.NewStore(store.Backend(backend), machines, config)
 	if err != nil {
 		log.Error(err)
