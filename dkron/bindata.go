@@ -19301,7 +19301,7 @@ func templatesExecutionsHtmlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/executions.html.tmpl", size: 2615, mode: os.FileMode(420), modTime: time.Unix(1546984297, 0)}
+	info := bindataFileInfo{name: "templates/executions.html.tmpl", size: 2615, mode: os.FileMode(420), modTime: time.Unix(1546985138, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -19341,7 +19341,7 @@ func templatesJobsHtmlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/jobs.html.tmpl", size: 6912, mode: os.FileMode(420), modTime: time.Unix(1546984235, 0)}
+	info := bindataFileInfo{name: "templates/jobs.html.tmpl", size: 6912, mode: os.FileMode(420), modTime: time.Unix(1546985138, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
