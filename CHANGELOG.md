@@ -1,7 +1,3 @@
-## Unreleased
-
-- Add DynamoDB support
-
 ## 1.0.2
 
 05e318b 💅
