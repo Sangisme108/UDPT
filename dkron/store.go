@@ -11,7 +11,7 @@ import (
 	"github.com/abronan/valkeyrie/store/consul"
 	"github.com/abronan/valkeyrie/store/dynamodb"
 	"github.com/abronan/valkeyrie/store/etcd/v2"
-	"github.com/abronan/valkeyrie/store/etcd/v3"
+	etcdv3 "github.com/abronan/valkeyrie/store/etcd/v3"
 	"github.com/abronan/valkeyrie/store/redis"
 	"github.com/abronan/valkeyrie/store/zookeeper"
 	"github.com/sirupsen/logrus"
@@ -263,6 +263,13 @@ func (s *Store) GetJobs(options *JobOptions) ([]*Job, error) {
 				job.Status = job.GetStatus()
 			}
 		}
+
+		n, err := job.GetNext()
+		if err != nil {
+			return nil, err
+		}
+		job.Next = n
+
 		jobs = append(jobs, &job)
 	}
 	return jobs, nil
@@ -293,6 +300,12 @@ func (s *Store) GetJobWithKVPair(name string, options *JobOptions) (*Job, *store
 	if options != nil && options.ComputeStatus {
 		job.Status = job.GetStatus()
 	}
+
+	n, err := job.GetNext()
+	if err != nil {
+		return nil, nil, err
+	}
+	job.Next = n
 
 	return &job, res, nil
 }
