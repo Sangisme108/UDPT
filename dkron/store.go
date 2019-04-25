@@ -21,10 +21,9 @@ import (
 const MaxExecutions = 100
 
 type Storage interface {
-	SetJob(job *Job) error
+	SetJob(job *Job, copyDependentJobs bool) error
 	AtomicJobPut(job *Job, prevJobKVPair *store.KVPair) (bool, error)
-	SetJobDependencyTree(job *Job, previousJob *Job) error
-	GetJobs() ([]*Job, error)
+	GetJobs(options *JobOptions) ([]*Job, error)
 	GetJob(name string, options *JobOptions) (*Job, error)
 	GetJobWithKVPair(name string, options *JobOptions) (*Job, *store.KVPair, error)
 	DeleteJob(name string) (*Job, error)
@@ -36,10 +35,12 @@ type Storage interface {
 	DeleteExecutions(jobName string) error
 	GetLeader() []byte
 	LeaderKey() string
+	Healthy() error
+	Client() store.Store
 }
 
 type Store struct {
-	Client   store.Store
+	client   store.Store
 	agent    *Agent
 	keyspace string
 	backend  store.Backend
@@ -72,11 +73,15 @@ func NewStore(backend store.Backend, machines []string, a *Agent, keyspace strin
 		"keyspace": keyspace,
 	}).Debug("store: Backend config")
 
-	return &Store{Client: s, agent: a, keyspace: keyspace, backend: backend}
+	return &Store{client: s, agent: a, keyspace: keyspace, backend: backend}
+}
+
+func (s *Store) Client() store.Store {
+	return s.client
 }
 
 func (s *Store) Healthy() error {
-	_, err := s.Client.List(s.keyspace, nil)
+	_, err := s.client.List(s.keyspace, nil)
 	if err != store.ErrKeyNotFound && err != nil {
 		return err
 	}
@@ -130,7 +135,7 @@ func (s *Store) SetJob(job *Job, copyDependentJobs bool) error {
 		"json": string(jobJSON),
 	}).Debug("store: Setting job")
 
-	if err := s.Client.Put(jobKey, jobJSON, nil); err != nil {
+	if err := s.client.Put(jobKey, jobJSON, nil); err != nil {
 		return err
 	}
 
@@ -189,7 +194,7 @@ func (s *Store) AtomicJobPut(job *Job, prevJobKVPair *store.KVPair) (bool, error
 	jobKey := fmt.Sprintf("%s/jobs/%s", s.keyspace, job.Name)
 	jobJSON, _ := json.Marshal(job)
 
-	ok, _, err := s.Client.AtomicPut(jobKey, jobJSON, prevJobKVPair, nil)
+	ok, _, err := s.client.AtomicPut(jobKey, jobJSON, prevJobKVPair, nil)
 
 	return ok, err
 }
@@ -238,7 +243,7 @@ func (s *Store) jobHasTags(job *Job, tags map[string]string) bool {
 
 // GetJobs returns all jobs
 func (s *Store) GetJobs(options *JobOptions) ([]*Job, error) {
-	res, err := s.Client.List(s.keyspace+"/jobs/", nil)
+	res, err := s.client.List(s.keyspace+"/jobs/", nil)
 	if err != nil {
 		if err == store.ErrKeyNotFound {
 			log.Debug("store: No jobs found")
@@ -282,7 +287,7 @@ func (s *Store) GetJob(name string, options *JobOptions) (*Job, error) {
 }
 
 func (s *Store) GetJobWithKVPair(name string, options *JobOptions) (*Job, *store.KVPair, error) {
-	res, err := s.Client.Get(s.keyspace+"/jobs/"+name, nil)
+	res, err := s.client.Get(s.keyspace+"/jobs/"+name, nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -322,7 +327,7 @@ func (s *Store) DeleteJob(name string) (*Job, error) {
 		}
 	}
 
-	if err := s.Client.Delete(s.keyspace + "/jobs/" + name); err != nil {
+	if err := s.client.Delete(s.keyspace + "/jobs/" + name); err != nil {
 		return nil, err
 	}
 
@@ -331,7 +336,7 @@ func (s *Store) DeleteJob(name string) (*Job, error) {
 
 func (s *Store) GetExecutions(jobName string) ([]*Execution, error) {
 	prefix := fmt.Sprintf("%s/executions/%s", s.keyspace, jobName)
-	res, err := s.Client.List(prefix, nil)
+	res, err := s.client.List(prefix, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -340,7 +345,7 @@ func (s *Store) GetExecutions(jobName string) ([]*Execution, error) {
 }
 
 func (s *Store) GetLastExecutionGroup(jobName string) ([]*Execution, error) {
-	res, err := s.Client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, jobName), nil)
+	res, err := s.client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, jobName), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -369,7 +374,7 @@ func (s *Store) GetLastExecutionGroup(jobName string) ([]*Execution, error) {
 }
 
 func (s *Store) GetExecutionGroup(execution *Execution) ([]*Execution, error) {
-	res, err := s.Client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, execution.JobName), nil)
+	res, err := s.client.List(fmt.Sprintf("%s/executions/%s", s.keyspace, execution.JobName), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -421,7 +426,7 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 		"execution": key,
 	}).Debug("store: Setting key")
 
-	err := s.Client.Put(fmt.Sprintf("%s/executions/%s/%s", s.keyspace, execution.JobName, key), exJson, nil)
+	err := s.client.Put(fmt.Sprintf("%s/executions/%s/%s", s.keyspace, execution.JobName, key), exJson, nil)
 	if err != nil {
 		log.WithFields(logrus.Fields{
 			"job":       execution.JobName,
@@ -447,7 +452,7 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 				"job":       execs[i].JobName,
 				"execution": execs[i].Key(),
 			}).Debug("store: to detele key")
-			err := s.Client.Delete(fmt.Sprintf("%s/executions/%s/%s", s.keyspace, execs[i].JobName, execs[i].Key()))
+			err := s.client.Delete(fmt.Sprintf("%s/executions/%s/%s", s.keyspace, execs[i].JobName, execs[i].Key()))
 			if err != nil {
 				log.WithError(err).
 					WithField("execution", execs[i].Key()).
@@ -481,12 +486,12 @@ func (s *Store) unmarshalExecutions(res []*store.KVPair, stopWord string) ([]*Ex
 
 // Removes all executions of a job
 func (s *Store) DeleteExecutions(jobName string) error {
-	return s.Client.DeleteTree(fmt.Sprintf("%s/executions/%s", s.keyspace, jobName))
+	return s.client.DeleteTree(fmt.Sprintf("%s/executions/%s", s.keyspace, jobName))
 }
 
 // Retrieve the leader from the store
 func (s *Store) GetLeader() []byte {
-	res, err := s.Client.Get(s.LeaderKey(), nil)
+	res, err := s.client.Get(s.LeaderKey(), nil)
 	if err != nil {
 		if err == store.ErrNotReachable {
 			log.Fatal("store: Store not reachable, be sure you have an existing key-value store running is running and is reachable.")
