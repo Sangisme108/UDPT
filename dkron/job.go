@@ -6,9 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/abronan/valkeyrie/store"
+	"github.com/dgraph-io/badger"
 	"github.com/distribworks/dkron/cron"
 	"github.com/distribworks/dkron/proto"
+	"github.com/golang/protobuf/ptypes"
 	"github.com/sirupsen/logrus"
 )
 
@@ -80,6 +81,9 @@ type Job struct {
 	// Tags of the target servers to run this job against.
 	Tags map[string]string `json:"tags"`
 
+	// Job metadata describes the job and allows filtering from the API.
+	Metadata map[string]string `json:"metadata"`
+
 	// Pointer to the calling agent.
 	Agent *Agent `json:"-"`
 
@@ -93,8 +97,6 @@ type Job struct {
 
 	// Job id of job that this job is dependent upon.
 	ParentJob string `json:"parent_job"`
-
-	lock store.Locker
 
 	// Processors to use for this job
 	Processors map[string]PluginConfig `json:"processors"`
@@ -115,7 +117,11 @@ type Job struct {
 	Next time.Time `json:"next"`
 }
 
-func NewJobFromProto(in *proto.GetJobResponse) *Job {
+// NewJobFromProto create a new Job from a PB Job struct
+func NewJobFromProto(in *proto.Job) *Job {
+	lastSuccess, _ := ptypes.Timestamp(in.GetLastSuccess())
+	lastError, _ := ptypes.Timestamp(in.GetLastError())
+	next, _ := ptypes.Timestamp(in.GetNext())
 	return &Job{
 		Name:           in.Name,
 		Timezone:       in.Timezone,
@@ -133,6 +139,39 @@ func NewJobFromProto(in *proto.GetJobResponse) *Job {
 		Executor:       in.Executor,
 		ExecutorConfig: in.ExecutorConfig,
 		Status:         in.Status,
+		Metadata:       in.Metadata,
+		LastSuccess:    lastSuccess,
+		LastError:      lastError,
+		Next:           next,
+	}
+}
+
+// ToProto return the corresponding representation of this Job in proto struct
+func (j *Job) ToProto() *proto.Job {
+	lastSuccess, _ := ptypes.TimestampProto(j.LastSuccess)
+	lastError, _ := ptypes.TimestampProto(j.LastError)
+	next, _ := ptypes.TimestampProto(j.Next)
+	return &proto.Job{
+		Name:           j.Name,
+		Timezone:       j.Timezone,
+		Schedule:       j.Schedule,
+		Owner:          j.Owner,
+		OwnerEmail:     j.OwnerEmail,
+		SuccessCount:   int32(j.SuccessCount),
+		ErrorCount:     int32(j.ErrorCount),
+		Disabled:       j.Disabled,
+		Tags:           j.Tags,
+		Retries:        uint32(j.Retries),
+		DependentJobs:  j.DependentJobs,
+		ParentJob:      j.ParentJob,
+		Concurrency:    j.Concurrency,
+		Executor:       j.Executor,
+		ExecutorConfig: j.ExecutorConfig,
+		Status:         j.Status,
+		Metadata:       j.Metadata,
+		LastSuccess:    lastSuccess,
+		LastError:      lastError,
+		Next:           next,
 	}
 }
 
@@ -226,7 +265,7 @@ func (j *Job) GetParent() (*Job, error) {
 
 	parentJob, err := j.Agent.Store.GetJob(j.ParentJob, nil)
 	if err != nil {
-		if err == store.ErrKeyNotFound {
+		if err == badger.ErrKeyNotFound {
 			return nil, ErrParentJobNotFound
 		}
 		return nil, err
@@ -236,41 +275,11 @@ func (j *Job) GetParent() (*Job, error) {
 	return parentJob, nil
 }
 
-// Lock the job in store
-func (j *Job) Lock() error {
-	// Maybe we are testing
-	if j.Agent == nil {
-		return ErrNoAgent
+func (j *Job) getLast() time.Time {
+	if j.LastSuccess.After(j.LastError) {
+		return j.LastSuccess
 	}
-
-	lockKey := fmt.Sprintf("%s/job_locks/%s", j.Agent.Config().Keyspace, j.Name)
-	// TODO: LockOptions empty is a temporary fix until https://github.com/docker/libkv/pull/99 is fixed
-	l, err := j.Agent.Store.Client().NewLock(lockKey, &store.LockOptions{RenewLock: make(chan (struct{}))})
-	if err != nil {
-		return err
-	}
-	j.lock = l
-
-	_, err = j.lock.Lock(nil)
-	if err != nil {
-		return err
-	}
-
-	return nil
-}
-
-// Unlock the job in store
-func (j *Job) Unlock() error {
-	// Maybe we are testing
-	if j.Agent == nil {
-		return ErrNoAgent
-	}
-
-	if err := j.lock.Unlock(); err != nil {
-		return err
-	}
-
-	return nil
+	return j.LastError
 }
 
 // GetNext returns the job's next schedule from now
