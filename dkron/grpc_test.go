@@ -19,9 +19,7 @@ func TestGRPCExecutionDone(t *testing.T) {
 
 	viper.Reset()
 
-	ip1, returnFn1 := testutil.TakeIP()
-	defer returnFn1()
-	aAddr := ip1.String()
+	aAddr := testutil.GetBindAddr().String()
 
 	c := DefaultConfig()
 	c.BindAddr = aAddr
@@ -50,19 +48,9 @@ func TestGRPCExecutionDone(t *testing.T) {
 		Disabled:       true,
 	}
 
-	err = a.Store.SetJob(testJob, true)
-	require.NoError(t, err)
-
-	testChildJob := &Job{
-		Name:           "child-test",
-		ParentJob:      testJob.Name,
-		Executor:       "shell",
-		ExecutorConfig: map[string]string{"command": "/bin/true"},
-		Disabled:       false,
+	if err := a.Store.SetJob(testJob, true); err != nil {
+		t.Fatalf("error creating job: %s", err)
 	}
-
-	err = a.Store.SetJob(testChildJob, true)
-	require.NoError(t, err)
 
 	testExecution := &Execution{
 		JobName:    "test",
@@ -71,36 +59,21 @@ func TestGRPCExecutionDone(t *testing.T) {
 		NodeName:   "testNode",
 		FinishedAt: time.Now(),
 		Success:    true,
-		Output:     "test",
+		Output:     []byte("type"),
 	}
 
 	rc := NewGRPCClient(nil, a)
-	rc.ExecutionDone(a.advertiseRPCAddr(), testExecution)
-	execs, err := a.Store.GetExecutions("test")
-	require.NoError(t, err)
+	rc.ExecutionDone(a.getRPCAddr(), testExecution)
+	execs, _ := a.Store.GetExecutions("test", nil)
 
 	assert.Len(t, execs, 1)
 	assert.Equal(t, string(testExecution.Output), string(execs[0].Output))
 
-	// Test run a dependent job
-	execs, err = a.Store.GetExecutions("child-test")
-	require.NoError(t, err)
-
-	assert.Len(t, execs, 1)
-
-	// Test job with dependents no delete
-	_, err = a.Store.DeleteJob(testJob.Name)
-	require.Error(t, err)
-
-	// Remove dependents and parent
-	_, err = a.Store.DeleteJob(testChildJob.Name)
-	require.NoError(t, err)
-	_, err = a.Store.DeleteJob(testJob.Name)
-	require.NoError(t, err)
-
 	// Test store execution on a deleted job
+	a.Store.DeleteJob(testJob.Name)
+
 	testExecution.FinishedAt = time.Now()
-	err = rc.ExecutionDone(a.advertiseRPCAddr(), testExecution)
+	err = rc.ExecutionDone(a.getRPCAddr(), testExecution)
 
 	assert.Error(t, err, ErrExecutionDoneForDeletedJob)
 }
