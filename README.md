@@ -2,7 +2,7 @@
 <img width="400" src="docs/images/DKRON_STICKER_OK_CMYK_RGB_CONV_300.png" alt="Dkron" title="Dkron" />
 </p>
 
-# Dkron - Distributed, fault tolerant job scheduling system for cloud native environments [![GoDoc](https://godoc.org/github.com/distribworks/dkron?status.svg)](https://godoc.org/github.com/distribworks/dkron) [![Actions Status](https://github.com/distribworks/dkron/workflows/Test/badge.svg)](https://github.com/distribworks/dkron/actions) [![Gitter](https://badges.gitter.im/distribworks/dkron.svg)](https://gitter.im/distribworks/dkron)
+# Dkron - Distributed, fault tolerant job scheduling system for cloud native environments [![GoDoc](https://godoc.org/github.com/distribworks/dkron?status.svg)](https://godoc.org/github.com/distribworks/dkron) [![Build Status](https://travis-ci.org/distribworks/dkron.svg?branch=master)](https://travis-ci.org/distribworks/dkron) [![Gitter](https://badges.gitter.im/distribworks/dkron.svg)](https://gitter.im/distribworks/dkron)
 
 Website: http://dkron.io/
 
@@ -22,9 +22,7 @@ You can use Dkron to run the most important part of your company, scheduled jobs
 
 ## Project status
 
-Dkron v1.x is the previous stable still used in production by several companies.
-
-Dkron v2.x is the latest version also stable and used in production by several companies, if you are going to start a new deployment, use this.
+Dkron v2.x is stable and being used in production by several companies.
 
 ## Installation
 
@@ -44,10 +42,8 @@ Next, run the included Docker Compose config:
 
 This will start Dkron instances. To add more Dkron instances to the clusters:
 
-```
-docker-compose up --scale dkron-server=4
-docker-compose up --scale dkron-agent=10
-```
+`docker-compose up --scale dkron-server=4`
+`docker-compose up --scale dkron-agent=10`
 
 Check the port mapping using `docker-compose ps` and use the browser to navigate to the Dkron dashboard using one of the ports mapped by compose.
 
@@ -59,7 +55,7 @@ Dkron dashboard is built using a combinations of golang templates and AngularJS 
 
 To start developing the dashboard enter the `static` directory and run `npm install` to get the frontend dependencies.
 
-Change code in JS files or in templates, then run `make gen` to generate `bindata.go` file. This is a method of embedding resources in Go applications.
+Change code in JS files or in templates, then run `make gen` to generate assets files. This is a method of embedding resources in Go applications.
 
 ### Resources
 
@@ -75,9 +71,13 @@ https://github.com/jobandtalent/dkron-rb
 PHP client
 https://github.com/gromo/dkron-php-adapter
 
+Terraform provider
+https://github.com/peertransfer/terraform-provider-dkron
+
 ## Get in touch
 
-- Twitter: [@distribworks](https://twitter.com/distribworks) or [@distribworks](https://twitter.com/distribworks)
+- Twitter: [@distribworks](https://twitter.com/distribworks)
+- Chat: https://gitter.im/distribworks/dkron
 - Email: victor at distrib.works
 
 # Sponsor
