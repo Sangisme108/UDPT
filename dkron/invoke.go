@@ -6,8 +6,6 @@ import (
 	"time"
 
 	"github.com/armon/circbuf"
-	"github.com/distribworks/dkron/v2/plugin/types"
-	"github.com/golang/groupcache/consistenthash"
 )
 
 const (
@@ -36,7 +34,7 @@ func (a *Agent) invokeJob(job *Job, execution *Execution) error {
 	if executor, ok := a.ExecutorPlugins[jex]; ok {
 		log.WithField("plugin", jex).Debug("invoke: calling executor plugin")
 		runningExecutions.Store(execution.GetGroup(), execution)
-		out, err := executor.Execute(&types.ExecuteRequest{
+		out, err := executor.Execute(&ExecuteRequest{
 			JobName: job.Name,
 			Config:  exc,
 		})
