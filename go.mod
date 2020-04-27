@@ -24,7 +24,6 @@ require (
 	github.com/hashicorp/serf v0.9.0
 	github.com/hashicorp/yamux v0.0.0-20190923154419-df201c70410d // indirect
 	github.com/jordan-wright/email v0.0.0-20180115032944-94ae17dedda2
-	github.com/juliangruber/go-intersect v1.0.0
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
 	github.com/mattn/go-shellwords v1.0.10
 	github.com/mitchellh/go-testing-interface v1.0.0 // indirect
@@ -40,8 +39,7 @@ require (
 	golang.org/x/crypto v0.0.0-20200311171314-f7b00557c8c4 // indirect
 	golang.org/x/net v0.0.0-20200301022130-244492dfa37a
 	golang.org/x/sys v0.0.0-20200302150141-5c8b2ff67527 // indirect
-	google.golang.org/grpc v1.28.1
-	google.golang.org/protobuf v1.21.0
+	google.golang.org/grpc v1.29.1
 )
 
 go 1.13
