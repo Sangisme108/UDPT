@@ -2,7 +2,7 @@
 <img width="400" src="docs/images/DKRON_STICKER_OK_CMYK_RGB_CONV_300.png" alt="Dkron" title="Dkron" />
 </p>
 
-# Dkron - Distributed, fault tolerant job scheduling system for cloud native environments [![GoDoc](https://godoc.org/github.com/distribworks/dkron?status.svg)](https://godoc.org/github.com/distribworks/dkron) [![Build Status](https://travis-ci.org/distribworks/dkron.svg?branch=master)](https://travis-ci.org/distribworks/dkron) [![Gitter](https://badges.gitter.im/distribworks/dkron.svg)](https://gitter.im/distribworks/dkron)
+# Dkron - Distributed, fault tolerant job scheduling system for cloud native environments [![GoDoc](https://godoc.org/github.com/distribworks/dkron?status.svg)](https://godoc.org/github.com/distribworks/dkron) [![Actions Status](https://github.com/distribworks/dkron/workflows/Test/badge.svg)](https://github.com/distribworks/dkron/actions) [![Gitter](https://badges.gitter.im/distribworks/dkron.svg)](https://gitter.im/distribworks/dkron)
 
 Website: http://dkron.io/
 
@@ -22,7 +22,11 @@ You can use Dkron to run the most important part of your company, scheduled jobs
 
 ## Project status
 
-Dkron v2.x is stable and being used in production by several companies.
+Dkron v1.x is legacy, not supported.
+
+Dkron v2.x is the previous version, stable and still used in production by some users.
+
+Dkron v3.x current stable version, if you are going to start a new deployment, use this.
 
 ## Installation
 
@@ -42,8 +46,10 @@ Next, run the included Docker Compose config:
 
 This will start Dkron instances. To add more Dkron instances to the clusters:
 
-`docker-compose up --scale dkron-server=4`
-`docker-compose up --scale dkron-agent=10`
+```
+docker-compose up --scale dkron-server=4
+docker-compose up --scale dkron-agent=10
+```
 
 Check the port mapping using `docker-compose ps` and use the browser to navigate to the Dkron dashboard using one of the ports mapped by compose.
 
