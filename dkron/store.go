@@ -2,25 +2,27 @@ package dkron
 
 import (
 	"bytes"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
 	"sort"
+	"strings"
 	"sync"
 	"time"
 
-	"github.com/dgraph-io/badger/v2"
-	dkronpb "github.com/distribworks/dkron/v2/proto"
+	dkronpb "github.com/distribworks/dkron/v3/plugin/types"
 	"github.com/golang/protobuf/proto"
 	"github.com/sirupsen/logrus"
+	"github.com/tidwall/buntdb"
 )
 
 const (
 	// MaxExecutions to maintain in the storage
 	MaxExecutions = 100
 
-	defaultGCInterval     = 5 * time.Minute
-	defaultGCDiscardRatio = 0.7
+	jobsPrefix       = "jobs"
+	executionsPrefix = "executions"
 )
 
 var (
@@ -30,77 +32,59 @@ var (
 
 // Store is the local implementation of the Storage interface.
 // It gives dkron the ability to manipulate its embedded storage
-// BadgerDB.
+// BuntDB.
 type Store struct {
-	agent  *Agent
-	db     *badger.DB
-	lock   *sync.Mutex // for
-	closed bool
+	db   *buntdb.DB
+	lock *sync.Mutex // for
 }
 
 // JobOptions additional options to apply when loading a Job.
 type JobOptions struct {
 	Metadata map[string]string `json:"tags"`
+	Sort     string
+	Order    string
+	Query    string
+}
+
+type kv struct {
+	Key   string
+	Value []byte
 }
 
 // NewStore creates a new Storage instance.
-func NewStore(a *Agent, dir string) (*Store, error) {
-	opts := badger.DefaultOptions(dir).
-		WithLogger(log)
-
-	db, err := badger.Open(opts)
+func NewStore() (*Store, error) {
+	db, err := buntdb.Open(":memory:")
+	db.CreateIndex("name", jobsPrefix+":*", buntdb.IndexJSON("name"))
+	db.CreateIndex("displayname", jobsPrefix+":*", buntdb.IndexJSON("displayname"))
+	db.CreateIndex("schedule", jobsPrefix+":*", buntdb.IndexJSON("schedule"))
+	db.CreateIndex("success_count", jobsPrefix+":*", buntdb.IndexJSON("success_count"))
+	db.CreateIndex("error_count", jobsPrefix+":*", buntdb.IndexJSON("error_count"))
+	db.CreateIndex("last_success", jobsPrefix+":*", buntdb.IndexJSON("last_success"))
+	db.CreateIndex("last_error", jobsPrefix+":*", buntdb.IndexJSON("last_error"))
+	db.CreateIndex("next", jobsPrefix+":*", buntdb.IndexJSON("next"))
 	if err != nil {
 		return nil, err
 	}
 
-	if err := db.DropAll(); err != nil {
-		return nil, err
-	}
-
 	store := &Store{
-		db:    db,
-		agent: a,
-		lock:  &sync.Mutex{},
+		db:   db,
+		lock: &sync.Mutex{},
 	}
-
-	go store.runGcLoop()
 
 	return store, nil
 }
 
-func (s *Store) runGcLoop() {
-	ticker := time.NewTicker(defaultGCInterval)
-	defer ticker.Stop()
-	for range ticker.C {
-		s.lock.Lock()
-		closed := s.closed
-		s.lock.Unlock()
-		if closed {
-			break
-		}
+func (s *Store) setJobTxFunc(pbj *dkronpb.Job) func(tx *buntdb.Tx) error {
+	return func(tx *buntdb.Tx) error {
+		jobKey := fmt.Sprintf("%s:%s", jobsPrefix, pbj.Name)
 
-		// One call would only result in removal of at max one log file.
-		// As an optimization, you could also immediately re-run it whenever it returns nil error
-		//(indicating a successful value log GC), as shown below.
-	again:
-		err := s.db.RunValueLogGC(defaultGCDiscardRatio)
-		if err == nil {
-			goto again
-		}
-	}
-}
-
-func (s *Store) setJobTxnFunc(pbj *dkronpb.Job) func(txn *badger.Txn) error {
-	return func(txn *badger.Txn) error {
-		jobKey := fmt.Sprintf("jobs/%s", pbj.Name)
-
-		jb, err := proto.Marshal(pbj)
+		jb, err := json.Marshal(pbj)
 		if err != nil {
 			return err
 		}
 		log.WithField("job", pbj.Name).Debug("store: Setting job")
 
-		if err := txn.Set([]byte(jobKey), jb); err != nil {
+		if _, _, err := tx.Set(jobKey, string(jb), nil); err != nil {
 			return err
 		}
 
@@ -108,13 +92,15 @@ func (s *Store) setJobTxnFunc(pbj *dkronpb.Job) func(txn *badger.Txn) error {
 	}
 }
 
+// DB is the getter for the BuntDB instance
+func (s *Store) DB() *buntdb.DB {
+	return s.db
+}
+
 // SetJob stores a job in the storage
 func (s *Store) SetJob(job *Job, copyDependentJobs bool) error {
 	var pbej dkronpb.Job
 	var ej *Job
-
-	// Init the job agent
-	job.Agent = s.agent
 
 	if err := job.Validate(); err != nil {
 		return err
@@ -127,15 +113,14 @@ func (s *Store) SetJob(job *Job, copyDependentJobs bool) error {
 		}
 	}
 
-	err := s.db.Update(func(txn *badger.Txn) error {
+	err := s.db.Update(func(tx *buntdb.Tx) error {
 		// Get if the requested job already exist
-		err := s.getJobTxnFunc(job.Name, &pbej)(txn)
-		if err != nil && err != badger.ErrKeyNotFound {
+		err := s.getJobTxFunc(job.Name, &pbej)(tx)
+		if err != nil && err != buntdb.ErrNotFound {
 			return err
 		}
 
 		ej = NewJobFromProto(&pbej)
-		ej.Agent = s.agent
 
 		if ej.Name != "" {
 			// When the job runs, these status vars are updated
@@ -155,6 +140,9 @@ func (s *Store) SetJob(job *Job, copyDependentJobs bool) error {
 			if len(ej.DependentJobs) != 0 && copyDependentJobs {
 				job.DependentJobs = ej.DependentJobs
 			}
+			if ej.Status != "" {
+				job.Status = ej.Status
+			}
 		}
 
 		if job.Schedule != ej.Schedule {
@@ -162,10 +150,15 @@ func (s *Store) SetJob(job *Job, copyDependentJobs bool) error {
 			if err != nil {
 				return err
 			}
+		} else {
+			// If comming from a backup us the previous value, don't allow overwriting this
+			if job.Next.Before(ej.Next) {
+				job.Next = ej.Next
+			}
 		}
 
 		pbj := job.ToProto()
-		s.setJobTxnFunc(pbj)(txn)
+		s.setJobTxFunc(pbj)(tx)
 		return nil
 	})
 	if err != nil {
@@ -193,7 +186,7 @@ func (s *Store) removeFromParent(child *Job) error {
 		return nil
 	}
 
-	parent, err := child.GetParent()
+	parent, err := child.GetParent(s)
 	if err != nil {
 		return err
 	}
@@ -221,7 +214,7 @@ func (s *Store) addToParent(child *Job) error {
 		return nil
 	}
 
-	parent, err := child.GetParent()
+	parent, err := child.GetParent(s)
 	if err != nil {
 		return err
 	}
@@ -237,11 +230,11 @@ func (s *Store) addToParent(child *Job) error {
 // SetExecutionDone saves the execution and updates the job with the corresponding
 // results
 func (s *Store) SetExecutionDone(execution *Execution) (bool, error) {
-	err := s.db.Update(func(txn *badger.Txn) error {
+	err := s.db.Update(func(tx *buntdb.Tx) error {
 		// Load the job from the store
 		var pbj dkronpb.Job
-		if err := s.getJobTxnFunc(execution.JobName, &pbj)(txn); err != nil {
-			if err == badger.ErrKeyNotFound {
+		if err := s.getJobTxFunc(execution.JobName, &pbj)(tx); err != nil {
+			if err == buntdb.ErrNotFound {
 				log.Warning(ErrExecutionDoneForDeletedJob)
 				return ErrExecutionDoneForDeletedJob
 			}
@@ -249,11 +242,11 @@ func (s *Store) SetExecutionDone(execution *Execution) (bool, error) {
 			return err
 		}
 
-		key := fmt.Sprintf("executions/%s/%s", execution.JobName, execution.Key())
+		key := fmt.Sprintf("%s:%s:%s", executionsPrefix, execution.JobName, execution.Key())
 
 		// Save the execution to store
 		pbe := execution.ToProto()
-		if err := s.setExecutionTxnFunc(key, pbe)(txn); err != nil {
+		if err := s.setExecutionTxFunc(key, pbe)(tx); err != nil {
 			return err
 		}
 
@@ -267,13 +260,13 @@ func (s *Store) SetExecutionDone(execution *Execution) (bool, error) {
 			pbj.ErrorCount++
 		}
 
-		status, err := s.computeStatus(pbj.Name, pbe.Group, txn)
+		status, err := s.computeStatus(pbj.Name, pbe.Group, tx)
 		if err != nil {
 			return err
 		}
 		pbj.Status = status
 
-		if err := s.setJobTxnFunc(&pbj)(txn); err != nil {
+		if err := s.setJobTxFunc(&pbj)(tx); err != nil {
 			return err
 		}
 
@@ -303,35 +296,40 @@ func (s *Store) jobHasMetadata(job *Job, metadata map[string]string) bool {
 
 // GetJobs returns all jobs
 func (s *Store) GetJobs(options *JobOptions) ([]*Job, error) {
+	if options == nil {
+		options = &JobOptions{
+			Sort: "name",
+		}
+	}
+
 	jobs := make([]*Job, 0)
-
-	err := s.db.View(func(txn *badger.Txn) error {
-		it := txn.NewIterator(badger.DefaultIteratorOptions)
-		defer it.Close()
-		prefix := []byte("jobs")
-		for it.Seek(prefix); it.ValidForPrefix(prefix); it.Next() {
-			item := it.Item()
-			v, err := item.ValueCopy(nil)
-			if err != nil {
-				return err
+	jobsFn := func(key, item string) bool {
+		var pbj dkronpb.Job
+		// [TODO] This condition is temporary while we migrate to JSON marshalling for jobs
+		// so we can use BuntDb indexes. To be removed in future versions.
+		if err := proto.Unmarshal([]byte(item), &pbj); err != nil {
+			if err := json.Unmarshal([]byte(item), &pbj); err != nil {
+				return false
 			}
+		}
+		job := NewJobFromProto(&pbj)
 
-			var pbj dkronpb.Job
-			if err := proto.Unmarshal(v, &pbj); err != nil {
-				return err
-			}
-			job := NewJobFromProto(&pbj)
-
-			job.Agent = s.agent
-			if options != nil {
-				if options.Metadata != nil && len(options.Metadata) > 0 && !s.jobHasMetadata(job, options.Metadata) {
-					continue
-				}
-			}
-
+		if options == nil ||
+			(options.Metadata == nil || len(options.Metadata) == 0 || s.jobHasMetadata(job, options.Metadata)) &&
+				(options.Query == "" || strings.Contains(job.Name, options.Query)) {
 			jobs = append(jobs, job)
 		}
-		return nil
+		return true
+	}
+
+	err := s.db.View(func(tx *buntdb.Tx) error {
+		var err error
+		if options.Order == "DESC" {
+			err = tx.Descend(options.Sort, jobsFn)
+		} else {
+			err = tx.Ascend(options.Sort, jobsFn)
+		}
+		return err
 	})
 
 	return jobs, err
@@ -341,32 +339,30 @@ func (s *Store) GetJobs(options *JobOptions) ([]*Job, error) {
 func (s *Store) GetJob(name string, options *JobOptions) (*Job, error) {
 	var pbj dkronpb.Job
 
-	err := s.db.View(s.getJobTxnFunc(name, &pbj))
+	err := s.db.View(s.getJobTxFunc(name, &pbj))
 	if err != nil {
 		return nil, err
 	}
 
 	job := NewJobFromProto(&pbj)
-	job.Agent = s.agent
 
 	return job, nil
 }
 
 // This will allow reuse this code to avoid nesting transactions
-func (s *Store) getJobTxnFunc(name string, pbj *dkronpb.Job) func(txn *badger.Txn) error {
-	return func(txn *badger.Txn) error {
-		item, err := txn.Get([]byte("jobs/" + name))
+func (s *Store) getJobTxFunc(name string, pbj *dkronpb.Job) func(tx *buntdb.Tx) error {
+	return func(tx *buntdb.Tx) error {
+		item, err := tx.Get(fmt.Sprintf("%s:%s", jobsPrefix, name))
 		if err != nil {
 			return err
 		}
 
-		res, err := item.ValueCopy(nil)
-		if err != nil {
-			return err
-		}
-
-		if err := proto.Unmarshal(res, pbj); err != nil {
-			return err
+		// [TODO] This condition is temporary while we migrate to JSON marshalling for jobs
+		// so we can use BuntDb indexes. To be removed in future versions.
+		if err := proto.Unmarshal([]byte(item), pbj); err != nil {
+			if err := json.Unmarshal([]byte(item), pbj); err != nil {
+				return err
+			}
 		}
 
 		log.WithFields(logrus.Fields{
@@ -381,10 +377,10 @@ func (s *Store) getJobTxnFunc(name string, pbj *dkronpb.Job) func(txn *badger.Tx
 // all its executions and references to it.
 func (s *Store) DeleteJob(name string) (*Job, error) {
 	var job *Job
-	err := s.db.Update(func(txn *badger.Txn) error {
+	err := s.db.Update(func(tx *buntdb.Tx) error {
 		// Get the job
 		var pbj dkronpb.Job
-		if err := s.getJobTxnFunc(name, &pbj)(txn); err != nil {
+		if err := s.getJobTxFunc(name, &pbj)(tx); err != nil {
 			return err
 		}
 		// Check if the job has dependent jobs
@@ -394,13 +390,13 @@ func (s *Store) DeleteJob(name string) (*Job, error) {
 			return ErrDependentJobs
 		}
 		job = NewJobFromProto(&pbj)
-		job.Agent = s.agent
 
-		if err := s.DeleteExecutions(name); err != nil {
+		if err := s.deleteExecutionsTxFunc(name)(tx); err != nil {
 			return err
 		}
 
-		return txn.Delete([]byte("jobs/" + name))
+		_, err := tx.Delete(fmt.Sprintf("%s:%s", jobsPrefix, name))
+		return err
 	})
 	if err != nil {
 		return nil, err
@@ -418,7 +414,7 @@ func (s *Store) DeleteJob(name string) (*Job, error) {
 
 // GetExecutions returns the executions given a Job name.
 func (s *Store) GetExecutions(jobName string, timezone *time.Location) ([]*Execution, error) {
-	prefix := fmt.Sprintf("executions/%s/", jobName)
+	prefix := fmt.Sprintf("%s:%s:", executionsPrefix, jobName)
 
 	kvs, err := s.list(prefix, true)
 	if err != nil {
@@ -428,50 +424,32 @@ func (s *Store) GetExecutions(jobName string, timezone *time.Location) ([]*Execu
 	return s.unmarshalExecutions(kvs, timezone)
 }
 
-type kv struct {
-	Key   string
-	Value []byte
-}
-
 func (s *Store) list(prefix string, checkRoot bool) ([]kv, error) {
 	var found bool
 	kvs := []kv{}
 
-	err := s.db.View(s.listTxnFunc(prefix, &kvs, &found))
+	err := s.db.View(s.listTxFunc(prefix, &kvs, &found))
 	if err == nil && !found && checkRoot {
-		return nil, badger.ErrKeyNotFound
+		return nil, buntdb.ErrNotFound
 	}
 
 	return kvs, err
 }
 
-func (*Store) listTxnFunc(prefix string, kvs *[]kv, found *bool) func(txn *badger.Txn) error {
-	return func(txn *badger.Txn) error {
-		it := txn.NewIterator(badger.DefaultIteratorOptions)
-		defer it.Close()
-
-		prefix := []byte(prefix)
-
-		for it.Seek(prefix); it.ValidForPrefix(prefix); it.Next() {
-			*found = true
-			item := it.Item()
-			k := item.Key()
-
-			// ignore self in listing
-			if bytes.Equal(trimDirectoryKey(k), prefix) {
-				continue
+func (*Store) listTxFunc(prefix string, kvs *[]kv, found *bool) func(tx *buntdb.Tx) error {
+	return func(tx *buntdb.Tx) error {
+		err := tx.Ascend("", func(key, value string) bool {
+			if strings.HasPrefix(key, prefix) {
+				*found = true
+				// ignore self in listing
+				if !bytes.Equal(trimDirectoryKey([]byte(key)), []byte(prefix)) {
+					kv := kv{Key: key, Value: []byte(value)}
+					*kvs = append(*kvs, kv)
+				}
 			}
-
-			body, err := item.ValueCopy(nil)
-			if err != nil {
-				return err
-			}
-
-			kv := kv{Key: string(k), Value: body}
-			*kvs = append(*kvs, kv)
-		}
-
-		return nil
+			return true
+		})
+		return err
 	}
 }
 
@@ -513,22 +491,18 @@ func (s *Store) GetGroupedExecutions(jobName string, timezone *time.Location) (m
 	return groups, byGroup, nil
 }
 
-func (*Store) setExecutionTxnFunc(key string, pbe *dkronpb.Execution) func(txn *badger.Txn) error {
-	return func(txn *badger.Txn) error {
+func (*Store) setExecutionTxFunc(key string, pbe *dkronpb.Execution) func(tx *buntdb.Tx) error {
+	return func(tx *buntdb.Tx) error {
 		// Get previous execution
-		i, err := txn.Get([]byte(key))
-		if err != nil && err != badger.ErrKeyNotFound {
+		i, err := tx.Get(key)
+		if err != nil && err != buntdb.ErrNotFound {
 			return err
 		}
 		// Do nothing if a previous execution exists and is
 		// more recent, avoiding non ordered execution set
-		if i != nil {
-			v, err := i.ValueCopy(nil)
-			if err != nil {
-				return err
-			}
+		if i != "" {
 			var p dkronpb.Execution
-			if err := proto.Unmarshal(v, &p); err != nil {
+			if err := proto.Unmarshal([]byte(i), &p); err != nil {
 				return err
 			}
 			// Compare existing execution
@@ -541,14 +515,16 @@ func (*Store) setExecutionTxnFunc(key string, pbe *dkronpb.Execution) func(txn *
 		if err != nil {
 			return err
 		}
-		return txn.Set([]byte(key), eb)
+
+		_, _, err = tx.Set(key, string(eb), nil)
+		return err
 	}
 }
 
 // SetExecution Save a new execution and returns the key of the new saved item or an error.
 func (s *Store) SetExecution(execution *Execution) (string, error) {
 	pbe := execution.ToProto()
-	key := fmt.Sprintf("executions/%s/%s", execution.JobName, execution.Key())
+	key := fmt.Sprintf("%s:%s:%s", executionsPrefix, execution.JobName, execution.Key())
 
 	log.WithFields(logrus.Fields{
 		"job":       execution.JobName,
@@ -556,7 +532,7 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 		"finished":  execution.FinishedAt.String(),
 	}).Debug("store: Setting key")
 
-	err := s.db.Update(s.setExecutionTxnFunc(key, pbe))
+	err := s.db.Update(s.setExecutionTxFunc(key, pbe))
 
 	if err != nil {
 		log.WithError(err).WithFields(logrus.Fields{
@@ -567,7 +543,7 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 	}
 
 	execs, err := s.GetExecutions(execution.JobName, nil)
-	if err != nil && err != badger.ErrKeyNotFound {
+	if err != nil && err != buntdb.ErrNotFound {
 		log.WithError(err).
 			WithField("job", execution.JobName).
 			Error("store: Error getting executions for job")
@@ -585,9 +561,10 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 				"job":       execs[i].JobName,
 				"execution": execs[i].Key(),
 			}).Debug("store: to detele key")
-			err = s.db.Update(func(txn *badger.Txn) error {
-				k := fmt.Sprintf("executions/%s/%s", execs[i].JobName, execs[i].Key())
-				return txn.Delete([]byte(k))
+			err = s.db.Update(func(tx *buntdb.Tx) error {
+				k := fmt.Sprintf("%s:%s:%s", executionsPrefix, execs[i].JobName, execs[i].Key())
+				_, err := tx.Delete(k)
+				return err
 			})
 			if err != nil {
 				log.WithError(err).
@@ -601,9 +578,23 @@ func (s *Store) SetExecution(execution *Execution) (string, error) {
 }
 
 // DeleteExecutions removes all executions of a job
-func (s *Store) DeleteExecutions(jobName string) error {
-	prefix := fmt.Sprintf("executions/%s/", jobName)
-	return s.db.DropPrefix([]byte(prefix))
+func (s *Store) deleteExecutionsTxFunc(jobName string) func(tx *buntdb.Tx) error {
+	return func(tx *buntdb.Tx) error {
+		var delkeys []string
+		prefix := fmt.Sprintf("%s:%s", executionsPrefix, jobName)
+		tx.Ascend("", func(key, value string) bool {
+			if strings.HasPrefix(key, prefix) {
+				delkeys = append(delkeys, key)
+			}
+			return true
+		})
+
+		for _, k := range delkeys {
+			_, _ = tx.Delete(k)
+		}
+
+		return nil
+	}
 }
 
 // Shutdown close the KV store
@@ -611,17 +602,14 @@ func (s *Store) Shutdown() error {
 	return s.db.Close()
 }
 
-// Snapshot creates a backup of the data stored in Badger
+// Snapshot creates a backup of the data stored in BuntDB
 func (s *Store) Snapshot(w io.WriteCloser) error {
-	_, err := s.db.Backup(w, 0)
-	return err
+	return s.db.Save(w)
 }
 
-// Restore load data created with backup in to Badger
-// Default value for maxPendingWrites is 256, to minimise memory usage
-// and overall finish time.
+// Restore load data created with backup in to Bunt
 func (s *Store) Restore(r io.ReadCloser) error {
-	return s.db.Load(r, 256)
+	return s.db.Load(r)
 }
 
 func (s *Store) unmarshalExecutions(items []kv, timezone *time.Location) ([]*Execution, error) {
@@ -643,13 +631,13 @@ func (s *Store) unmarshalExecutions(items []kv, timezone *time.Location) ([]*Exe
 	return executions, nil
 }
 
-func (s *Store) computeStatus(jobName string, exGroup int64, txn *badger.Txn) (string, error) {
+func (s *Store) computeStatus(jobName string, exGroup int64, tx *buntdb.Tx) (string, error) {
 	// compute job status based on execution group
 	kvs := []kv{}
 	found := false
-	prefix := fmt.Sprintf("executions/%s/", jobName)
+	prefix := fmt.Sprintf("%s:%s:", executionsPrefix, jobName)
 
-	if err := s.listTxnFunc(prefix, &kvs, &found)(txn); err != nil {
+	if err := s.listTxFunc(prefix, &kvs, &found)(tx); err != nil {
 		return "", err
 	}
 
@@ -667,11 +655,6 @@ func (s *Store) computeStatus(jobName string, exGroup int64, txn *badger.Txn) (s
 
 	success := 0
 	failed := 0
-	for _, ex := range executions {
-		if ex.FinishedAt.IsZero() {
-			return StatusRunning, nil
-		}
-	}
 
 	var status string
 	for _, ex := range executions {
@@ -702,5 +685,5 @@ func trimDirectoryKey(key []byte) []byte {
 }
 
 func isDirectoryKey(key []byte) bool {
-	return len(key) > 0 && key[len(key)-1] == '/'
+	return len(key) > 0 && key[len(key)-1] == ':'
 }
