@@ -883,9 +883,13 @@ func (s *Store) computeStatus(jobName string, exGroup int64, tx *buntdb.Tx) (str
 	}
 
 	var executions []*Execution
+	var latestAttempt uint
 	for _, ex := range execs {
 		if ex.Group == exGroup {
 			executions = append(executions, ex)
+			if ex.Attempt > latestAttempt {
+				latestAttempt = ex.Attempt
+			}
 		}
 	}
 
@@ -894,6 +898,9 @@ func (s *Store) computeStatus(jobName string, exGroup int64, tx *buntdb.Tx) (str
 
 	var status string
 	for _, ex := range executions {
+		if ex.Attempt < latestAttempt {
+			continue
+		}
 		if ex.Success {
 			success = success + 1
 		} else {

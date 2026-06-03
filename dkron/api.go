@@ -306,6 +306,7 @@ func (h *HTTPTransport) jobCreateOrUpdateHandler(c *gin.Context) {
 	}
 
 	// Validate job
+	job.NormalizeRetries()
 	if err := job.Validate(); err != nil {
 		c.AbortWithStatus(http.StatusBadRequest)
 		_, _ = c.Writer.WriteString(fmt.Sprintf("Job validation failed: %s.", err))

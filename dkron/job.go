@@ -111,6 +111,9 @@ type Job struct {
 	// Number of times to retry a job that failed an execution.
 	Retries uint `json:"retries"`
 
+	// MaxRetry is an API alias for Retries.
+	MaxRetry uint `json:"max_retry,omitempty"`
+
 	// Jobs that are dependent upon this one will be run after this job runs.
 	DependentJobs []string `json:"dependent_jobs"`
 
@@ -165,6 +168,7 @@ func NewJobFromProto(in *proto.Job, logger *logrus.Entry) *Job {
 		Disabled:       in.Disabled,
 		Tags:           in.Tags,
 		Retries:        uint(in.Retries),
+		MaxRetry:       uint(in.Retries),
 		DependentJobs:  in.DependentJobs,
 		ParentJob:      in.ParentJob,
 		Concurrency:    in.Concurrency,
@@ -207,6 +211,8 @@ func NewJobFromProto(in *proto.Job, logger *logrus.Entry) *Job {
 
 // ToProto return the corresponding representation of this Job in proto struct
 func (j *Job) ToProto() *proto.Job {
+	j.NormalizeRetries()
+
 	lastSuccess := &proto.Job_NullableTime{
 		HasValue: j.LastSuccess.HasValue(),
 	}
@@ -267,6 +273,21 @@ func (j *Job) ToProto() *proto.Job {
 		ExpiresAt:      expiresAt,
 		StartsAt:       startsAt,
 	}
+}
+
+// NormalizeRetries keeps the existing retries field and the max_retry alias in sync.
+func (j *Job) NormalizeRetries() {
+	if j.MaxRetry > 0 {
+		j.Retries = j.MaxRetry
+		return
+	}
+	j.MaxRetry = j.Retries
+}
+
+// MaxRetries returns the configured number of retries for the job.
+func (j *Job) MaxRetries() uint {
+	j.NormalizeRetries()
+	return j.Retries
 }
 
 // Run the job

@@ -7,9 +7,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/hashicorp/go-metrics"
 	typesv1 "github.com/distribworks/dkron/v4/gen/proto/types/v1"
 	"github.com/distribworks/dkron/v4/plugin"
+	"github.com/hashicorp/go-metrics"
 	"github.com/hashicorp/raft"
 	"github.com/hashicorp/serf/serf"
 	"github.com/sirupsen/logrus"
@@ -201,6 +201,63 @@ func (grpcs *GRPCServer) ExecutionDone(ctx context.Context, execDoneReq *typesv1
 		return nil, err
 	}
 
+	// If the execution failed and the job still has retries left, reassign it
+	// before marking the execution done so the job is not concluded as failed yet.
+	execution := NewExecutionFromProto(execDoneReq.Execution)
+	maxRetry := job.MaxRetries()
+	if !execution.Success && execution.Attempt <= maxRetry {
+		failedAgent := execution.NodeName
+		reassignedNode, ok := grpcs.agent.getRetryTargetNode(job.Tags, failedAgent)
+		if ok {
+			if _, err := grpcs.SetExecution(ctx, execDoneReq.Execution); err != nil {
+				return nil, err
+			}
+
+			retryExecution := *execution
+			retryExecution.Attempt++
+			retryExecution.RetryCount = retryCountFromAttempt(retryExecution.Attempt)
+			retryExecution.NodeName = reassignedNode.Name
+			eb := retryExecution.CalculateExponentialBackoff()
+			retryExecution.StartedAt = time.Time{}
+			retryExecution.FinishedAt = time.Time{}
+			retryExecution.Success = false
+			retryExecution.Output = ""
+
+			grpcs.logger.WithFields(logrus.Fields{
+				"job_name":         job.Name,
+				"failed_agent":     failedAgent,
+				"retry_count":      retryExecution.RetryCount,
+				"max_retry":        maxRetry,
+				"reassigned_agent": reassignedNode.Name,
+				"reassigned_addr":  rpcAddrForNode(reassignedNode),
+				"backoff":          eb,
+			}).Info("grpc: Retrying failed job on reassigned agent")
+
+			time.Sleep(eb)
+
+			if _, err := grpcs.agent.Run(ctx, job.Name, &retryExecution); err != nil {
+				grpcs.logger.WithError(err).WithFields(logrus.Fields{
+					"job_name":         job.Name,
+					"failed_agent":     failedAgent,
+					"retry_count":      retryExecution.RetryCount,
+					"reassigned_agent": reassignedNode.Name,
+				}).Error("grpc: Retry reassignment failed, marking execution failed")
+			} else {
+				return &typesv1.ExecutionDoneResponse{
+					From:    grpcs.agent.config.NodeName,
+					Payload: []byte("retry"),
+				}, nil
+			}
+		} else {
+			grpcs.logger.WithFields(logrus.Fields{
+				"job_name":     job.Name,
+				"failed_agent": failedAgent,
+				"retry_count":  retryCountFromAttempt(execution.Attempt),
+				"max_retry":    maxRetry,
+			}).Warn("grpc: No reassignment agent available, marking execution failed")
+		}
+	}
+
 	pbex := execDoneReq.Execution
 	for k, v := range job.Processors {
 		grpcs.logger.WithField("plugin", k).Info("grpc: Processing execution with plugin")
@@ -222,40 +279,12 @@ func (grpcs *GRPCServer) ExecutionDone(ctx context.Context, execDoneReq *typesv1
 		return nil, err
 	}
 
+	execution = NewExecutionFromProto(pbex)
 	// Retrieve the fresh, updated job from the store to work on stored values
 	job, err = grpcs.agent.Store.GetJob(ctx, job.Name, nil)
 	if err != nil {
 		grpcs.logger.WithError(err).WithField("job", execDoneReq.Execution.JobName).Error("grpc: Error retrieving job from store")
 		return nil, err
-	}
-
-	// If the execution failed, retry it until retries limit (default: don't retry)
-	execution := NewExecutionFromProto(pbex)
-	if !execution.Success &&
-		uint(execution.Attempt) < job.Retries+1 {
-		// Increment the attempt counter
-		execution.Attempt++
-
-		// Keep all execution properties intact except the last output
-		execution.Output = ""
-
-		eb := execution.CalculateExponentialBackoff()
-		grpcs.logger.WithFields(logrus.Fields{
-			"attempt":   execution.Attempt,
-			"execution": execution,
-			"backoff":   eb,
-		}).Debug("grpc: Retrying execution")
-
-		time.Sleep(eb)
-
-		if _, err := grpcs.agent.Run(ctx, job.Name, execution); err != nil {
-			return nil, err
-		}
-
-		return &typesv1.ExecutionDoneResponse{
-			From:    grpcs.agent.config.NodeName,
-			Payload: []byte("retry"),
-		}, nil
 	}
 
 	exg, err := grpcs.agent.Store.GetExecutionGroup(ctx, execution, &ExecutionOptions{

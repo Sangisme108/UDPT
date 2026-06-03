@@ -294,6 +294,30 @@ func Test_computeStatus(t *testing.T) {
 	}
 	_, _ = s.SetExecution(ctx, ex6)
 
+	ex7 := &Execution{
+		JobName:    "test",
+		StartedAt:  n.Add(50 * time.Millisecond),
+		FinishedAt: n,
+		Success:    false,
+		Output:     "test",
+		NodeName:   "testNode1",
+		Group:      5,
+		Attempt:    1,
+	}
+	_, _ = s.SetExecution(ctx, ex7)
+
+	ex8 := &Execution{
+		JobName:    "test",
+		StartedAt:  n.Add(60 * time.Millisecond),
+		FinishedAt: n,
+		Success:    true,
+		Output:     "test",
+		NodeName:   "testNode2",
+		Group:      5,
+		Attempt:    2,
+	}
+	_, _ = s.SetExecution(ctx, ex8)
+
 	// Tests status
 	err = s.db.View(func(tx *buntdb.Tx) error {
 		status, _ := s.computeStatus("test", 1, tx)
@@ -307,6 +331,9 @@ func Test_computeStatus(t *testing.T) {
 
 		status, _ = s.computeStatus("test", 4, tx)
 		assert.Equal(t, StatusFailed, status)
+
+		status, _ = s.computeStatus("test", 5, tx)
+		assert.Equal(t, StatusSuccess, status)
 
 		return nil
 	})

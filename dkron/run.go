@@ -38,16 +38,17 @@ func (a *Agent) Run(ctx context.Context, jobName string, ex *Execution) (*Job, e
 	if ex.Attempt <= 1 {
 		targetNodes = a.getTargetNodes(job.Tags, defaultSelector)
 	} else {
-		// In case of retrying, find the node or return with an error
 		for _, m := range a.serf.Members() {
 			if ex.NodeName == m.Name {
 				if m.Status == serf.StatusAlive {
 					targetNodes = []Node{m}
 					break
-				} else {
-					return nil, fmt.Errorf("retry node is gone: %s for job %s", ex.NodeName, ex.JobName)
 				}
+				return nil, fmt.Errorf("retry target node is gone: %s for job %s", ex.NodeName, ex.JobName)
 			}
+		}
+		if len(targetNodes) == 0 {
+			return nil, fmt.Errorf("retry target node not found: %s for job %s", ex.NodeName, ex.JobName)
 		}
 	}
 
@@ -60,10 +61,7 @@ func (a *Agent) Run(ctx context.Context, jobName string, ex *Execution) (*Job, e
 	var wg sync.WaitGroup
 	for _, v := range targetNodes {
 		// Determine node address
-		addr, ok := v.Tags["rpc_addr"]
-		if !ok {
-			addr = v.Addr.String()
-		}
+		addr := rpcAddrForNode(v)
 
 		// Call here client GRPC AgentRun
 		wg.Add(1)
@@ -86,4 +84,23 @@ func (a *Agent) Run(ctx context.Context, jobName string, ex *Execution) (*Job, e
 
 	wg.Wait()
 	return job, nil
+}
+
+func (a *Agent) getRetryTargetNode(tags map[string]string, failedAgent string) (Node, bool) {
+	bareTags, _ := cleanTags(tags, a.logger)
+	nodes := a.getQualifyingNodes(a.serf.Members(), bareTags)
+	nodes = filterArray(nodes, func(node Node) bool {
+		return node.Status == serf.StatusAlive && node.Name != failedAgent
+	})
+	if len(nodes) == 0 {
+		return Node{}, false
+	}
+	return nodes[defaultSelector(nodes)], true
+}
+
+func rpcAddrForNode(node Node) string {
+	if addr, ok := node.Tags["rpc_addr"]; ok {
+		return addr
+	}
+	return node.Addr.String()
 }

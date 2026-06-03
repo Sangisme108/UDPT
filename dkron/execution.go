@@ -40,6 +40,9 @@ type Execution struct {
 
 	// Retry attempt of this execution.
 	Attempt uint `json:"attempt,omitempty"`
+
+	// RetryCount is an API alias derived from Attempt.
+	RetryCount uint `json:"retry_count,omitempty"`
 }
 
 // NewExecution creates a new execution.
@@ -63,6 +66,7 @@ func NewExecutionFromProto(e *proto.Execution) *Execution {
 		NodeName:   e.NodeName,
 		Group:      e.Group,
 		Attempt:    uint(e.Attempt),
+		RetryCount: retryCountFromAttempt(uint(e.Attempt)),
 		StartedAt:  startedAt,
 		FinishedAt: finishedAt,
 	}
@@ -71,6 +75,9 @@ func NewExecutionFromProto(e *proto.Execution) *Execution {
 // ToProto returns the protobuf struct corresponding to
 // the representation of the current execution.
 func (e *Execution) ToProto() *proto.Execution {
+	if e.Attempt == 0 {
+		e.Attempt = e.RetryCount + 1
+	}
 	startedAt := timestamppb.New(e.StartedAt)
 	finishedAt := timestamppb.New(e.FinishedAt)
 	return &proto.Execution{
@@ -83,6 +90,13 @@ func (e *Execution) ToProto() *proto.Execution {
 		StartedAt:  startedAt,
 		FinishedAt: finishedAt,
 	}
+}
+
+func retryCountFromAttempt(attempt uint) uint {
+	if attempt == 0 {
+		return 0
+	}
+	return attempt - 1
 }
 
 // Key wil generate the execution Id for an execution.
