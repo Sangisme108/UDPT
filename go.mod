@@ -4,6 +4,7 @@ require (
 	cloud.google.com/go/pubsub v1.50.2
 	github.com/IBM/sarama v1.47.0
 	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2
+	github.com/coreos/go-etcd v2.0.0+incompatible
 	github.com/devopsfaith/krakend-usage v1.4.0
 	github.com/fluent/fluent-logger-golang v1.10.1
 	github.com/fullstorydev/grpcurl v1.9.3
@@ -27,7 +28,7 @@ require (
 	github.com/jhump/protoreflect v1.18.0
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
-	github.com/mattn/go-shellwords v1.0.12
+	github.com/mattn/go-shellwords v1.0.13
 	github.com/nats-io/nats.go v1.50.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.23.2
