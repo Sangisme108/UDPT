@@ -4,6 +4,7 @@ require (
 	cloud.google.com/go/pubsub v1.50.2
 	github.com/IBM/sarama v1.47.0
 	github.com/armon/circbuf v0.0.0-20190214190532-5111143e8da2
+	github.com/coreos/go-etcd v2.0.0+incompatible
 	github.com/devopsfaith/krakend-usage v1.4.0
 	github.com/fluent/fluent-logger-golang v1.10.1
 	github.com/fullstorydev/grpcurl v1.9.3
@@ -14,7 +15,7 @@ require (
 	github.com/hashicorp/go-hclog v1.6.3
 	github.com/hashicorp/go-metrics v0.5.4
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/hashicorp/go-plugin v1.7.0
+	github.com/hashicorp/go-plugin v1.8.0
 	github.com/hashicorp/go-sockaddr v1.0.7
 	github.com/hashicorp/go-syslog v1.0.0
 	github.com/hashicorp/go-uuid v1.0.3
