@@ -1,0 +1,42 @@
+services:
+  dkron1:
+    image: dkron/dkron
+    container_name: dkron1
+    command:
+      - agent
+      - --server
+      - --bootstrap-expect=3
+      - --node-name=dkron1
+      - --retry-join=dkron1
+      - --advertise-addr=dkron1
+      - --tag=agent=dkron1
+    ports:
+      - "8080:8080"
+
+  dkron2:
+    image: dkron/dkron
+    container_name: dkron2
+    command:
+      - agent
+      - --server
+      - --bootstrap-expect=3
+      - --node-name=dkron2
+      - --retry-join=dkron1
+      - --advertise-addr=dkron2
+      - --tag=agent=dkron2
+    depends_on:
+      - dkron1
+
+  dkron3:
+    image: dkron/dkron
+    container_name: dkron3
+    command:
+      - agent
+      - --server
+      - --bootstrap-expect=3
+      - --node-name=dkron3
+      - --retry-join=dkron1
+      - --advertise-addr=dkron3
+      - --tag=agent=dkron3
+    depends_on:
+      - dkron1
